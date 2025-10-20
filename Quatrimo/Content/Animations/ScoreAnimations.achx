@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationChainArraySave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileRelativeTextures>true</FileRelativeTextures>
+  <TimeMeasurementUnit>Undefined</TimeMeasurementUnit>
+  <CoordinateType>Pixel</CoordinateType>
+  <AnimationChain>
+    <Name>ScoreAnimation</Name>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>80</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>10</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.08</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>90</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>10</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.08</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>100</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>10</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.08</FrameLength>
+      <LeftCoordinate>100</LeftCoordinate>
+      <RightCoordinate>110</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>10</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>VanishAnim</Name>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>80</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>10</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>70</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>80</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>90</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>100</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>100</LeftCoordinate>
+      <RightCoordinate>110</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.4</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>90</RightCoordinate>
+      <TopCoordinate>20</TopCoordinate>
+      <BottomCoordinate>30</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+</AnimationChainArraySave>

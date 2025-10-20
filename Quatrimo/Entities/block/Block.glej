@@ -1,0 +1,708 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "ReferencedFiles": [
+    {
+      "Name": "atlas.png",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "pieceCard.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "X",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "Scorable",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "CollidesWhenFalling",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "Summary": "If the block is solid and collides while falling",
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "CollidesWhenPlaced",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "Summary": "If the block collides with falling blocks while on the board",
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardX",
+      "SetByDerived": true,
+      "Summary": "",
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardY",
+      "SetByDerived": true,
+      "Summary": "Position on board",
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "localX",
+      "SetByDerived": true,
+      "Summary": "",
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "localY",
+      "SetByDerived": true,
+      "Summary": "Offset from piece origin",
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "OverridesTexture",
+      "SetByDerived": true,
+      "IsShared": true,
+      "Summary": "Should override piece texture?",
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1LeftTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "LeftTexturePixel",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1TopTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "TopTexturePixel",
+      "Summary": "X,Y Positions for Layer1 Sprite",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2LeftTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer2",
+      "SourceObjectProperty": "LeftTexturePixel",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2TopTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer2",
+      "SourceObjectProperty": "TopTexturePixel",
+      "Summary": "X,Y Positions for Layer2 Sprite",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer3LeftTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer3",
+      "SourceObjectProperty": "LeftTexturePixel",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer3TopTexture",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer3",
+      "SourceObjectProperty": "TopTexturePixel",
+      "Summary": "X,Y Positions for Layer2 Sprite",
+      "CreatesEvent": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "RotateSprite",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "Summary": "If the sprite should rotate with the block",
+      "Category": "Visuals"
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "SpriteLayer1",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "atlas",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 10.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "SpriteLayer2",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "atlas",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Z",
+          "Value": 1.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "SpriteLayer3",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "atlas",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Z",
+          "Value": 2.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "SlamPreview1",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Alpha",
+          "Value": 0.8,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "BottomTexturePixel",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "LeftTexturePixel",
+          "Value": 40.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "RightTexturePixel",
+          "Value": 50.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "atlas",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Z",
+          "Value": 3.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "SlamPreview2",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Alpha",
+          "Value": 0.8,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 0.7058824,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "BottomTexturePixel",
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 0.7058824,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "LeftTexturePixel",
+          "Value": 50.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 0.7058824,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "RightTexturePixel",
+          "Value": 60.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "atlas",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Z",
+          "Value": 3.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "Name": "Entities\\block\\Block",
+  "Events": [
+    {
+      "EventName": "AfterLayer1LeftTextureSet",
+      "SourceVariable": "Layer1LeftTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterLayer1TopTextureSet",
+      "SourceVariable": "Layer1TopTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterLayer2LeftTextureSet",
+      "SourceVariable": "Layer2LeftTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterLayer2TopTextureSet",
+      "SourceVariable": "Layer2TopTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterLayer3LeftTextureSet",
+      "SourceVariable": "Layer3LeftTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterLayer3TopTextureSet",
+      "SourceVariable": "Layer3TopTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    }
+  ],
+  "CustomClassesForExport": []
+}

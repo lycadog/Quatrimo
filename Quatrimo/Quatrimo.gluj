@@ -1,0 +1,161 @@
+{
+  "In2D": true,
+  "ResolutionWidth": 800,
+  "ResolutionHeight": 600,
+  "OrthogonalWidth": 800,
+  "OrthogonalHeight": 600,
+  "Screens": [],
+  "Entities": [],
+  "GlobalFiles": [
+    {
+      "Name": "GumProject/GumProject.gumx",
+      "Properties": [
+        {
+          "Name": "FileAdditionBehavior",
+          "Value": 1,
+          "Type": "int"
+        },
+        {
+          "Name": "AutoCreateGumScreens",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "ShowMouse",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "MakeGumInstancesPublic",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsMatchGameResolutionInGumChecked",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IncludeFormsInComponents",
+          "Value": true
+        },
+        {
+          "Name": "IncludeComponentToFormsAssociation",
+          "Value": true
+        }
+      ],
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "barTop.png",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "atlas.png",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "pieceCard.png",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "GlobalContentSettingsSave": {
+    "GenerateLoadGlobalContentCode": true
+  },
+  "SyncedProjects": [],
+  "StartUpScreen": "Screens\\GameScreen",
+  "ResolutionPresets": [],
+  "PerformanceSettingsSave": {},
+  "IgnoredDirectories": [],
+  "CustomClasses": [
+    {
+      "Name": "TileMapInfo",
+      "CsvFilesUsingThis": [],
+      "RequiredProperties": [
+        {
+          "Type": "string",
+          "Member": "Name",
+          "Time": 0.0
+        },
+        {
+          "Type": "System.Collections.Generic.List<FlatRedBall.Content.AnimationChain.AnimationFrameSave>",
+          "Member": "EmbeddedAnimation",
+          "Time": 0.0
+        }
+      ],
+      "GenerateCode": true
+    }
+  ],
+  "ApplyToFixedResolutionPlatforms": true,
+  "ExternallyBuiltFileDirectory": "../../",
+  "FileVersion": 63,
+  "ScreenReferences": [
+    {
+      "Name": "Screens\\GameScreen"
+    }
+  ],
+  "EntityReferences": [
+    {
+      "Name": "Entities\\block\\Block"
+    },
+    {
+      "Name": "Entities\\block\\EmptyBlock"
+    },
+    {
+      "Name": "Entities\\board\\Board"
+    },
+    {
+      "Name": "Entities\\board\\HandUI"
+    },
+    {
+      "Name": "Entities\\board\\RowScorer"
+    },
+    {
+      "Name": "Entities\\Piece"
+    },
+    {
+      "Name": "Entities\\PieceCard"
+    },
+    {
+      "Name": "Entities\\ScoreAnimation"
+    },
+    {
+      "Name": "Entities\\TestEntity"
+    }
+  ],
+  "Bookmarks": [],
+  "PluginData": {
+    "RequiredPlugins": []
+  },
+  "DisplaySettings": {
+    "Name": "Custom",
+    "GenerateDisplayCode": true,
+    "Is2D": true,
+    "ResolutionWidth": 480,
+    "ResolutionHeight": 270,
+    "AspectRatioBehavior": 2,
+    "AspectRatioWidth": 16.0,
+    "AspectRatioHeight": 9.0,
+    "AspectRatioWidth2": 16.0,
+    "AspectRatioHeight2": 9.0,
+    "SupportLandscape": true,
+    "AllowWindowResizing": true,
+    "Scale": 200,
+    "ScaleGum": 100,
+    "DominantInternalCoordinates": 1,
+    "TextureFilter": 1
+  },
+  "AllDisplaySettings": []
+}

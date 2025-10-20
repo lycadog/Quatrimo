@@ -1,0 +1,210 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "X",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z",
+      "DefaultValue": 1.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position & Size",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardX",
+      "SetByDerived": true,
+      "Summary": "",
+      "CreatesEvent": true,
+      "Category": "Position & Size"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position & Size",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardY",
+      "SetByDerived": true,
+      "Summary": "Position on board",
+      "CreatesEvent": true,
+      "Category": "Position & Size"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position & Size",
+          "Type": "String"
+        }
+      ],
+      "Name": "Rotation",
+      "SetByDerived": true,
+      "Category": "Position & Size"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Texture",
+          "Type": "String"
+        }
+      ],
+      "Name": "CardTypeTextureLeft",
+      "DefaultValue": 147,
+      "SetByDerived": true,
+      "Category": "Texture"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Texture",
+          "Type": "String"
+        }
+      ],
+      "Name": "CardTypeTextureTop",
+      "DefaultValue": 0,
+      "SetByDerived": true,
+      "Summary": "Texture for the type box on piececard",
+      "Category": "Texture"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Texture",
+          "Type": "String"
+        }
+      ],
+      "Name": "CardAbilityTextureLeft",
+      "DefaultValue": 140,
+      "SetByDerived": true,
+      "Category": "Texture"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Texture",
+          "Type": "String"
+        }
+      ],
+      "Name": "CardAbilityTextureTop",
+      "DefaultValue": 0,
+      "SetByDerived": true,
+      "Summary": "Texture for piece ability box",
+      "Category": "Texture"
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "Blocks",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\block\\Block",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "CallActivity": false
+    }
+  ],
+  "Name": "Entities\\Piece",
+  "Events": [
+    {
+      "EventName": "AfterboardXSet",
+      "SourceVariable": "boardX",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterboardYSet",
+      "SourceVariable": "boardY",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    }
+  ],
+  "CustomClassesForExport": []
+}

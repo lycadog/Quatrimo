@@ -1,0 +1,277 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "BaseEntity": "Entities\\block\\Block",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "Scorable",
+      "DefaultValue": false,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "CollidesWhenFalling",
+      "DefaultValue": false,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Summary": "If the block is solid and collides while falling",
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "CollidesWhenPlaced",
+      "DefaultValue": false,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Summary": "If the block collides with falling blocks while on the board",
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "localX",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "OverridesTexture",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "IsShared": true,
+      "DefinedByBase": true,
+      "Summary": "Should override piece texture?",
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1LeftTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1TopTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2LeftTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2TopTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer3LeftTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer3TopTexture",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "RotateSprite",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Summary": "If the sprite should rotate with the block",
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardX",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "CreatesEvent": true,
+      "Category": "Position"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Position",
+          "Type": "String"
+        }
+      ],
+      "Name": "boardY",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "CreatesEvent": true,
+      "Category": "Position"
+    }
+  ],
+  "Name": "Entities\\block\\EmptyBlock",
+  "CustomClassesForExport": []
+}
