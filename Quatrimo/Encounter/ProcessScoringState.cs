@@ -10,13 +10,12 @@ namespace Quatrimo.Main
 {
     public class ProcessScoringState : BoardState
     {
-
         public bool[] RowUpdated;
-        List<int> ScoredRows = [];
+        List<RowScorer> RowScorers = [];
 
         public ProcessScoringState(int boardHeight)
         {
-            RowUpdated = new bool[boardHeight];
+            RowUpdated = new bool[boardHeight + 8];
             Array.Fill(RowUpdated, true);
         }
         public ProcessScoringState(bool[] updatedRows)
@@ -29,12 +28,25 @@ namespace Quatrimo.Main
         //next state: TickBoardState
         public override void TickState()
         {
+            bool complete = true;
+            foreach(var scorer in RowScorers)
+            {
+                scorer.Iterate();
+                if (!scorer.completed)
+                {
+                    complete = false;
+                }
+            }
 
+            if (complete)
+            {
+                screen.StartState(new StartTurnAndWaitState());
+            }
         }
 
         protected override void OnStateStart()
         {
-            for (int y = 0; y < screen.boardHeight; y++)
+            for (int y = 0; y < screen.boardHeight+8; y++)
             {
                 if (!RowUpdated[y]) //if row not updated: skip row
                 {
@@ -60,10 +72,8 @@ namespace Quatrimo.Main
 
                 if (rowScorable)
                 {
-                    ScoredRows.Add(y);
+                    RowScorers.Add(new RowScorer(screen, y));
                 }
-
-
             }
         }
     }

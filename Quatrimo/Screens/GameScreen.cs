@@ -22,6 +22,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Quatrimo.Main;
 using Quatrimo.Data;
 using System.Reflection;
+using System.Diagnostics;
 
 
 namespace Quatrimo.Screens
@@ -50,6 +51,8 @@ namespace Quatrimo.Screens
         public double turnScore = 0;
         public double turnTimes = 1;
 
+        public int ActiveAnimCount { get => ScoreAnimations.Count; }
+
         private void CustomInitialize()
         {
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
@@ -63,6 +66,7 @@ namespace Quatrimo.Screens
 
         private void CustomActivity(bool firstTimeCalled)
         {
+            FlatRedBall.Debugging.Debugger.Write("ActiveAnimCount: " + ActiveAnimCount);
             Keybinds.UpdateBinds();
             state.TickState();
         }
@@ -91,23 +95,25 @@ namespace Quatrimo.Screens
             CurrentPiece.Play(this);
         }
 
-        public void ScoreBlock(Block block, int index)
+        public ScoreAnimation ScoreBlock(Block block, int index = 0)
         {
-            ScoreBlock(block, index, HsvColor.White);
+            return ScoreBlock(block, index, HsvColor.White);
         }
 
-        public void ScoreBlock(Block block, int index, HsvColor color)
+        public ScoreAnimation ScoreBlock(Block block, int index, HsvColor color)
         {
-            
             ScoreAnimation anim = Factories.ScoreAnimationFactory.CreateNew();
+            AttachToBoard(anim);
+            anim.MoveToLayer(FalingBlocksLayer);
             anim.SetColor(color);
             anim.StartScoreAnimation(block.boardX, block.boardY, index);
+
             scoredBlocks.Add(block);
 
             turnScore += block.score;
             turnTimes += block.times;
+            return anim;
         }
-
 
         public void DiscardPlayedCard()
         {

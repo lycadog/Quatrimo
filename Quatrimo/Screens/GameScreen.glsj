@@ -199,25 +199,7 @@
       "GenerateTimedEmit": true
     },
     {
-      "InstanceName": "RowScorerList",
-      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
-      "Properties": [
-        {
-          "Name": "AssociateWithFactory",
-          "Value": true,
-          "Type": "bool"
-        }
-      ],
-      "InstructionSaves": [],
-      "SourceType": 2,
-      "SourceFile": "PositionedObjectList (Generic)",
-      "SourceClassGenericType": "Entities\\board\\RowScorer",
-      "ExposedInDerived": true,
-      "AttachToContainer": true,
-      "GenerateTimedEmit": true
-    },
-    {
-      "InstanceName": "TempAnimationList",
+      "InstanceName": "ScoreAnimations",
       "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
       "Properties": [
         {

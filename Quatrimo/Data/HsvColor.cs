@@ -41,7 +41,7 @@ namespace Quatrimo.Data
             color = new Color(r, g, b);
         }
 
-        public static HsvColor White = new(0, 1, 1);
+        public static HsvColor White = new(0, 0, 1);
 
             
 

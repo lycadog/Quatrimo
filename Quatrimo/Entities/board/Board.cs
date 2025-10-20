@@ -17,6 +17,8 @@ namespace Quatrimo.Entities.board
         public int Width;
         public int Height;
 
+        
+
         public void GenerateGraphics(int width, int height)
         {
             int x = width + 2, y = height + 2;

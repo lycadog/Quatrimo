@@ -18,10 +18,11 @@ namespace Quatrimo.Entities
 
         public void StartScoreAnimation(int x, int y, int index = 0)
         {
-            MoveToLayer(LayerProvidedByContainer);
             SpriteInstance.CurrentChain = SpriteInstance.AnimationChains[index];
             RelativeX = x * 10 + 10; RelativeY = y * 10 + 10;
             RelativeZ = 4;
+
+            SpriteInstance.Animate = true;
         }
 
         public void SetColor(HsvColor color)

@@ -65,12 +65,11 @@ namespace Quatrimo.Main
         {
             screen.CurrentPiece.Place();
             screen.Bag.DiscardCard(screen.Bag.currentCardIndex);
-            screen.StartState(new StartTurnAndWaitState());
+            screen.StartState(new ProcessScoringState(screen.boardHeight));
         }
 
         void ProcessMovement()
         {
-            FlatRedBall.Debugging.Debugger.Write($"-1,0 COLLIDES: {screen.CurrentPiece.Collides(-1,0)}\n1,0 COLLIDES: {screen.CurrentPiece.Collides(1, 0)}\n0, -1 COLLIDES:{screen.CurrentPiece.Collides(0, -1)}");
 
             if (Keybinds.Slam.Pushed)
             {

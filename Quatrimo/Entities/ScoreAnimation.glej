@@ -67,6 +67,12 @@
           "Time": 0.0
         },
         {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
           "Type": "string",
           "Member": "CurrentChainName",
           "Value": "ScoreAnimation",
@@ -79,9 +85,9 @@
           "Time": 0.0
         },
         {
-          "Type": "ColorOperation",
-          "Member": "ColorOperation",
-          "Value": 6,
+          "Type": "bool",
+          "Member": "Animate",
+          "Value": false,
           "Time": 0.0
         }
       ],

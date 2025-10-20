@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using FlatRedBall;
@@ -10,35 +10,55 @@ using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using Microsoft.Xna.Framework;
 using Quatrimo.Screens;
+using Quatrimo.Entities;
+using Quatrimo.Entities.block;
 
-namespace Quatrimo.Entities.board
+namespace Quatrimo.Main
 {
-    public partial class RowScorer
+    public class RowScorer
     {
         GameScreen screen;
 
         int y;
         List<ScoreIterator> iterators = [];
         List<ScoreIterator> staleIterators = [];
-        List<int> processedXValues = [];
+        bool[] processed;
         public bool completed = false;
 
         public RowScorer(GameScreen screen, int y)
         {
             this.screen = screen;
             this.y = y;
+            processed = new bool[screen.boardWidth];
             InitializeIterators();
+        }
 
+        public void Iterate()
+        {
+            foreach (var iterator in iterators)
+            {
+                iterator.Iterate();
+            }
+
+            foreach (var stale in staleIterators)
+            {
+                iterators.Remove(stale);
+            }
+            staleIterators.Clear();
+
+            if (iterators.Count == 0 && screen.ActiveAnimCount == 0)
+            {
+                completed = true;
+            }
         }
 
         void InitializeIterators()
         {
-
-
+            List<Block> immediatelyScoredBlocks = [];
 
             byte counter = 0; //if 0:
             int outerLeft = screen.boardWidth / 2;
-            int outerRight = screen.boardWidth / 2;
+            int outerRight = screen.boardWidth / 2 - 1;
             int innerLeft = 100;
             int innerRight = 100;
             //default values ensure if there is no matching block the animation will start from a set position (the center)
@@ -50,29 +70,32 @@ namespace Quatrimo.Entities.board
 
                 if (screen.blockboard[x, y].justPlaced)
                 {
-
+                    ScoreBlock(x);
                 }
 
                 switch (counter)
                 {
+
                     case 0:
-                        if (screen.blockboard[x, y].justPlaced)
+                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
                         {
                             counter++;
                             outerLeft = x;
-                        }break;
+                        }
+                        break;
 
                     case 1:
                         outerRight = x;
-                        if (!screen.blockboard[x,y].justPlaced)
+                        if (screen.blockboard[x, y].piece != screen.CurrentPiece)
                         {
                             innerLeft = x - 1;
                             outerRight = x - 1;
                             counter++;
-                        }break;
+                        }
+                        break;
 
                     case 2:
-                        if (screen.blockboard[x,y].justPlaced)
+                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
                         {
                             innerRight = x;
                             outerRight = x;
@@ -81,59 +104,24 @@ namespace Quatrimo.Entities.board
                         break;
 
                     case 3:
-                        if (screen.blockboard[x, y].justPlaced)
+                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
                         {
-                            outerRight = x;                      
+                            outerRight = x;
                         }
                         break;
                 }
             }
 
             //create outer iterators
-            iterators.Add(new ScoreIterator(this, outerLeft, y, -1));
-            iterators.Add(new ScoreIterator(this, outerRight, y, 1));
+            iterators.Add(new ScoreIterator(this, outerLeft, -1));
+            iterators.Add(new ScoreIterator(this, outerRight, 1));
 
             if (counter < 3) //if there are no empty spaces in the current piece we do not need inner iterators, so return
             {
                 return;
             }
-            iterators.Add(new ScoreIterator(this, innerLeft, y, 1));
-            iterators.Add(new ScoreIterator(this, innerRight, y, -1));
-        }
-
-        private void CustomInitialize()
-        {
-            
-        }
-
-        private void CustomActivity()
-        {
-            foreach(var iterator in iterators)
-            {
-                iterator.Iterate();
-            }
-
-            foreach(var stale in staleIterators)
-            {
-                iterators.Remove(stale);
-            }
-            staleIterators.Clear();
-
-            if (ActiveAnims.Count == 0)
-            {
-                completed = true;
-            }
-
-        }
-
-        private void CustomDestroy()
-        {
-            
-        }
-
-        private static void CustomLoadStaticContent(string contentManagerName)
-        {
-            
+            iterators.Add(new ScoreIterator(this, innerLeft, 1));
+            iterators.Add(new ScoreIterator(this, innerRight, -1));
         }
 
         void QueueIteratorRemoval(ScoreIterator iterator)
@@ -141,39 +129,49 @@ namespace Quatrimo.Entities.board
             staleIterators.Add(iterator);
         }
 
-        void ScoreBlock(int x, int y, int index = 0)
+        void ScoreBlock(int x, int index = 0)
         {
-            
-            ScoreAnimation anim = Factories.ScoreAnimationFactory.CreateNew();
-            anim.StartScoreAnimation(x, y, index);
+            processed[x] = true;
+            screen.ScoreBlock(screen.blockboard[x, y], index);
         }
 
-        class ScoreIterator(RowScorer Scorer, int X, int Y, int Direction)
+        class ScoreIterator
         {
-            RowScorer scorer => Scorer;
-            int x => X;
-            int y => Y;
-            int direction => Direction;
+            RowScorer scorer;
+            int x, direction;
             float iterationCooldown = 0;
+
+            public ScoreIterator(RowScorer scorer, int x, int direction)
+            {
+                this.scorer = scorer;
+                this.x = x;
+                this.direction = direction;
+            }
 
             public void Iterate()
             {
-                if (iterationCooldown < .25)
+                if (iterationCooldown < .025)
                 {
                     iterationCooldown += TimeManager.SecondDifference;
                     return;
                 }
                 iterationCooldown = 0;
-
-                //iterate !!!
                 x += direction;
-                if (scorer.processedXValues.Contains(x)) //if this spot has already been processed, don't process it again
+
+                if (x >= scorer.screen.boardWidth || x < 0)
+                {
+                    Terminate();
+                    return;
+                }
+
+                if (scorer.processed[x]) //if this spot has already been processed, don't process it again
                 {
                     return;
                 }
 
-                //iterate here now
-
+                //if iterator has reached either edge of the board, stop iterating
+                
+                scorer.ScoreBlock(x);
             }
 
             void Terminate()

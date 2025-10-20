@@ -337,6 +337,7 @@
     <Compile Include="Data\PoolPieceType.cs" />
     <Compile Include="Data\RunData.cs" />
     <Compile Include="Data\SimplePieceType.cs" />
+    <Compile Include="Encounter\RowScorer.cs" />
     <Compile Include="Entities\block\Block.cs" />
     <Compile Include="Entities\block\Block.Event.cs">
       <DependentUpon>Block.cs</DependentUpon>
@@ -351,13 +352,9 @@
     <Compile Include="Entities\board\HandUI.Generated.cs">
       <DependentUpon>HandUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\board\RowScorer.cs" />
-    <Compile Include="Entities\board\RowScorer.Generated.cs">
-      <DependentUpon>RowScorer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entities\ScoreAnimation.cs" />
     <Compile Include="Entities\ScoreAnimation.Generated.cs">
-      <DependentUpon>TempAnimation.cs</DependentUpon>
+      <DependentUpon>ScoreAnimation.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Piece.cs" />
     <Compile Include="Entities\Piece.Event.cs">
@@ -391,7 +388,6 @@
     <Compile Include="Factories\PieceFactory.Generated.cs" />
     <Compile Include="Factories\BoardFactory.Generated.cs" />
     <Compile Include="Factories\EmptyBlockFactory.Generated.cs" />
-    <Compile Include="Factories\RowScorerFactory.Generated.cs" />
     <Compile Include="Factories\ScoreAnimationFactory.Generated.cs" />
     <Compile Include="Factories\TestEntityFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />

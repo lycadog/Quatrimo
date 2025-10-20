@@ -120,9 +120,6 @@
       "Name": "Entities\\board\\HandUI"
     },
     {
-      "Name": "Entities\\board\\RowScorer"
-    },
-    {
       "Name": "Entities\\Piece"
     },
     {
