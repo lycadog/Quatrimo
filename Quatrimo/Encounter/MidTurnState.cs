@@ -65,7 +65,7 @@ namespace Quatrimo.Main
         {
             screen.CurrentPiece.Place();
             screen.Bag.DiscardCard(screen.Bag.currentCardIndex);
-            screen.StartState(new ProcessScoringState(screen.boardHeight));
+            screen.StartState(new ProcessScoringState());
         }
 
         void ProcessMovement()

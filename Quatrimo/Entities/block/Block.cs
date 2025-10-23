@@ -28,7 +28,7 @@ namespace Quatrimo.Entities.block
         public double score = 1;
         public double times = 0;
 
-        public Block createBlock(GameScreen screen, Piece piece, int localX, int localY, float textureX, float textureY, HsvColor hsvColor)
+        public Block CreateBlock(GameScreen screen, Piece piece, int localX, int localY, float textureX, float textureY, HsvColor hsvColor)
         {
             this.screen = screen;
             this.piece = piece;
@@ -56,6 +56,7 @@ namespace Quatrimo.Entities.block
 
         public virtual void Play()
         {
+            
         }
 
         public virtual void Place()
@@ -70,26 +71,41 @@ namespace Quatrimo.Entities.block
             SlamPreview2.Visible = false;
         }
 
-        public virtual void Score()
+        public virtual void Score(bool forcedRemoval = false)
         {
-
+            HideSprites();
         }
 
-        
+
+        public virtual void RemovePlaced(bool forced = false, bool lowerCollumn = true)
+        {
+            screen.SetEmpty(boardX, boardY);
+            Destroy();
+        }
+
+        public virtual void RemoveAndLower(bool forced = false)
+        {
+            LowerCollumn();
+            Destroy();
+        }
 
         /// <summary>
         /// Lower blocks above to fill in empty space
         /// </summary>
         /// <param name="screen"></param>
-        public void LowerCollumn()
+        protected void LowerCollumn()
         {
-            //go up and move each block down
-        }
+            //screen.RowUpdated[boardY] = true;
 
-        public virtual void RemovePlaced(bool forced = false)
-        {
+            for (int y = boardY+1; y < screen.trueBoardHeight; y++) //go up and move each block down
+            {
+                screen.RowUpdated[y] = true;
+                screen.blockboard[boardX, y].MoveTo(boardX, y - 1);
+            }
             
         }
+
+        
 
         public virtual void Tick()
         {
@@ -132,6 +148,7 @@ namespace Quatrimo.Entities.block
         // [----==================================================================================================----]
         //                                          -- Positional Methods --
         // [----==================================================================================================----]
+
         /// <summary>
         /// Move placed block to specified position
         /// </summary>
@@ -140,10 +157,9 @@ namespace Quatrimo.Entities.block
         /// <param name="y"></param>
         public void MoveTo(int x, int y)
         {
-            screen.SetEmpty(boardX, boardY);
+            //screen.SetEmpty(boardX, boardY); // CAUSES immense lag when lowering things.
             screen.blockboard[x, y] = this;
             boardX = x; boardY = y;
-            screen.boardUpdated = true;
             updatePlacedBlockPos();
         }
 
@@ -196,7 +212,7 @@ namespace Quatrimo.Entities.block
 
         public bool IsOutsideBounds(int x, int y)
         {
-            return x >= screen.boardWidth || x < 0 || y >= screen.boardHeight + 8 || y < 0;
+            return x >= screen.boardWidth || x < 0 || y >= screen.trueBoardHeight || y < 0;
  
         }
 
@@ -230,7 +246,7 @@ namespace Quatrimo.Entities.block
 
         protected void UpdatePos()
         {
-            if (boardY >= screen.boardHeight) //hide block if it extends above the board into the buffer
+            if (boardY >= screen.visualBoardHeight) //hide block if it extends above the board into the buffer
             {
                 HideSprites();
             }
@@ -240,17 +256,15 @@ namespace Quatrimo.Entities.block
             }
         }
 
-        //what to do next:
-        //block/piece behavior
-        //i need to implement this so i can work on board logic
-
+        // [----==================================================================================================----]
+        //                                              -- Engine Methods --
+        // [----==================================================================================================----]
 
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not
         /// added to managers will not have this method called.
         /// </summary>
-        /// 
         private void CustomInitialize()
         {
             

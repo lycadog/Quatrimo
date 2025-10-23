@@ -21,7 +21,14 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
-            throw new NotImplementedException();
+            for (int x = 0; x < screen.boardWidth; x++)
+            {
+                for (int y = 0; y < screen.trueBoardHeight; y++)
+                {
+                    screen.blockboard[x, y].justPlaced = false;
+                }
+            }
+            screen.StartState(new StartTurnAndWaitState());
         }
     }
 }

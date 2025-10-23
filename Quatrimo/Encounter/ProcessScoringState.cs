@@ -10,18 +10,7 @@ namespace Quatrimo.Main
 {
     public class ProcessScoringState : BoardState
     {
-        public bool[] RowUpdated;
         List<RowScorer> RowScorers = [];
-
-        public ProcessScoringState(int boardHeight)
-        {
-            RowUpdated = new bool[boardHeight + 8];
-            Array.Fill(RowUpdated, true);
-        }
-        public ProcessScoringState(bool[] updatedRows)
-        {
-            RowUpdated = updatedRows;
-        }
 
         //process scoring and starting scoring animations, then waiting for them to finish before continuing
         // (with if statement not stupid interrupt system of before)
@@ -40,18 +29,50 @@ namespace Quatrimo.Main
 
             if (complete)
             {
-                screen.StartState(new StartTurnAndWaitState());
+                RowScorers.Clear();
+                endState();
             }
         }
 
         protected override void OnStateStart()
         {
-            for (int y = 0; y < screen.boardHeight+8; y++)
+            CheckUpdatedRows();
+        }
+
+        void endState()
+        {
+            //THE GAME IS LAGGING HERE SOMEHOW
+
+            //remove scored blocks. this will update their respective rows.
+            
+            foreach(var block in screen.scoredBlocks) //THIS is taking 250 ms. FAR too long
             {
-                if (!RowUpdated[y]) //if row not updated: skip row
+                block.RemoveAndLower();
+            }
+            screen.scoredBlocks.Clear();
+
+            //recheck said rows and return to repeat the state and score everything
+            CheckUpdatedRows();
+
+            if(RowScorers.Count > 0)
+            {
+                return;
+            }
+
+            
+            screen.StartState(new TickBoardState());
+        }
+
+        void CheckUpdatedRows()
+        {
+            for (int y = 0; y < screen.trueBoardHeight; y++)
+            {
+                if (!screen.RowUpdated[y]) //if row not updated: skip row
                 {
                     continue;
                 }
+                //Row is being processed, so uncheck as updated
+                screen.RowUpdated[y] = false;
 
                 int nonScorableBlocks = 0;
                 bool rowScorable = true; //default to true, if any block stops it from being scorable it will be set to false
@@ -61,13 +82,14 @@ namespace Quatrimo.Main
                     if (!screen.blockboard[x, y].Scorable) //if a block isn't scorable check if we need to stop scoring
                     {
                         nonScorableBlocks++;
-                        if(nonScorableBlocks > RunData.EmptySpacesAllowedForScoring)
+                        if (nonScorableBlocks > RunData.EmptySpacesAllowedForScoring)
                         {
                             rowScorable = false;
                             break;
                         }
                     }
                 }
+                
                 //finish processing for this row
 
                 if (rowScorable)

@@ -57,8 +57,8 @@ namespace Quatrimo.Data
 
         //public static PieceShape s = new(new int[,] { { } })
 
-        public static StarterBag magnetBag = new([sBigTee.B, sLHatchet.B, sRHatchet.B, sDipole.B, sLHook.B, sRHook.B, sLine.B, sTwig.B],
-            [new HsvColor(334, .62, .97), new HsvColor(294, .77, .973), new HsvColor(280, .94, .94), new HsvColor(258, .65, .98), new HsvColor(163, .56, .97), new HsvColor(124, .66, .96), new HsvColor(348, .75, .9),new HsvColor(36, .73, 1)],
+        public static StarterBag magnetBag = new([sBigTee.B, sLHatchet.B, sRHatchet.B, sDipole.B, sLHook.B, sRHook.B, sLine.B, sTwig.B, sWedge.B],
+            [new HsvColor(334, .62, .97), new HsvColor(294, .77, .973), new HsvColor(280, .94, .94), new HsvColor(258, .65, .98), new HsvColor(163, .56, .97), new HsvColor(124, .66, .96), new HsvColor(348, .75, .9),new HsvColor(36, .73, 1), new HsvColor(240, .73, .95)],
                 "magnet bag", 80, 30);
         
         //hello :3 go to turn start state! we will start with bag stuff, but we'll need to figure out inputs and piece stuff after!

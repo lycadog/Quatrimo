@@ -67,8 +67,9 @@ namespace Quatrimo.Main
             //which means we need to implement inner iterators. otherwise, if the counter stays at 1, we only need outer iterators
             for (int x = 0; x < screen.boardWidth; x++)
             {
+                Block block = screen.blockboard[x, y];
 
-                if (screen.blockboard[x, y].justPlaced)
+                if (block.justPlaced)
                 {
                     ScoreBlock(x);
                 }
@@ -77,16 +78,17 @@ namespace Quatrimo.Main
                 {
 
                     case 0:
-                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
+                        if(block.justPlaced && block.piece == screen.CurrentPiece)
                         {
-                            counter++;
                             outerLeft = x;
+                            outerRight = x;
+                            innerLeft = x;
+                            counter++;
                         }
                         break;
 
                     case 1:
-                        outerRight = x;
-                        if (screen.blockboard[x, y].piece != screen.CurrentPiece)
+                        if(!block.justPlaced || block.piece != screen.CurrentPiece)
                         {
                             innerLeft = x - 1;
                             outerRight = x - 1;
@@ -95,16 +97,16 @@ namespace Quatrimo.Main
                         break;
 
                     case 2:
-                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
+                        if(block.justPlaced && block.piece == screen.CurrentPiece)
                         {
-                            innerRight = x;
                             outerRight = x;
+                            innerRight = x;
                             counter++;
                         }
                         break;
 
                     case 3:
-                        if (screen.blockboard[x, y].piece == screen.CurrentPiece)
+                        if (block.justPlaced && block.piece == screen.CurrentPiece)
                         {
                             outerRight = x;
                         }

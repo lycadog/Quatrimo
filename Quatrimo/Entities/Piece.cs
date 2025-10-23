@@ -16,6 +16,7 @@ using Quatrimo.Entities.board;
 using Quatrimo.Screens;
 using Quatrimo.Data;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 
 namespace Quatrimo.Entities
 {
@@ -58,7 +59,7 @@ namespace Quatrimo.Entities
         {
             this.screen = screen;
             boardX = screen.boardWidth/2;
-            boardY = screen.boardHeight-2; //set start position of piece
+            boardY = screen.visualBoardHeight-2; //set start position of piece
             
             foreach (var bagBlock in bagBlocks) //create blocks from bagblocks
             {
@@ -176,7 +177,7 @@ namespace Quatrimo.Entities
             {
                 block.UpdateFallingPosition();
 
-                for (int yOffset = 1; yOffset < screen.boardHeight+8; yOffset++)
+                for (int yOffset = 1; yOffset < screen.trueBoardHeight; yOffset++)
                 {
                     if (block.CollidesFallingOffset(0, -yOffset))
                     {

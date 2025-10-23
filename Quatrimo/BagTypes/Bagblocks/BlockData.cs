@@ -37,7 +37,7 @@ namespace Quatrimo
         {
             Block block = Factories.BlockFactory.CreateNew();
 
-            return block.createBlock(screen, piece, bagBlock.localX, bagBlock.localY, piece.textureLeft, piece.textureTop, bagBlock.hsvColor);
+            return block.CreateBlock(screen, piece, bagBlock.localX, bagBlock.localY, piece.textureLeft, piece.textureTop, bagBlock.hsvColor);
         }
 
         //TODO: methods for preview graphics, blocksense description, etc

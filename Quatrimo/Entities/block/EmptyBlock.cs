@@ -9,14 +9,16 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using Microsoft.Xna.Framework;
+using Quatrimo.Screens;
 
 namespace Quatrimo.Entities.block
 {
     public partial class EmptyBlock
     {
 
-        public EmptyBlock(int x, int y)
+        public EmptyBlock(GameScreen screen, int x, int y)
         {
+            this.screen = screen;
             boardX = x; boardY = y;
         }
 

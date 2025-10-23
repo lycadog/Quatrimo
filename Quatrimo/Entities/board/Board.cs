@@ -104,11 +104,6 @@ namespace Quatrimo.Entities.board
             {
                 SpriteManager.RemoveSprite(sprite);
             }
-
-            /*foreach(var block in BlockList) may be necessary to uncomment. not entirely sure if the screen cleans up after code created objects or not
-            {
-                block.Destroy();
-            }*/
         }
 
         private static void CustomLoadStaticContent(string contentManagerName)

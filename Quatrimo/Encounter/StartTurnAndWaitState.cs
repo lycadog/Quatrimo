@@ -74,6 +74,12 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
+            //It's important to check the entire board once every turn. so the whole board must be set as updated
+            //so it will be checked for scorability
+            for(int i = 0; i < screen.RowUpdated.Length; i++)
+            {
+                screen.RowUpdated[i] = true;
+            }
             bag.Tick();
         }
 

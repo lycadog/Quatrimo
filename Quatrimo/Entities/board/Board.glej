@@ -52,24 +52,6 @@
   ],
   "NamedObjects": [
     {
-      "InstanceName": "BlockList",
-      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
-      "Properties": [
-        {
-          "Name": "AssociateWithFactory",
-          "Value": true,
-          "Type": "bool"
-        }
-      ],
-      "InstructionSaves": [],
-      "SourceType": 2,
-      "SourceFile": "PositionedObjectList (Generic)",
-      "SourceClassGenericType": "Entities\\block\\Block",
-      "ExposedInDerived": true,
-      "AttachToContainer": true,
-      "GenerateTimedEmit": true
-    },
-    {
       "InstanceName": "BGSprites",
       "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
       "Properties": [
