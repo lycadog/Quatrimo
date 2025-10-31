@@ -22,6 +22,7 @@ namespace Quatrimo.Entities.block
         public Piece piece;
         public bool attachedToPiece = true;
         public bool justPlaced = false;
+        public bool ticked = false;
 
         public int rotation = 0;
 
@@ -65,6 +66,7 @@ namespace Quatrimo.Entities.block
             justPlaced = true;
 
             screen.AttachToBoard(this);
+            screen.boardUpdated = true;
             updatePlacedBlockPos();
             screen.blockboard[boardX, boardY] = this; //TODO: DO clipping stuff
             SlamPreview1.Visible = false;
@@ -79,12 +81,14 @@ namespace Quatrimo.Entities.block
 
         public virtual void RemovePlaced(bool forced = false, bool lowerCollumn = true)
         {
+            screen.boardUpdated = true;
             screen.SetEmpty(boardX, boardY);
             Destroy();
         }
 
         public virtual void RemoveAndLower(bool forced = false)
         {
+            screen.boardUpdated = true;
             LowerCollumn();
             Destroy();
         }
@@ -101,11 +105,14 @@ namespace Quatrimo.Entities.block
             {
                 screen.RowUpdated[y] = true;
                 screen.blockboard[boardX, y].MoveTo(boardX, y - 1);
+
+                if(y == screen.trueBoardHeight - 1) //Create a new empty to fill in space created by lowering blocks at the top of the board
+                {
+                    screen.SetEmpty(boardX, y);
+                }
             }
             
         }
-
-        
 
         public virtual void Tick()
         {
@@ -150,14 +157,14 @@ namespace Quatrimo.Entities.block
         // [----==================================================================================================----]
 
         /// <summary>
-        /// Move placed block to specified position
+        /// Move placed block to specified position, DOES NOT fill in spot left behind !!!!! it must be filled in seperately!
         /// </summary>
         /// <param name="board"></param>
         /// <param name="x"></param>
         /// <param name="y"></param>
         public void MoveTo(int x, int y)
         {
-            //screen.SetEmpty(boardX, boardY); // CAUSES immense lag when lowering things.
+            screen.boardUpdated = true;
             screen.blockboard[x, y] = this;
             boardX = x; boardY = y;
             updatePlacedBlockPos();
@@ -172,7 +179,6 @@ namespace Quatrimo.Entities.block
         public bool CollidesFalling(int x, int y)
         {
             if (IsOutsideBounds(x, y)) { return true; }
-            ;
 
             return CollidesWhenFalling && screen.blockboard[x, y].CollidesWhenPlaced;
         }

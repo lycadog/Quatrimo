@@ -12,12 +12,12 @@ using Microsoft.Xna.Framework;
 using Quatrimo.Screens;
 using Quatrimo.Entities;
 using Quatrimo.Entities.block;
+using Quatrimo.Encounter;
 
 namespace Quatrimo.Main
 {
-    public class RowScorer
+    public class RowScorer : BlockScorer
     {
-        GameScreen screen;
 
         int y;
         List<ScoreIterator> iterators = [];
@@ -33,7 +33,7 @@ namespace Quatrimo.Main
             InitializeIterators();
         }
 
-        public void Iterate()
+        public override void Update()
         {
             foreach (var iterator in iterators)
             {

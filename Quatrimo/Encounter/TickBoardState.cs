@@ -11,7 +11,6 @@ namespace Quatrimo.Main
     public class TickBoardState : BoardState
     {
 
-
         //tick every block on the board and process the board again if it is updated
         //next state: FinalizeTurnState
         public override void TickState()
@@ -21,6 +20,7 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
+            TickBlocks();
             for (int x = 0; x < screen.boardWidth; x++)
             {
                 for (int y = 0; y < screen.trueBoardHeight; y++)
@@ -28,7 +28,28 @@ namespace Quatrimo.Main
                     screen.blockboard[x, y].justPlaced = false;
                 }
             }
+
             screen.StartState(new StartTurnAndWaitState());
+        }
+
+        void TickBlocks()
+        {
+
+            
+
+            for (int x = 0; x < screen.boardWidth; x++)
+            {
+                for (int y = 0; y < screen.trueBoardHeight; y++)
+                {
+
+
+                    if(!screen.blockboard[x, y].ticked)
+                    {
+                        screen.blockboard[x, y].Tick();
+                    }
+                    
+                }
+            }
         }
     }
 }

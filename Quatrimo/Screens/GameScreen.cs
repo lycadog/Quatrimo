@@ -33,11 +33,12 @@ namespace Quatrimo.Screens
 
         public Block[,] blockboard;
         public bool[] RowUpdated; //if row of Y index has been updated this turn
+        public bool boardUpdated = false;
 
         public Bag Bag;
         public Piece CurrentPiece;
         public int boardWidth = 12;
-        public int trueBoardHeight = 28;
+        public int trueBoardHeight;
         public int visualBoardHeight = 20;
 
         //todo: maybe more possible values for updated board like updated rows
@@ -57,7 +58,8 @@ namespace Quatrimo.Screens
         private void CustomInitialize()
         {
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
-            InitializeBoard(boardWidth, visualBoardHeight);
+            trueBoardHeight = visualBoardHeight + 8;
+            InitializeBoard();
 
             RowUpdated = new bool[trueBoardHeight];
 
@@ -74,15 +76,15 @@ namespace Quatrimo.Screens
             state.TickState();
         }
 
-        public void InitializeBoard(int width, int height)
+        public void InitializeBoard()
         {
-            blockboard = new Block[width, height + 8];
-            MainBoard.GenerateGraphics(width, height);
-            MainHand.SetPosition(width);
+            blockboard = new Block[boardWidth, trueBoardHeight + 8];
+            MainBoard.GenerateGraphics(boardWidth, visualBoardHeight);
+            MainHand.SetPosition(boardWidth);
 
-            for(int x = 0; x < width; x++) //Initialize the board with empty blocks
+            for(int x = 0; x < boardWidth; x++) //Initialize the board with empty blocks
             {
-                for(int y = 0; y < height + 8; y++)
+                for(int y = 0; y < trueBoardHeight; y++)
                 {
                     SetEmpty(x, y);
                 }

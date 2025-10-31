@@ -337,6 +337,7 @@
     <Compile Include="Data\PoolPieceType.cs" />
     <Compile Include="Data\RunData.cs" />
     <Compile Include="Data\SimplePieceType.cs" />
+    <Compile Include="Encounter\BlockScorer.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
     <Compile Include="Entities\block\Block.cs" />
     <Compile Include="Entities\block\Block.Event.cs">

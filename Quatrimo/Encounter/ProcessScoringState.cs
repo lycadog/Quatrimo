@@ -20,7 +20,7 @@ namespace Quatrimo.Main
             bool complete = true;
             foreach(var scorer in RowScorers)
             {
-                scorer.Iterate();
+                scorer.Update();
                 if (!scorer.completed)
                 {
                     complete = false;
@@ -45,7 +45,7 @@ namespace Quatrimo.Main
 
             //remove scored blocks. this will update their respective rows.
             
-            foreach(var block in screen.scoredBlocks) //THIS is taking 250 ms. FAR too long
+            foreach(var block in screen.scoredBlocks)
             {
                 block.RemoveAndLower();
             }
