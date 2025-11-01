@@ -46,5 +46,9 @@ namespace Quatrimo.Entities.block
         {
             
         }
+
+        public override void Score(bool forcedRemoval = false)
+        {
+        }
     }
 }

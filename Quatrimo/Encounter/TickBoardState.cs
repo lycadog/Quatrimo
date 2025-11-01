@@ -15,40 +15,29 @@ namespace Quatrimo.Main
         //next state: FinalizeTurnState
         public override void TickState()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("TickBoardState's TickState method was somehow ran.");
         }
 
         protected override void OnStateStart()
         {
             TickBlocks();
-            for (int x = 0; x < screen.boardWidth; x++)
+
+            if (screen.boardUpdated)
             {
-                for (int y = 0; y < screen.trueBoardHeight; y++)
-                {
-                    screen.blockboard[x, y].justPlaced = false;
-                }
+                screen.StartState(new ProcessScoringState());
+                return;
             }
 
-            screen.StartState(new StartTurnAndWaitState());
+            screen.StartState(new FinalizeTurnState());
         }
 
         void TickBlocks()
         {
-
-            
-
-            for (int x = 0; x < screen.boardWidth; x++)
+            foreach(var block in screen.placedBlocks)
             {
-                for (int y = 0; y < screen.trueBoardHeight; y++)
-                {
+                if (block.ticked) { continue; }
 
-
-                    if(!screen.blockboard[x, y].ticked)
-                    {
-                        screen.blockboard[x, y].Tick();
-                    }
-                    
-                }
+                block.Tick();
             }
         }
     }

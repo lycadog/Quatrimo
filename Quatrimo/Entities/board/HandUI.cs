@@ -42,12 +42,12 @@ namespace Quatrimo.Entities.board
         
         public void DeselectCard()
         {
-            if(activeCard == null)
+            NonselectedCardDimSprite.Visible = false;
+            if (activeCard == null)
             {
-                throw new ArgumentException("HandUI Error: Attempted to deselect card with no card selected");
+                return;
             }
             activeCard.DeselectCard();
-            NonselectedCardDimSprite.Visible = false;
             activeCard = null;
         }
 

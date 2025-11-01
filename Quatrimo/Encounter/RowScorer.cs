@@ -16,21 +16,17 @@ using Quatrimo.Encounter;
 
 namespace Quatrimo.Main
 {
-    public class RowScorer : BlockScorer
+    public class RowScorer : Scorer
     {
-
         int y;
         List<ScoreIterator> iterators = [];
         List<ScoreIterator> staleIterators = [];
-        bool[] processed;
-        public bool completed = false;
 
         public RowScorer(GameScreen screen, int y)
         {
             this.screen = screen;
             this.y = y;
-            processed = new bool[screen.boardWidth];
-            InitializeIterators();
+            Start();
         }
 
         public override void Update()
@@ -46,13 +42,13 @@ namespace Quatrimo.Main
             }
             staleIterators.Clear();
 
-            if (iterators.Count == 0 && screen.ActiveAnimCount == 0)
+            if (iterators.Count == 0)
             {
                 completed = true;
             }
         }
 
-        void InitializeIterators()
+        protected override void Start()
         {
             List<Block> immediatelyScoredBlocks = [];
 
@@ -133,7 +129,7 @@ namespace Quatrimo.Main
 
         void ScoreBlock(int x, int index = 0)
         {
-            processed[x] = true;
+            if (screen.blockboard[x, y].scored) { return; }
             screen.ScoreBlock(screen.blockboard[x, y], index);
         }
 
@@ -160,18 +156,12 @@ namespace Quatrimo.Main
                 iterationCooldown = 0;
                 x += direction;
 
+                //if iterator has reached either edge of the board, stop iterating
                 if (x >= scorer.screen.boardWidth || x < 0)
                 {
                     Terminate();
                     return;
                 }
-
-                if (scorer.processed[x]) //if this spot has already been processed, don't process it again
-                {
-                    return;
-                }
-
-                //if iterator has reached either edge of the board, stop iterating
                 
                 scorer.ScoreBlock(x);
             }

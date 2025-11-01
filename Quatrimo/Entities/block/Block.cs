@@ -20,8 +20,8 @@ namespace Quatrimo.Entities.block
         protected GameScreen screen;
 
         public Piece piece;
-        public bool attachedToPiece = true;
         public bool justPlaced = false;
+        public bool scored = false;
         public bool ticked = false;
 
         public int rotation = 0;
@@ -66,6 +66,7 @@ namespace Quatrimo.Entities.block
             justPlaced = true;
 
             screen.AttachToBoard(this);
+            screen.placedBlocks.Add(this);
             screen.boardUpdated = true;
             updatePlacedBlockPos();
             screen.blockboard[boardX, boardY] = this; //TODO: DO clipping stuff
@@ -75,6 +76,7 @@ namespace Quatrimo.Entities.block
 
         public virtual void Score(bool forcedRemoval = false)
         {
+            scored = true;
             HideSprites();
         }
 
@@ -99,14 +101,15 @@ namespace Quatrimo.Entities.block
         /// <param name="screen"></param>
         protected void LowerCollumn()
         {
-            //screen.RowUpdated[boardY] = true;
+            screen.RowUpdated[boardY] = true;
 
             for (int y = boardY+1; y < screen.trueBoardHeight; y++) //go up and move each block down
             {
                 screen.RowUpdated[y] = true;
                 screen.blockboard[boardX, y].MoveTo(boardX, y - 1);
 
-                if(y == screen.trueBoardHeight - 1) //Create a new empty to fill in space created by lowering blocks at the top of the board
+                //Create a new empty to fill in space created by lowering blocks at the top of the board
+                if (y == screen.trueBoardHeight - 1)
                 {
                     screen.SetEmpty(boardX, y);
                 }
@@ -116,6 +119,7 @@ namespace Quatrimo.Entities.block
 
         public virtual void Tick()
         {
+            ticked = true;
             justPlaced = false;
         }
 
@@ -283,6 +287,7 @@ namespace Quatrimo.Entities.block
 
         private void CustomDestroy()
         {
+            screen.placedBlocks.Remove(this);
             Detach();
         }
 

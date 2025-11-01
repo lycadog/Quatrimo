@@ -10,7 +10,6 @@ namespace Quatrimo.Main
 {
     public class ProcessScoringState : BoardState
     {
-        List<RowScorer> RowScorers = [];
 
         //process scoring and starting scoring animations, then waiting for them to finish before continuing
         // (with if statement not stupid interrupt system of before)
@@ -18,7 +17,7 @@ namespace Quatrimo.Main
         public override void TickState()
         {
             bool complete = true;
-            foreach(var scorer in RowScorers)
+            foreach(var scorer in screen.activeScorers)
             {
                 scorer.Update();
                 if (!scorer.completed)
@@ -27,9 +26,9 @@ namespace Quatrimo.Main
                 }
             }
 
-            if (complete)
+            if (complete && screen.ActiveAnimCount == 0)
             {
-                RowScorers.Clear();
+                screen.boardUpdated = false;
                 endState();
             }
         }
@@ -41,11 +40,12 @@ namespace Quatrimo.Main
 
         void endState()
         {
-            //THE GAME IS LAGGING HERE SOMEHOW
+
+            //Remove scorers since they have already completed
+            screen.activeScorers.Clear();
 
             //remove scored blocks. this will update their respective rows.
-            
-            foreach(var block in screen.scoredBlocks)
+            foreach (var block in screen.scoredBlocks)
             {
                 block.RemoveAndLower();
             }
@@ -54,12 +54,11 @@ namespace Quatrimo.Main
             //recheck said rows and return to repeat the state and score everything
             CheckUpdatedRows();
 
-            if(RowScorers.Count > 0)
+            if(screen.activeScorers.Count > 0)
             {
                 return;
             }
 
-            
             screen.StartState(new TickBoardState());
         }
 
@@ -91,10 +90,9 @@ namespace Quatrimo.Main
                 }
                 
                 //finish processing for this row
-
                 if (rowScorable)
                 {
-                    RowScorers.Add(new RowScorer(screen, y));
+                    screen.activeScorers.Add(new RowScorer(screen, y));
                 }
             }
         }

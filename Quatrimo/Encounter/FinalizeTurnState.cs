@@ -20,7 +20,17 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
-            throw new NotImplementedException();
+            foreach(var block in screen.placedBlocks)
+            {
+                block.justPlaced = false;
+                block.scored = false;
+                block.ticked = false;
+
+            }
+            screen.Bag.DeselectCard();
+
+            screen.StartState(new StartTurnAndWaitState());
         }
+        
     }
 }

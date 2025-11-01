@@ -23,6 +23,7 @@ using Quatrimo.Main;
 using Quatrimo.Data;
 using System.Reflection;
 using System.Diagnostics;
+using Quatrimo.Encounter;
 
 
 namespace Quatrimo.Screens
@@ -30,6 +31,10 @@ namespace Quatrimo.Screens
     public partial class GameScreen
     {
         public BoardState state;
+
+        public List<Block> placedBlocks = [];
+        public List<Block> scoredBlocks = [];
+        public List<Scorer> activeScorers = [];
 
         public Block[,] blockboard;
         public bool[] RowUpdated; //if row of Y index has been updated this turn
@@ -41,14 +46,9 @@ namespace Quatrimo.Screens
         public int trueBoardHeight;
         public int visualBoardHeight = 20;
 
-        //todo: maybe more possible values for updated board like updated rows
-
-        //score variables
-        public List<Block> scoredBlocks = [];
         public int level = 0;
         public int rowsRequiredForLevelup = 4;
         public int rowsCleared = 0;
-
         public double totalScore = 0;
         public double turnScore = 0;
         public double turnTimes = 1;
@@ -107,9 +107,8 @@ namespace Quatrimo.Screens
 
         public ScoreAnimation ScoreBlock(Block block, int index, HsvColor color)
         {
-            ScoreAnimation anim = Factories.ScoreAnimationFactory.CreateNew();
+            ScoreAnimation anim = Factories.ScoreAnimationFactory.CreateNew(FalingBlocksLayer);
             AttachToBoard(anim);
-            anim.MoveToLayer(FalingBlocksLayer);
             anim.SetColor(color);
             anim.StartScoreAnimation(block.boardX, block.boardY, index);
 
@@ -118,6 +117,7 @@ namespace Quatrimo.Screens
 
             turnScore += block.score;
             turnTimes += block.times;
+            boardUpdated = true;
             return anim;
         }
 

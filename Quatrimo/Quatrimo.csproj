@@ -339,6 +339,7 @@
     <Compile Include="Data\SimplePieceType.cs" />
     <Compile Include="Encounter\BlockScorer.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
+    <Compile Include="Encounter\Scorer.cs" />
     <Compile Include="Entities\block\Block.cs" />
     <Compile Include="Entities\block\Block.Event.cs">
       <DependentUpon>Block.cs</DependentUpon>

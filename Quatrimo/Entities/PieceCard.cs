@@ -82,7 +82,8 @@ namespace Quatrimo.Entities
         {
             RelativeZ = 3;
 
-            SelectedBarTop.Visible = true;
+            if(index > 0) { SelectedBarTop.Visible = true; }
+            
             SelectedBarBottom.Visible = true;
             
         }
