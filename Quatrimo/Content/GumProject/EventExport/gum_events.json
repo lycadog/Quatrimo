@@ -1,27 +1,5 @@
 {
   "UserEvents": {
-    "57889c9d05b091839687ed0be0f8ab51d3a709f9295baa9084f0d0d2d3c80577": [
-      {
-        "NewName": "PieceCard",
-        "OldName": null,
-        "ElementType": "Components",
-        "EventType": 0,
-        "TimestampUtc": "2025-09-07T01:14:54.0814316Z"
-      },
-      {
-        "NewName": "PieceCard (Sprite).CardBorder",
-        "OldName": null,
-        "ElementType": "Components",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-07T01:17:26.1542319Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "PieceCard",
-        "ElementType": "Components",
-        "EventType": 1,
-        "TimestampUtc": "2025-09-15T17:14:14.8776248Z"
-      }
-    ]
+    "57889c9d05b091839687ed0be0f8ab51d3a709f9295baa9084f0d0d2d3c80577": []
   }
 }

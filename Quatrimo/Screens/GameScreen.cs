@@ -63,7 +63,7 @@ namespace Quatrimo.Screens
 
             RowUpdated = new bool[trueBoardHeight];
 
-            Bag = GlobalData.magnetBag.CreateBag();
+            Bag = GlobalData.quantumBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
             StartState(new StartTurnAndWaitState());

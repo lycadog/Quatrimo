@@ -36,7 +36,13 @@
     <Variable>
       <Type>float</Type>
       <Name>ColoredRectangleInstance.Width</Name>
-      <Value xsi:type="xsd:float">480</Value>
+      <Value xsi:type="xsd:float">755</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ColoredRectangleInstance.X</Name>
+      <Value xsi:type="xsd:float">-150</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

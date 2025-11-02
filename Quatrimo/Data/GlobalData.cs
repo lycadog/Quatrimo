@@ -27,7 +27,7 @@ namespace Quatrimo.Data
         public static PieceShape sStick = new(new int[,] { { 1 }, { 2 }, { 3 } }, 1, 0, 3, "Stick");
         public static PieceShape sTwig = new(new int[,] { { 1 }, { 2 } }, 0, 0, 2, "Twig", -1);
         public static PieceShape sNub = new(new int[,] { { 1 } }, 0, 0, 1, "Nub");
-        public static PieceShape sWedge = new(new int[,] { { 1, 0 }, { 2, 3 } }, 0, 1, 3, "Wedge", -1);
+        public static PieceShape sWedge = new(new int[,] { { 1, 0 }, { 2, 3 } }, 1, 0, 3, "Wedge", 0, -1);
         public static PieceShape sSlash = new(new int[,] { { 1, 0 }, { 0, 2 } }, 0, 0, 2, "Slash", -1, -1);
 
         public static PieceShape sSmallTee = new(new int[,] { { 0, 1 }, { 2, 2 }, { 0, 3 } }, 1, 1, 4, "Small Tee");
@@ -51,8 +51,8 @@ namespace Quatrimo.Data
 
         public static PieceShape sCaret = new(new int[,] { { 0, 1 }, { 2, 0 }, { 0, 3 } }, 1, 1, 3, "Caret");
         public static PieceShape sBoson = new(new int[,] { { 0, 1, 0 }, { 0, 2, 3 }, { 4, 0, 0 } }, 1, 1, 4, "Boson", 0, -1);
-        public static PieceShape sLLepton = new(new int[,] { { 1, 2, 0 }, { 0, 0, 0 }, { 0, 3, 4 } }, 1, 1, 4, "Left Lepton");
-        public static PieceShape sRLepton = new(new int[,] { { 0, 1, 2 }, { 0, 0, 0 }, { 3, 4, 0 } }, 1, 1, 4, "Right Lepton");
+        public static PieceShape sLLepton = new(new int[,] { { 1, 2 }, { 0, 0 }, { 3, 0 } }, 1, 1, 3, "Left Lepton");
+        public static PieceShape sRLepton = new(new int[,] { { 3, 0 }, { 0, 0}, { 1, 2} }, 1, 1, 3, "Right Lepton");
         public static PieceShape sStump = new(new int[,] { { 1, 0 }, { 2, 3 }, { 2, 3 }, { 4, 0 } }, 1, 1, 6, "Stump", -1 );
 
         //public static PieceShape s = new(new int[,] { { } })
@@ -60,6 +60,8 @@ namespace Quatrimo.Data
         public static StarterBag magnetBag = new([sBigTee.B, sLHatchet.B, sRHatchet.B, sDipole.B, sLHook.B, sRHook.B, sLine.B, sTwig.B, sWedge.B],
             [new HsvColor(334, .62, .97), new HsvColor(294, .77, .973), new HsvColor(280, .94, .94), new HsvColor(258, .65, .98), new HsvColor(163, .56, .97), new HsvColor(124, .66, .96), new HsvColor(348, .75, .9),new HsvColor(36, .73, 1), new HsvColor(240, .73, .95)],
                 "magnet bag", 80, 30);
+
+        public static StarterBag quantumBag = new([sCaret.B, sBoson.B, sLLepton.B, sRLepton.B, sStump.B, sSlash.B, sSmallTee.B, sLine.B, sTwig.B], "quantum bag");
         
         //hello :3 go to turn start state! we will start with bag stuff, but we'll need to figure out inputs and piece stuff after!
 

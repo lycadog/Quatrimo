@@ -24,17 +24,25 @@ namespace Quatrimo.Main
                 //play selected piece if SelectedCard != -1
                 if (SelectedCard != -1)
                 {
-                    
-                    screen.PlayCard(SelectedCard);
-                    screen.StartState(new MidTurnState());
+
+                    PlayPiece();
                     return;
                 }
+            }
+
+            if (Keybinds.Up.Pushed)
+            {
+                ChangeSelection(-1);
+            }else if (Keybinds.Down.Pushed)
+            {
+                ChangeSelection(1);
             }
 
             if (InputManager.Keyboard.KeyPushed(Keys.D1))
             {
                 SelectPiece(0);
-            }else if (InputManager.Keyboard.KeyPushed(Keys.D2))
+            }
+            else if (InputManager.Keyboard.KeyPushed(Keys.D2))
             {
                 SelectPiece(1);
             }
@@ -84,18 +92,37 @@ namespace Quatrimo.Main
             bag.Tick();
         }
 
-        void SelectPiece(int index)
+        void PlayPiece()
+        {
+            screen.PlayCard(SelectedCard);
+            screen.StartState(new MidTurnState());
+        }
+
+        void ChangeSelection(int direction)
+        {
+            int index = SelectedCard + direction;
+            if (index >= bag.Hand.Count || index < 0) { return; }
+            DeselectPiece();
+            SelectPiece(index, false);
+        }
+
+        void SelectPiece(int index, bool shouldPlayIfMatching = true)
         {
             if (index >= bag.Hand.Count) { return; }
-            if(SelectedCard == index)
+            if(SelectedCard == index && shouldPlayIfMatching)
             {
-                bag.DeselectCard();
-                SelectedCard = -1;
+                PlayPiece();
                 return;
             }
 
             SelectedCard = index;
             bag.SelectCard(index);
+        }
+
+        void DeselectPiece()
+        {
+            bag.DeselectCard();
+            SelectedCard = -1;
         }
     }
 }
