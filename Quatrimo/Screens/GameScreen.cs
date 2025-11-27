@@ -24,6 +24,7 @@ using Quatrimo.Data;
 using System.Reflection;
 using System.Diagnostics;
 using Quatrimo.Encounter;
+using FlatRedBall.Graphics;
 
 
 namespace Quatrimo.Screens
@@ -57,6 +58,7 @@ namespace Quatrimo.Screens
 
         private void CustomInitialize()
         {
+            FlatRedBallServices.GraphicsDeviceManager.HardwareModeSwitch = false;
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;
             InitializeBoard();
@@ -71,6 +73,19 @@ namespace Quatrimo.Screens
 
         private void CustomActivity(bool firstTimeCalled)
         {
+            if (InputManager.Keyboard.KeyPushed(Microsoft.Xna.Framework.Input.Keys.F4))
+            {
+                if (FlatRedBallServices.GraphicsOptions.IsFullScreen)
+                {
+                    FlatRedBallServices.GraphicsOptions.IsFullScreen = false;
+                }
+                else
+                {
+                    var displayMode = FlatRedBallServices.GraphicsDevice.DisplayMode;
+                    FlatRedBallServices.GraphicsOptions.SetFullScreen(displayMode.Width, displayMode.Height);
+                }
+            }
+
             FlatRedBall.Debugging.Debugger.Write("ActiveAnimCount: " + ActiveAnimCount);
             Keybinds.UpdateBinds();
             state.TickState();

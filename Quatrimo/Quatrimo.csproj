@@ -329,6 +329,7 @@
     <Compile Include="BagTypes\Bagblocks\BlockData.cs" />
     <Compile Include="BagTypes\StarterBag.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
+    <Compile Include="Data\Duration.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="Data\HsvColor.cs" />
     <Compile Include="Data\ObjPool.cs" />

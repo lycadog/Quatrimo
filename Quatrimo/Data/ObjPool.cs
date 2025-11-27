@@ -46,13 +46,18 @@ namespace Quatrimo.Data
             }
         }
 
-        //for single element pools
+        /// <summary>
+        /// Use for single element pools
+        /// </summary>
+        /// <param name="value"></param>
         public ObjPool(T value)
         {
             addNewEntry(value, 1, 0);
         }
 
-        //to add elements later
+        /// <summary>
+        /// Use to create an empty pool and add elements later
+        /// </summary>
         public ObjPool() { }
 
         public T getRandom(out weightedEntry entry)
