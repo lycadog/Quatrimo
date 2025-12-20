@@ -31,6 +31,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>barTop</Name>
     </None>
+    <None Include="Content\Bm437_ToshibaSat_8x16 - Copy.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Bm437_ToshibaSat_8x16 - Copy</Name>
+    </None>
     <None Include="Content\GumProject\Components\Controls\ButtonClose.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>ButtonClose</Name>
@@ -250,14 +254,6 @@
     <None Include="Content\GumProject\FontCache\Font22Arial_Bold_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font22Arial_Bold_0</Name>
-    </None>
-    <None Include="Content\GumProject\FontCache\Font22Calibri.fnt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Font22Calibri</Name>
-    </None>
-    <None Include="Content\GumProject\FontCache\Font22Calibri_0.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Font22Calibri_0</Name>
     </None>
     <None Include="Content\GumProject\FontCache\Font28Arial_Bold.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

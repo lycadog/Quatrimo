@@ -1,5 +1,48 @@
 {
   "UserEvents": {
-    "57889c9d05b091839687ed0be0f8ab51d3a709f9295baa9084f0d0d2d3c80577": []
+    "57889c9d05b091839687ed0be0f8ab51d3a709f9295baa9084f0d0d2d3c80577": [
+      {
+        "NewName": "GameScreenGum.ButtonStandardInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-20T00:22:03.994057Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Controls/ButtonStandard ButtonStandardInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-12-20T00:24:09.9938299Z"
+      },
+      {
+        "NewName": "GameScreenGum.ButtonIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-20T00:24:13.5074819Z"
+      },
+      {
+        "NewName": "GameScreenGum.CheckBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-20T00:24:55.6125315Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Controls/CheckBox CheckBoxInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-12-20T00:26:08.1001641Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Controls/ButtonIcon ButtonIconInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-12-20T00:26:11.184374Z"
+      }
+    ]
   }
 }

@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationChainArraySave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileRelativeTextures>true</FileRelativeTextures>
+  <TimeMeasurementUnit>Undefined</TimeMeasurementUnit>
+  <CoordinateType>Pixel</CoordinateType>
+  <AnimationChain>
+    <Name>ticking</Name>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>11</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>10</LeftCoordinate>
+      <RightCoordinate>21</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>20</LeftCoordinate>
+      <RightCoordinate>31</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>30</LeftCoordinate>
+      <RightCoordinate>41</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>40</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>50</LeftCoordinate>
+      <RightCoordinate>61</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>60</LeftCoordinate>
+      <RightCoordinate>71</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>70</LeftCoordinate>
+      <RightCoordinate>81</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>80</LeftCoordinate>
+      <RightCoordinate>91</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>14</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>13</TopCoordinate>
+      <BottomCoordinate>27</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>26</TopCoordinate>
+      <BottomCoordinate>40</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>39</TopCoordinate>
+      <BottomCoordinate>53</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>52</TopCoordinate>
+      <BottomCoordinate>66</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>65</TopCoordinate>
+      <BottomCoordinate>79</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>78</TopCoordinate>
+      <BottomCoordinate>92</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>91</TopCoordinate>
+      <BottomCoordinate>105</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>104</TopCoordinate>
+      <BottomCoordinate>118</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>117</TopCoordinate>
+      <BottomCoordinate>131</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>../numberbox.png</TextureName>
+      <FrameLength>0.02</FrameLength>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>130</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+</AnimationChainArraySave>
