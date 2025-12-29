@@ -42,6 +42,41 @@
         "ElementType": "Screens",
         "EventType": 6,
         "TimestampUtc": "2025-12-20T00:26:11.184374Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text aaaa in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-12-27T22:59:08.8923698Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-27T22:59:14.7333965Z"
+      },
+      {
+        "NewName": "GameScreenGum.ButtonStandardInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-27T23:00:07.5012045Z"
+      },
+      {
+        "NewName": "Quatrimo/FancyPuaseButton",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2025-12-28T00:07:06.3152685Z"
+      },
+      {
+        "NewName": "GameScreenGum.FancyPuaseButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-12-28T00:57:12.7751412Z"
       }
     ]
   }

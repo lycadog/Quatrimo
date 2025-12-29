@@ -62,8 +62,7 @@ namespace Quatrimo.Screens
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;
             InitializeBoard();
-
-            RowUpdated = new bool[trueBoardHeight];
+            
 
             Bag = GlobalData.quantumBag.CreateBag();
             Bag.StartEncounter(MainHand);

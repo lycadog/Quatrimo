@@ -191,6 +191,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>VerticalLines</Name>
     </None>
+    <None Include="Content\GumProject\Components\Quatrimo\FancyPuaseButton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>FancyPuaseButton</Name>
+    </None>
     <None Include="Content\GumProject\FontCache\Font10Arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font10Arial</Name>
@@ -238,6 +242,14 @@
     <None Include="Content\GumProject\FontCache\Font16Arial_Bold_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font16Arial_Bold_0</Name>
+    </None>
+    <None Include="Content\GumProject\FontCache\Font18Arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font18Arial</Name>
+    </None>
+    <None Include="Content\GumProject\FontCache\Font18Arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font18Arial_0</Name>
     </None>
     <None Include="Content\GumProject\FontCache\Font18Arial_Bold.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -624,6 +636,10 @@
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\FancyPuaseButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\FancyPuaseButtonRuntime.Generated.cs">
+      <DependentUpon>FancyPuaseButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
