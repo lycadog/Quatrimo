@@ -120,6 +120,9 @@
       "Name": "Entities\\board\\HandUI"
     },
     {
+      "Name": "Entities\\board\\NumberBox"
+    },
+    {
       "Name": "Entities\\Piece"
     },
     {

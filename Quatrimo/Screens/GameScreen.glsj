@@ -217,6 +217,24 @@
       "GenerateTimedEmit": true
     },
     {
+      "InstanceName": "NumberBoxList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\board\\NumberBox",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
       "InstanceName": "CameraInstance",
       "SourceClassType": "FlatRedBall.Camera",
       "Properties": [
