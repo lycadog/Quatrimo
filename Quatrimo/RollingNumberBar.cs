@@ -10,7 +10,7 @@ namespace Quatrimo
     public class RollingNumberBar
     {
         int digits;
-        NumberBox[] boxes;
+        RollingNumberBox[] boxes;
 
         
 

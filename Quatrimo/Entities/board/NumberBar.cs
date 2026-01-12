@@ -12,12 +12,9 @@ using Microsoft.Xna.Framework;
 
 namespace Quatrimo.Entities.board
 {
-    public partial class NumberBox
+    public partial class NumberBar
     {
-        int totalRolls;
-        int currentRolls;
-        int displayedNumber;
-        int staleNumber;
+        Sprite[] sprites;
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not
@@ -25,35 +22,40 @@ namespace Quatrimo.Entities.board
         /// </summary>
         private void CustomInitialize()
         {
-            
+            sprites = new Sprite[Digits];
+            for(int i = 0; i < Digits; i++)
+            {
+                Sprite sprite = SpriteManager.AddSprite(numberBox, LayerProvidedByContainer);
+                sprite.AttachTo(this);
+                sprite.RelativeX = i * 10;
+                sprites[i] = sprite;
+
+                sprite.LeftTexturePixel = 100;
+                sprite.RightTexturePixel = 111;
+                sprite.BottomTexturePixel = 14;
+                sprite.Width = 11;
+                sprite.Height = 14;
+            }
+
+        }
+
+        public void UpdateBoxes(int number)
+        {
+            for(int i = 0; i < Digits; i++)
+            {
+
+            }
+        }
+
+        void SetBox(int index, int number)
+        {
+            sprites[index].LeftTexturePixel = 10 * number;
+            sprites[index].RightTexturePixel = sprites[index].LeftTexturePixel + 11;
         }
 
         private void CustomActivity()
         {
             
-
-            if (BoxSprite.JustChangedFrame)//check current animation frame and get number.
-            {
-                displayedNumber = BoxSprite.CurrentFrameIndex / 11;
-
-                //we need a way to update current rolls! if the number displayed changes we need to figure that out and update current rolls!
-                //check if the animation should be paused on the current number or should keep going
-
-
-                //if the animation has looped,
-                if (BoxSprite.JustCycled)
-                {
-                    //fire rollover event
-                }
-            }
-        }
-
-        /// <summary>
-        /// Resets state to default
-        /// </summary>
-        public void Reset(bool markInactive = false)
-        {
-
         }
 
         private void CustomDestroy()

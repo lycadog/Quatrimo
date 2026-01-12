@@ -55,8 +55,7 @@ namespace Quatrimo.Entities.board
                 for (int x = 0; x < width; x++)
                 {
 
-                    Sprite sprite = SpriteManager.AddSprite(atlas);
-                    SpriteManager.AddToLayer(sprite, LayerProvidedByContainer);
+                    Sprite sprite = SpriteManager.AddSprite(atlas, LayerProvidedByContainer);
                     sprite.RelativeX = x * 10 + 10; sprite.RelativeY = y * 10 + 10;
                     sprite.AttachTo(this);
                     BGSprites.Add(sprite);

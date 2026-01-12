@@ -371,9 +371,13 @@
     <Compile Include="Entities\board\HandUI.Generated.cs">
       <DependentUpon>HandUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\board\NumberBox.cs" />
-    <Compile Include="Entities\board\NumberBox.Generated.cs">
-      <DependentUpon>NumberBox.cs</DependentUpon>
+    <Compile Include="Entities\board\NumberBar.cs" />
+    <Compile Include="Entities\board\NumberBar.Generated.cs">
+      <DependentUpon>NumberBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\board\RollingNumberBox.cs" />
+    <Compile Include="Entities\board\RollingNumberBox.Generated.cs">
+      <DependentUpon>RollingNumberBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\ScoreAnimation.cs" />
     <Compile Include="Entities\ScoreAnimation.Generated.cs">
@@ -407,7 +411,8 @@
     </Compile>
     <Compile Include="Factories\BlockFactory.Generated.cs" />
     <Compile Include="Factories\HandUIFactory.Generated.cs" />
-    <Compile Include="Factories\NumberBoxFactory.Generated.cs" />
+    <Compile Include="Factories\NumberBarFactory.Generated.cs" />
+    <Compile Include="Factories\RollingNumberBoxFactory.Generated.cs" />
     <Compile Include="Factories\PieceCardFactory.Generated.cs" />
     <Compile Include="Factories\PieceFactory.Generated.cs" />
     <Compile Include="Factories\BoardFactory.Generated.cs" />

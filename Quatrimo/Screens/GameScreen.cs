@@ -56,11 +56,14 @@ namespace Quatrimo.Screens
 
         public int ActiveAnimCount { get => ScoreAnimations.Count; }
 
+        public RollingNumberBar ScoreBar;
+
         private void CustomInitialize()
         {
             FlatRedBallServices.GraphicsDeviceManager.HardwareModeSwitch = false;
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;
+            RowUpdated = new bool[trueBoardHeight];
             InitializeBoard();
             
 

@@ -359,13 +359,19 @@
         {
           "Type": "float",
           "Member": "BottomTexturePixel",
-          "Value": 200.0,
+          "Value": 50.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "LeftTexturePixel",
+          "Value": 80.0,
           "Time": 0.0
         },
         {
           "Type": "float",
           "Member": "RightTexturePixel",
-          "Value": 10.0,
+          "Value": 90.0,
           "Time": 0.0
         },
         {
@@ -383,13 +389,13 @@
         {
           "Type": "float",
           "Member": "TopTexturePixel",
-          "Value": 190.0,
+          "Value": 40.0,
           "Time": 0.0
         },
         {
           "Type": "float",
           "Member": "X",
-          "Value": 21.5,
+          "Value": 21.0,
           "Time": 0.0
         },
         {
