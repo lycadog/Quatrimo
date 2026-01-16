@@ -47,6 +47,8 @@ namespace Quatrimo.Screens
         public int trueBoardHeight;
         public int visualBoardHeight = 20;
 
+        public Enemy Enemy;
+
         public int level = 0;
         public int rowsRequiredForLevelup = 4;
         public int rowsCleared = 0;
@@ -65,9 +67,10 @@ namespace Quatrimo.Screens
             trueBoardHeight = visualBoardHeight + 8;
             RowUpdated = new bool[trueBoardHeight];
             InitializeBoard();
-            
 
-            Bag = GlobalData.quantumBag.CreateBag();
+            GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
+
+            Bag = GlobalData.debugBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
             StartState(new StartTurnAndWaitState());
@@ -88,7 +91,6 @@ namespace Quatrimo.Screens
                 }
             }
 
-            FlatRedBall.Debugging.Debugger.Write("ActiveAnimCount: " + ActiveAnimCount);
             Keybinds.UpdateBinds();
             state.TickState();
         }
@@ -98,7 +100,6 @@ namespace Quatrimo.Screens
             blockboard = new Block[boardWidth, trueBoardHeight + 8];
             MainBoard.GenerateGraphics(boardWidth, visualBoardHeight);
             MainHand.SetPosition(boardWidth);
-
             for(int x = 0; x < boardWidth; x++) //Initialize the board with empty blocks
             {
                 for(int y = 0; y < trueBoardHeight; y++)
@@ -135,7 +136,15 @@ namespace Quatrimo.Screens
             turnScore += block.score;
             turnTimes += block.times;
             boardUpdated = true;
+            ScoreNumberBar.UpdateBoxes((int)turnScore);
             return anim;
+        }
+
+        public void DamageEnemy(double damage)
+        {
+            Enemy.TakeDamage(damage);
+            EnemyHPNumberBar.UpdateBoxes((int)Enemy.health);
+
         }
 
         public void DiscardPlayedCard()
@@ -172,6 +181,10 @@ namespace Quatrimo.Screens
         private void CustomDestroy()
         {
             SpriteManager.RemoveSpriteList(Sprites);
+            foreach(var block in blockboard)
+            {
+                block?.Destroy();
+            }
         }
 
         private static void CustomLoadStaticContent(string contentManagerName)

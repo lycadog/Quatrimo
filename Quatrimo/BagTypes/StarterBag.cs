@@ -26,7 +26,7 @@ namespace Quatrimo
         /// <param name="name"></param>
         /// <param name="pieceTextureLeft"></param>
         /// <param name="pieceTextureTop"></param>
-        public StarterBag(PieceType[] pieces, HsvColor[] colors, string name, int pieceTextureLeft = 0, int pieceTextureTop = 0)
+        public StarterBag(PieceType[] pieces, HsvColor[] colors, string name, int pieceTextureLeft = 0, int pieceTextureTop = 30)
         {
             this.pieces = pieces;
             this.colors = colors;
@@ -42,10 +42,10 @@ namespace Quatrimo
         /// <param name="name"></param>
         /// <param name="pieceTextureLeft"></param>
         /// <param name="pieceTextureTop"></param>
-        public StarterBag(PieceType[] pieces, string name, int pieceTextureLeft = 0, int pieceTextureTop = 0 )
+        public StarterBag(PieceType[] pieces, string name, int pieceTextureLeft = 0, int pieceTextureTop = 30)
         {
             this.pieces = pieces;
-            this.colors = [];
+            colors = [];
             this.pieceTextureLeft = pieceTextureLeft;
             this.pieceTextureTop = pieceTextureTop;
             this.name = name;

@@ -21,7 +21,7 @@
         }
       ],
       "Name": "Scorable",
-      "DefaultValue": false,
+      "DefaultValue": true,
       "SetByDerived": true,
       "DefinedByBase": true,
       "Category": "Collision"
@@ -40,7 +40,7 @@
         }
       ],
       "Name": "CollidesWhenFalling",
-      "DefaultValue": false,
+      "DefaultValue": true,
       "SetByDerived": true,
       "DefinedByBase": true,
       "Summary": "If the block is solid and collides while falling",
@@ -60,29 +60,11 @@
         }
       ],
       "Name": "CollidesWhenPlaced",
-      "DefaultValue": false,
+      "DefaultValue": true,
       "SetByDerived": true,
       "DefinedByBase": true,
       "Summary": "If the block collides with falling blocks while on the board",
       "Category": "Collision"
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
-          "Value": "int",
-          "Type": "String"
-        },
-        {
-          "Name": "Category",
-          "Value": "Position",
-          "Type": "String"
-        }
-      ],
-      "Name": "localX",
-      "SetByDerived": true,
-      "DefinedByBase": true,
-      "Category": "Position"
     },
     {
       "Properties": [
@@ -100,7 +82,6 @@
       "Name": "OverridesTexture",
       "DefaultValue": true,
       "SetByDerived": true,
-      "IsShared": true,
       "DefinedByBase": true,
       "Summary": "Should override piece texture?",
       "Category": "Visuals"
@@ -138,7 +119,7 @@
         }
       ],
       "Name": "DefaultLayer2Visibility",
-      "DefaultValue": false,
+      "DefaultValue": true,
       "SetByDerived": true,
       "DefinedByBase": true,
       "Category": "Visuals"
@@ -157,7 +138,7 @@
         }
       ],
       "Name": "DefaultLayer3Visibility",
-      "DefaultValue": false,
+      "DefaultValue": true,
       "SetByDerived": true,
       "DefinedByBase": true,
       "Category": "Visuals"
@@ -176,8 +157,10 @@
         }
       ],
       "Name": "Layer1LeftTexture",
+      "DefaultValue": 140.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -194,8 +177,11 @@
         }
       ],
       "Name": "Layer1TopTexture",
+      "DefaultValue": 0.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "Summary": "X,Y Positions for Layer1 Sprite",
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -212,8 +198,10 @@
         }
       ],
       "Name": "Layer2LeftTexture",
+      "DefaultValue": 140.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -230,8 +218,11 @@
         }
       ],
       "Name": "Layer2TopTexture",
+      "DefaultValue": 10.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "Summary": "X,Y Positions for Layer2 Sprite",
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -248,8 +239,10 @@
         }
       ],
       "Name": "Layer3LeftTexture",
+      "DefaultValue": 0.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -266,8 +259,11 @@
         }
       ],
       "Name": "Layer3TopTexture",
+      "DefaultValue": 0.0,
       "SetByDerived": true,
       "DefinedByBase": true,
+      "Summary": "X,Y Positions for Layer2 Sprite",
+      "CreatesEvent": true,
       "Category": "Visuals"
     },
     {
@@ -328,46 +324,8 @@
       "SetByDerived": true,
       "DefinedByBase": true,
       "Category": "Collision"
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
-          "Value": "int",
-          "Type": "String"
-        },
-        {
-          "Name": "Category",
-          "Value": "Position",
-          "Type": "String"
-        }
-      ],
-      "Name": "boardX",
-      "SetByDerived": true,
-      "DefinedByBase": true,
-      "CreatesEvent": true,
-      "Category": "Position"
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
-          "Value": "int",
-          "Type": "String"
-        },
-        {
-          "Name": "Category",
-          "Value": "Position",
-          "Type": "String"
-        }
-      ],
-      "Name": "boardY",
-      "SetByDerived": true,
-      "DefinedByBase": true,
-      "CreatesEvent": true,
-      "Category": "Position"
     }
   ],
-  "Name": "Entities\\block\\EmptyBlock",
+  "Name": "Entities\\block\\CursedBlock",
   "CustomClassesForExport": []
 }

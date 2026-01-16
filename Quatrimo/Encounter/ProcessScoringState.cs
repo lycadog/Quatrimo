@@ -64,6 +64,7 @@ namespace Quatrimo.Main
 
         void CheckUpdatedRows()
         {
+            //iterate through each row and check them all
             for (int y = 0; y < screen.trueBoardHeight; y++)
             {
                 if (!screen.RowUpdated[y]) //if row not updated: skip row
@@ -81,7 +82,7 @@ namespace Quatrimo.Main
                     if (!screen.blockboard[x, y].Scorable) //if a block isn't scorable check if we need to stop scoring
                     {
                         nonScorableBlocks++;
-                        if (nonScorableBlocks > RunData.EmptySpacesAllowedForScoring)
+                        if (nonScorableBlocks > PlayerStats.EmptySpacesAllowedForScoring)
                         {
                             rowScorable = false;
                             break;

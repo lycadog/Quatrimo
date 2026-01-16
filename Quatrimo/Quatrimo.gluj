@@ -111,6 +111,9 @@
       "Name": "Entities\\block\\Block"
     },
     {
+      "Name": "Entities\\block\\CursedBlock"
+    },
+    {
       "Name": "Entities\\block\\EmptyBlock"
     },
     {

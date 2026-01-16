@@ -27,7 +27,7 @@ namespace Quatrimo.Entities.board
             {
                 Sprite sprite = SpriteManager.AddSprite(numberBox, LayerProvidedByContainer);
                 sprite.AttachTo(this);
-                sprite.RelativeX = i * 10;
+                sprite.RelativeX = -(i * 10);
                 sprites[i] = sprite;
 
                 sprite.LeftTexturePixel = 100;
@@ -41,9 +41,15 @@ namespace Quatrimo.Entities.board
 
         public void UpdateBoxes(int number)
         {
+            //TODO: check if number has too many digits before iterating. if so change functionality
+
+            int quotient = number, remainder;
+
             for(int i = 0; i < Digits; i++)
             {
-
+                quotient = Math.DivRem(quotient, 10, out remainder); //divide by 10, use the remainder for the box. then remove
+                SetBox(i, remainder);
+                if(quotient == 0) { return; }
             }
         }
 
@@ -60,12 +66,16 @@ namespace Quatrimo.Entities.board
 
         private void CustomDestroy()
         {
-            
+            foreach(var sprite in sprites)
+            {
+                SpriteManager.RemoveSprite(sprite);
+            }
         }
 
         private static void CustomLoadStaticContent(string contentManagerName)
         {
             
         }
+
     }
 }

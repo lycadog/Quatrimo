@@ -197,8 +197,61 @@
       ],
       "Name": "OverridesTexture",
       "SetByDerived": true,
-      "IsShared": true,
       "Summary": "Should override piece texture?",
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "DefaultLayer1Visibility",
+      "DefaultValue": true,
+      "SetByDerived": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "DefaultLayer2Visibility",
+      "DefaultValue": false,
+      "SetByDerived": true,
+      "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "DefaultLayer3Visibility",
+      "DefaultValue": false,
+      "SetByDerived": true,
       "Category": "Visuals"
     },
     {
@@ -348,6 +401,43 @@
       "SetByDerived": true,
       "Summary": "If the sprite should rotate with the block",
       "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "PlacedClippingPriority",
+      "DefaultValue": 0,
+      "SetByDerived": true,
+      "Summary": "Priority of block's clipping fix method when it is placed and a falling block is placed on it",
+      "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Collision",
+          "Type": "String"
+        }
+      ],
+      "Name": "FallingClippingPriority",
+      "DefaultValue": -1,
+      "SetByDerived": true,
+      "Category": "Collision"
     }
   ],
   "NamedObjects": [
@@ -381,6 +471,12 @@
           "Time": 0.0
         },
         {
+          "Type": "bool",
+          "Member": "IgnoresParentVisibility",
+          "Value": false,
+          "Time": 0.0
+        },
+        {
           "Type": "Texture2D",
           "Member": "Texture",
           "Value": "atlas",
@@ -390,6 +486,12 @@
           "Type": "float",
           "Member": "TextureScale",
           "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": true,
           "Time": 0.0
         },
         {
@@ -434,6 +536,12 @@
           "Time": 0.0
         },
         {
+          "Type": "bool",
+          "Member": "IgnoresParentVisibility",
+          "Value": false,
+          "Time": 0.0
+        },
+        {
           "Type": "Texture2D",
           "Member": "Texture",
           "Value": "atlas",
@@ -443,6 +551,12 @@
           "Type": "float",
           "Member": "TextureScale",
           "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": false,
           "Time": 0.0
         },
         {
@@ -493,6 +607,12 @@
           "Time": 0.0
         },
         {
+          "Type": "bool",
+          "Member": "IgnoresParentVisibility",
+          "Value": false,
+          "Time": 0.0
+        },
+        {
           "Type": "Texture2D",
           "Member": "Texture",
           "Value": "atlas",
@@ -502,6 +622,12 @@
           "Type": "float",
           "Member": "TextureScale",
           "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": false,
           "Time": 0.0
         },
         {
@@ -543,6 +669,12 @@
           "Type": "float",
           "Member": "BottomTexturePixel",
           "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "IgnoresParentVisibility",
+          "Value": true,
           "Time": 0.0
         },
         {
@@ -620,6 +752,12 @@
           "Type": "float",
           "Member": "Green",
           "Value": 0.7058824,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "IgnoresParentVisibility",
+          "Value": true,
           "Time": 0.0
         },
         {

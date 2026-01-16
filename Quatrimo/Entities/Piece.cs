@@ -59,7 +59,7 @@ namespace Quatrimo.Entities
         {
             this.screen = screen;
             boardX = screen.boardWidth/2;
-            boardY = screen.visualBoardHeight-2; //set start position of piece
+            boardY = screen.visualBoardHeight-1; //set start position of piece
             
             foreach (var bagBlock in bagBlocks) //create blocks from bagblocks
             {
@@ -72,6 +72,11 @@ namespace Quatrimo.Entities
             }
 
             UpdatePos();
+        }
+
+        public void RemoveBlock(Block block)
+        {
+            Blocks.Remove(block);
         }
 
         public void Place()
@@ -137,7 +142,7 @@ namespace Quatrimo.Entities
         {
             if(direction != -1 && direction != 1)
             {
-                throw new ArgumentException("Invalid rotation value. Expected 1 or -1, instead received: " + direction);
+                throw new ArgumentException($"Invalid rotation value. Expected 1 or -1, instead received {direction}");
             }
             foreach(var block in Blocks)
             {

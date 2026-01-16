@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework;
 using Quatrimo.Entities.board;
 using Quatrimo.Data;
 using Quatrimo.Screens;
+using System.Diagnostics;
 
 namespace Quatrimo.Entities.block
 {
@@ -26,6 +27,9 @@ namespace Quatrimo.Entities.block
 
         public int rotation = 0;
 
+        /// <summary>
+        /// Score awarded
+        /// </summary>
         public double score = 1;
         public double times = 0;
 
@@ -35,6 +39,7 @@ namespace Quatrimo.Entities.block
             this.piece = piece;
             this.localX = localX;
             this.localY = localY;
+            Debug.WriteLine("CreateNew override " + OverridesTexture);
             if (!OverridesTexture)
             {
                 Layer1LeftTexture = textureX;
@@ -45,6 +50,10 @@ namespace Quatrimo.Entities.block
                 Layer3LeftTexture = 0;
                 Layer3TopTexture = 0;
             }
+
+            SpriteLayer1.Visible = DefaultLayer1Visibility;
+            SpriteLayer2.Visible = DefaultLayer2Visibility;
+            SpriteLayer3.Visible = DefaultLayer3Visibility;
 
             updateColor(hsvColor);
 
@@ -57,7 +66,7 @@ namespace Quatrimo.Entities.block
 
         public virtual void Play()
         {
-            
+
         }
 
         public virtual void Place()
@@ -69,6 +78,17 @@ namespace Quatrimo.Entities.block
             screen.placedBlocks.Add(this);
             screen.boardUpdated = true;
             updatePlacedBlockPos();
+
+            Block placedBlock = screen.blockboard[boardX, boardY];
+
+            if (placedBlock is not EmptyBlock)
+            {
+                
+
+
+            }
+
+            //i cant figure out clipping shit do it later i guess
             screen.blockboard[boardX, boardY] = this; //TODO: DO clipping stuff
             SlamPreview1.Visible = false;
             SlamPreview2.Visible = false;
@@ -80,8 +100,13 @@ namespace Quatrimo.Entities.block
             HideSprites();
         }
 
+        public virtual void RemoveFalling()
+        {
+            piece.RemoveBlock(this);
+            Destroy();
+        }
 
-        public virtual void RemovePlaced(bool forced = false, bool lowerCollumn = true)
+        public virtual void RemovePlaced(bool forced = false)
         {
             screen.boardUpdated = true;
             screen.SetEmpty(boardX, boardY);
@@ -117,11 +142,19 @@ namespace Quatrimo.Entities.block
             
         }
 
-        public virtual void Tick()
+        public void Tick()
         {
             ticked = true;
             justPlaced = false;
+            CustomTick();
         }
+
+        protected virtual void CustomTick()
+        {
+            
+        }
+
+        
 
         // [----==================================================================================================----]
         //                                          -- Graphics Methods --
@@ -131,9 +164,9 @@ namespace Quatrimo.Entities.block
 
         public void UnhideSprites()
         {
-            SpriteLayer1.Visible = true;
-            SpriteLayer2.Visible = true;
-            SpriteLayer3.Visible = true;
+            SpriteLayer1.Visible = DefaultLayer1Visibility;
+            SpriteLayer2.Visible = DefaultLayer2Visibility;
+            SpriteLayer3.Visible = DefaultLayer3Visibility;
         }
         public void HideSprites()
         {
@@ -150,8 +183,8 @@ namespace Quatrimo.Entities.block
 
             if (hsvColor.H < 210 || hsvColor.H > 15) { hueOffset1 = -hueOffset1; hueOffset2 = -hueOffset2; }
 
-            SpriteLayer2.Color = hsvColor.getAlteredColor(hueOffset1, -0.10);
-            SpriteLayer3.Color = hsvColor.getAlteredColor(hueOffset2, -0.06);
+            SpriteLayer2.Color = hsvColor.getAlteredColor(hueOffset1, -0.03, - 0.20);
+            SpriteLayer3.Color = hsvColor.getAlteredColor(hueOffset2, -0.06, -0.30);
         }
 
 

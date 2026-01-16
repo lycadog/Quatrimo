@@ -339,10 +339,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pieceCard</Name>
     </None>
+    <None Include="Content\uiElements.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>uiElements</Name>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BagTypes\Bagblocks\BagBlock.cs" />
     <Compile Include="BagTypes\Bagblocks\BlockData.cs" />
+    <Compile Include="BagTypes\Bagblocks\CursedBlockData.cs" />
     <Compile Include="BagTypes\StarterBag.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="Data\Duration.cs" />
@@ -352,9 +357,11 @@
     <Compile Include="Data\PieceShape.cs" />
     <Compile Include="Data\PieceType.cs" />
     <Compile Include="Data\PoolPieceType.cs" />
-    <Compile Include="Data\RunData.cs" />
+    <Compile Include="Data\PlayerStats.cs" />
     <Compile Include="Data\SimplePieceType.cs" />
     <Compile Include="Encounter\BlockScorer.cs" />
+    <Compile Include="Encounter\Enemy.cs" />
+    <Compile Include="Encounter\EnemyAttack.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
     <Compile Include="Encounter\Scorer.cs" />
     <Compile Include="Entities\block\Block.cs" />
@@ -378,6 +385,10 @@
     <Compile Include="Entities\board\RollingNumberBox.cs" />
     <Compile Include="Entities\board\RollingNumberBox.Generated.cs">
       <DependentUpon>RollingNumberBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\block\CursedBlock.cs" />
+    <Compile Include="Entities\block\CursedBlock.Generated.cs">
+      <DependentUpon>CursedBlock.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\ScoreAnimation.cs" />
     <Compile Include="Entities\ScoreAnimation.Generated.cs">
@@ -410,6 +421,7 @@
       <DependentUpon>TestEntity.cs</DependentUpon>
     </Compile>
     <Compile Include="Factories\BlockFactory.Generated.cs" />
+    <Compile Include="Factories\CursedBlockFactory.Generated.cs" />
     <Compile Include="Factories\HandUIFactory.Generated.cs" />
     <Compile Include="Factories\NumberBarFactory.Generated.cs" />
     <Compile Include="Factories\RollingNumberBoxFactory.Generated.cs" />

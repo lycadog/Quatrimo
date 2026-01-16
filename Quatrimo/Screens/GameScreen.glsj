@@ -16,6 +16,12 @@
       "DestroyOnUnload": false,
       "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
       "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "uiElements.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
     }
   ],
   "CustomVariables": [
@@ -73,7 +79,56 @@
       "ExposedInDerived": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
-      "CallActivity": false
+      "CallActivity": false,
+      "ContainedObjects": [
+        {
+          "InstanceName": "BlockInstance",
+          "SourceClassType": "Entities\\block\\Block",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "bool"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "Layer1LeftTexture",
+              "Value": 0.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Layer1TopTexture",
+              "Value": 10.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "bool",
+              "Member": "SpriteLayer1Visible",
+              "Value": false,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 86.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": -17.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 1,
+          "SourceFile": "Entities\\block\\Block",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ]
     },
     {
       "InstanceName": "BoardPieceList",
@@ -113,7 +168,90 @@
       "GenerateTimedEmit": true,
       "ContainedObjects": [
         {
-          "InstanceName": "SpriteInstance",
+          "InstanceName": "ScoreText",
+          "SourceClassType": "FlatRedBall.Sprite",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "bool"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "Blue",
+              "Value": 1.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "BottomTexturePixel",
+              "Value": 26.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "ColorOperation",
+              "Member": "ColorOperation",
+              "Value": 6,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Green",
+              "Value": 1.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Red",
+              "Value": 1.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "RightTexturePixel",
+              "Value": 35.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "Texture2D",
+              "Member": "Texture",
+              "Value": "uiElements",
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "TextureScale",
+              "Value": 1.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "bool",
+              "Member": "Visible",
+              "Value": true,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 101.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": -53.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Sprite",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "ScoreText1",
           "SourceClassType": "FlatRedBall.Sprite",
           "Properties": [
             {
@@ -126,57 +264,43 @@
             {
               "Type": "float",
               "Member": "BottomTexturePixel",
-              "Value": 30.0,
+              "Value": 26.0,
               "Time": 0.0
             },
             {
               "Type": "float",
               "Member": "RightTexturePixel",
-              "Value": 10.0,
+              "Value": 35.0,
               "Time": 0.0
             },
             {
               "Type": "Texture2D",
               "Member": "Texture",
-              "Value": "atlas",
+              "Value": "uiElements",
               "Time": 0.0
             },
             {
               "Type": "float",
               "Member": "TextureScale",
-              "Value": 5.7499995,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "TopTexturePixel",
-              "Value": 20.0,
+              "Value": 1.0,
               "Time": 0.0
             },
             {
               "Type": "float",
               "Member": "X",
-              "Value": -203.0,
+              "Value": 133.0,
               "Time": 0.0
             },
             {
               "Type": "float",
               "Member": "Y",
-              "Value": -55.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "Z",
-              "Value": 4.0,
+              "Value": 6.0,
               "Time": 0.0
             }
           ],
           "SourceType": 2,
           "SourceFile": "Sprite",
-          "AttachToContainer": true,
-          "GenerateTimedEmit": true,
-          "LayerOn": "BoardUILayer"
+          "GenerateTimedEmit": true
         }
       ]
     },
@@ -253,7 +377,7 @@
       "GenerateTimedEmit": true,
       "ContainedObjects": [
         {
-          "InstanceName": "NumberBarInstance",
+          "InstanceName": "ScoreNumberBar",
           "SourceClassType": "Entities\\board\\NumberBar",
           "Properties": [
             {
@@ -272,13 +396,48 @@
             {
               "Type": "float",
               "Member": "X",
-              "Value": 135.0,
+              "Value": 173.0,
               "Time": 0.0
             },
             {
               "Type": "float",
               "Member": "Y",
-              "Value": 58.0,
+              "Value": 4.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 1,
+          "SourceFile": "Entities\\board\\NumberBar",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "EnemyHPNumberBar",
+          "SourceClassType": "Entities\\board\\NumberBar",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "bool"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "int",
+              "Member": "Digits",
+              "Value": 9,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 173.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": 62.0,
               "Time": 0.0
             }
           ],

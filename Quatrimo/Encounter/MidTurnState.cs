@@ -81,7 +81,7 @@ namespace Quatrimo.Main
             //for movement keys, when key holds: do action once, wait until timeheld, then move rapidly
             if (Keybinds.Left.Pushed || (Keybinds.Left.TimeHeld > .14 && leftMoveCooldown > .03))
             {
-                //TODO: check for collision later
+                
                 if(!screen.CurrentPiece.Collides(-1, 0))
                 {
                     screen.CurrentPiece.MoveByOffset(-1, 0);
@@ -89,9 +89,9 @@ namespace Quatrimo.Main
                 }
                 
             }
-            else if (Keybinds.Right.Pushed || (Keybinds.Right.TimeHeld > .14 && leftMoveCooldown > .03))
+            else if (Keybinds.Right.Pushed || (Keybinds.Right.TimeHeld > .14 && rightMoveCooldown > .03))
             {
-                //TODO: check for collision later
+
                 if (!screen.CurrentPiece.Collides(1, 0))
                 {
                     screen.CurrentPiece.MoveByOffset(1, 0);
@@ -111,7 +111,13 @@ namespace Quatrimo.Main
             {
                 piecefallTimer += .600;
                 fastfallCooldown = 0;
-            }else if (Keybinds.Up.Held)
+            }else if (Keybinds.Down.Released)
+            {
+                piecefallTimer = -0.2;
+            }
+
+
+            else if (Keybinds.Up.Held)
             {
                 piecefallTimer = -.100;
             }

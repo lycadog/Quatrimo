@@ -71,7 +71,7 @@ namespace Quatrimo.Main
         /// </summary>
         public void DrawHand()
         {
-            for (int i = 0; i < RunData.HandDrawSize; i++)
+            for (int i = 0; i < PlayerStats.HandDrawSize; i++)
             {
                 Piece piece = pool.getRandom(out var entry);
                 AddPiece(piece);

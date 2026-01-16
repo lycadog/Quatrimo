@@ -22,14 +22,21 @@ namespace Quatrimo
 
         public virtual Sprite CreatePreview(BagBlock block, Layer layer)
         {
-            Sprite sprite = SpriteManager.AddSprite(cardTexture, layer);
+            Sprite sprite = GetDefaultSprite(block, layer);
+
             sprite.LeftTexturePixel = 0; sprite.RightTexturePixel = 5;
             sprite.TopTexturePixel = 40; sprite.BottomTexturePixel = 45;
+
+            return sprite;
+        }
+
+        protected Sprite GetDefaultSprite(BagBlock block, Layer layer)
+        {
+            Sprite sprite = SpriteManager.AddSprite(cardTexture, layer);
+            
             sprite.Color = block.hsvColor.color;
             sprite.ColorOperation = FlatRedBall.Graphics.ColorOperation.ColorTextureAlpha;
-
             sprite.Width = 5; sprite.Height = 5;
-
             return sprite;
         }
 

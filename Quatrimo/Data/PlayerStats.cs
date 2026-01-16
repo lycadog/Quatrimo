@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Quatrimo
 {
-    public static class RunData
+    /// <summary>
+    /// Holds the player's current stats
+    /// </summary>
+    public static class PlayerStats
     {
         public static int HandDrawSize = 3;
         public static int EmptySpacesAllowedForScoring = 0;

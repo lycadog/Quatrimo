@@ -34,9 +34,21 @@ namespace Quatrimo
 
         public abstract class Keybind
         {
+            /// <summary>
+            /// Key was up last frame, down this frame
+            /// </summary>
             public bool Pushed;
+            /// <summary>
+            /// Key is being held down
+            /// </summary>
             public bool Held;
+            /// <summary>
+            /// Key was down last frame, up this frame
+            /// </summary>
             public bool Released;
+            /// <summary>
+            /// Total time the key has been held
+            /// </summary>
             public float TimeHeld;
 
             public virtual void UpdateKey()
