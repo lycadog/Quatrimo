@@ -111,6 +111,9 @@
       "Name": "Entities\\block\\Block"
     },
     {
+      "Name": "Entities\\block\\BombBlock"
+    },
+    {
       "Name": "Entities\\block\\CursedBlock"
     },
     {
@@ -127,6 +130,9 @@
     },
     {
       "Name": "Entities\\board\\RollingNumberBox"
+    },
+    {
+      "Name": "Entities\\Particle"
     },
     {
       "Name": "Entities\\Piece"

@@ -79,56 +79,7 @@
       "ExposedInDerived": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
-      "CallActivity": false,
-      "ContainedObjects": [
-        {
-          "InstanceName": "BlockInstance",
-          "SourceClassType": "Entities\\block\\Block",
-          "Properties": [
-            {
-              "Name": "AssociateWithFactory",
-              "Value": true,
-              "Type": "bool"
-            }
-          ],
-          "InstructionSaves": [
-            {
-              "Type": "float",
-              "Member": "Layer1LeftTexture",
-              "Value": 0.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "Layer1TopTexture",
-              "Value": 10.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "bool",
-              "Member": "SpriteLayer1Visible",
-              "Value": false,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "X",
-              "Value": 86.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "Y",
-              "Value": -17.0,
-              "Time": 0.0
-            }
-          ],
-          "SourceType": 1,
-          "SourceFile": "Entities\\block\\Block",
-          "AttachToContainer": true,
-          "GenerateTimedEmit": true
-        }
-      ]
+      "CallActivity": false
     },
     {
       "InstanceName": "BoardPieceList",
@@ -447,6 +398,24 @@
           "GenerateTimedEmit": true
         }
       ]
+    },
+    {
+      "InstanceName": "ParticleList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\Particle",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
     },
     {
       "InstanceName": "CameraInstance",

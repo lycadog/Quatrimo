@@ -16,8 +16,10 @@ namespace Quatrimo.Main
         //next state: TickBoardState
         public override void TickState()
         {
+            //need to fix enumeration error happening here by bomb blocks
+            //maybe add a standardized method in gamescreen to add scorers which queues it? idk
             bool complete = true;
-            foreach(var scorer in screen.activeScorers)
+            foreach(var scorer in screen.activeScorers) 
             {
                 scorer.Update();
                 if (!scorer.completed)

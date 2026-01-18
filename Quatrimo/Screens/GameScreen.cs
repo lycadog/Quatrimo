@@ -25,6 +25,7 @@ using System.Reflection;
 using System.Diagnostics;
 using Quatrimo.Encounter;
 using FlatRedBall.Graphics;
+using FlatRedBall.Screens;
 
 
 namespace Quatrimo.Screens
@@ -140,11 +141,15 @@ namespace Quatrimo.Screens
             return anim;
         }
 
+        public bool IsOutsideBounds(int x, int y)
+        {
+            return x >= boardWidth || x < 0 || y >= trueBoardHeight || y < 0;
+        }
+
         public void DamageEnemy(double damage)
         {
             Enemy.TakeDamage(damage);
             EnemyHPNumberBar.UpdateBoxes((int)Enemy.health);
-
         }
 
         public void DiscardPlayedCard()
@@ -176,8 +181,6 @@ namespace Quatrimo.Screens
             blockboard[x, y] = new EmptyBlock(this, x, y);
         }
 
-        
-
         private void CustomDestroy()
         {
             SpriteManager.RemoveSpriteList(Sprites);
@@ -191,8 +194,5 @@ namespace Quatrimo.Screens
         {
 
         }
-
-
-
     }
 }

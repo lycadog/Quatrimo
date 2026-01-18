@@ -215,7 +215,7 @@ namespace Quatrimo.Entities.block
         /// <returns></returns>
         public bool CollidesFalling(int x, int y)
         {
-            if (IsOutsideBounds(x, y)) { return true; }
+            if (screen.IsOutsideBounds(x, y)) { return true; }
 
             return CollidesWhenFalling && screen.blockboard[x, y].CollidesWhenPlaced;
         }
@@ -251,12 +251,6 @@ namespace Quatrimo.Entities.block
         protected (int, int) GetRotatePos(int direction)
         {
             return (localY * -direction, localX * direction);
-        }
-
-        public bool IsOutsideBounds(int x, int y)
-        {
-            return x >= screen.boardWidth || x < 0 || y >= screen.trueBoardHeight || y < 0;
- 
         }
 
         /// <summary>

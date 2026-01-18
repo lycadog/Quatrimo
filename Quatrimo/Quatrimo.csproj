@@ -347,6 +347,7 @@
   <ItemGroup>
     <Compile Include="BagTypes\Bagblocks\BagBlock.cs" />
     <Compile Include="BagTypes\Bagblocks\BlockData.cs" />
+    <Compile Include="BagTypes\Bagblocks\BombBlockData.cs" />
     <Compile Include="BagTypes\Bagblocks\CursedBlockData.cs" />
     <Compile Include="BagTypes\StarterBag.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
@@ -390,6 +391,14 @@
     <Compile Include="Entities\block\CursedBlock.Generated.cs">
       <DependentUpon>CursedBlock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\block\BombBlock.cs" />
+    <Compile Include="Entities\block\BombBlock.Generated.cs">
+      <DependentUpon>BombBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Particle.cs" />
+    <Compile Include="Entities\Particle.Generated.cs">
+      <DependentUpon>Particle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ScoreAnimation.cs" />
     <Compile Include="Entities\ScoreAnimation.Generated.cs">
       <DependentUpon>ScoreAnimation.cs</DependentUpon>
@@ -421,9 +430,11 @@
       <DependentUpon>TestEntity.cs</DependentUpon>
     </Compile>
     <Compile Include="Factories\BlockFactory.Generated.cs" />
+    <Compile Include="Factories\BombBlockFactory.Generated.cs" />
     <Compile Include="Factories\CursedBlockFactory.Generated.cs" />
     <Compile Include="Factories\HandUIFactory.Generated.cs" />
     <Compile Include="Factories\NumberBarFactory.Generated.cs" />
+    <Compile Include="Factories\ParticleFactory.Generated.cs" />
     <Compile Include="Factories\RollingNumberBoxFactory.Generated.cs" />
     <Compile Include="Factories\PieceCardFactory.Generated.cs" />
     <Compile Include="Factories\PieceFactory.Generated.cs" />

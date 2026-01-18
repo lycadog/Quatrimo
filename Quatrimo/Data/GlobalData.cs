@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quatrimo.BagTypes.Bagblocks;
 
 namespace Quatrimo.Data
 {
@@ -19,7 +20,8 @@ namespace Quatrimo.Data
 
         public static BlockData[] blocks = [
             new BlockData(),
-            new CursedBlockData()
+            new CursedBlockData(),
+            new BombBlockData()
             ];
 
         
@@ -59,6 +61,7 @@ namespace Quatrimo.Data
         //public static PieceShape s = new(new int[,] { { } })
 
         public static SimplePieceType sCursedNub = new(sNub, 0, 1);
+        public static SimplePieceType sBombTwig = new(sTwig, 0, 2);
 
         public static StarterBag magnetBag = new([sBigTee.B, sLHatchet.B, sRHatchet.B, sDipole.B, sLHook.B, sRHook.B, sLine.B, sTwig.B, sWedge.B],
             [new HsvColor(334, .62, .97), new HsvColor(294, .77, .973), new HsvColor(280, .94, .94), new HsvColor(258, .65, .98), new HsvColor(163, .56, .97), new HsvColor(124, .66, .96), new HsvColor(348, .75, .9),new HsvColor(36, .73, 1), new HsvColor(240, .73, .95)],
@@ -68,7 +71,7 @@ namespace Quatrimo.Data
             new HsvColor(330, 1, .93), new HsvColor(310, .9, .91), new HsvColor(288, .83, .97), new HsvColor(274, .88, 1), new HsvColor(266, .83, .85), new HsvColor(258, .91, 1), new HsvColor(180, .88, 1), new HsvColor(160, .92, .92), new HsvColor(60, .88, 1), new HsvColor(50, .75, 1)
             ], "quantum bag", 0, 40);
 
-        public static StarterBag debugBag = new([sCursedNub, sLHatchet.B, sTwig.B], "debug");
+        public static StarterBag debugBag = new([sCursedNub, sLHatchet.B, sTwig.B, sBombTwig], "debug");
 
 
     }

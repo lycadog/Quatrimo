@@ -23,11 +23,14 @@ namespace Quatrimo.Encounter
         public BlockScorer(GameScreen screen, Point[] positions)
         {
             this.screen = screen;
-            blocks = new Block[positions.Length];
+            List<Block> blockList = [];
             for (int i = 0; i < positions.Length; i++)
             {
-                blocks[i] = screen.blockboard[positions[i].X, positions[i].Y];
+                if (screen.IsOutsideBounds(positions[i].X, positions[i].Y)) { continue; }
+
+                blockList.Add(screen.blockboard[positions[i].X, positions[i].Y]);
             }
+            blocks = [.. blockList];
             Start();
         }
 

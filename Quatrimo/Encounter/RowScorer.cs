@@ -45,6 +45,7 @@ namespace Quatrimo.Main
             if (iterators.Count == 0)
             {
                 completed = true;
+                screen.rowsCleared += 1;
             }
         }
 
