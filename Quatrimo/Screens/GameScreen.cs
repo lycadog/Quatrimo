@@ -37,6 +37,7 @@ namespace Quatrimo.Screens
         public List<Block> placedBlocks = [];
         public List<Block> scoredBlocks = [];
         public List<Scorer> activeScorers = [];
+        public List<Scorer> queuedScorers = [];
 
         public Block[,] blockboard;
         public bool[] RowUpdated; //if row of Y index has been updated this turn
@@ -119,6 +120,11 @@ namespace Quatrimo.Screens
             CurrentPiece.Play(this);
         }
 
+        public void QueueScorer(Scorer scorer) //this is bad and is used very bad.
+        {
+            queuedScorers.Add(scorer);
+        }
+
         public ScoreAnimation ScoreBlock(Block block, int index = 0)
         {
             return ScoreBlock(block, index, HsvColor.White);
@@ -150,6 +156,11 @@ namespace Quatrimo.Screens
         {
             Enemy.TakeDamage(damage);
             EnemyHPNumberBar.UpdateBoxes((int)Enemy.health);
+        }
+
+        public void UpdateAttackUI()
+        {
+            //todo: check attack current state after it's updated and update ui accordingly
         }
 
         public void DiscardPlayedCard()

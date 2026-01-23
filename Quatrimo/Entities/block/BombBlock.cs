@@ -39,7 +39,7 @@ namespace Quatrimo.Entities.block
                 new(boardX,boardY), new(boardX, boardY-1), new(boardX, boardY + 1),
                 new(boardX+1, boardY-1), new(boardX+1, boardY), new(boardX + 1, boardY+1)];
 
-            screen.activeScorers.Add(
+            screen.QueueScorer(
                 new BlockScorer(screen, positions)
                 );
         }

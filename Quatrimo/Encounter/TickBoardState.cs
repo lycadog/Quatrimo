@@ -22,6 +22,9 @@ namespace Quatrimo.Main
         {
             TickBlocks();
 
+            screen.activeScorers.AddRange(screen.queuedScorers);
+            screen.queuedScorers.Clear();
+
             if (screen.boardUpdated)
             {
                 screen.StartState(new ProcessScoringState());

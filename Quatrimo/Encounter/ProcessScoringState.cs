@@ -18,6 +18,9 @@ namespace Quatrimo.Main
         {
             //need to fix enumeration error happening here by bomb blocks
             //maybe add a standardized method in gamescreen to add scorers which queues it? idk
+            screen.activeScorers.AddRange(screen.queuedScorers);
+            screen.queuedScorers.Clear();
+
             bool complete = true;
             foreach(var scorer in screen.activeScorers) 
             {
@@ -98,6 +101,7 @@ namespace Quatrimo.Main
                     screen.activeScorers.Add(new RowScorer(screen, y));
                 }
             }
+
         }
     }
 }

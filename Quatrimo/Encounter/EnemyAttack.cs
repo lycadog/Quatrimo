@@ -9,8 +9,9 @@ namespace Quatrimo.Encounter
 {
     public abstract class EnemyAttack
     {
-        
         public int turnsUntilAttack;
+        int minAttackRange;
+        int maxAttackRange;
 
         public abstract void DoAttack(GameScreen screen);
     }
