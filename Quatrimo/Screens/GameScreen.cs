@@ -68,11 +68,12 @@ namespace Quatrimo.Screens
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;
             RowUpdated = new bool[trueBoardHeight];
+            Enemy = new TestSlime();
             InitializeBoard();
 
             GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
 
-            Bag = GlobalData.debugBag.CreateBag();
+            Bag = GlobalData.magnetBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
             StartState(new StartTurnAndWaitState());
@@ -92,6 +93,8 @@ namespace Quatrimo.Screens
                     FlatRedBallServices.GraphicsOptions.SetFullScreen(displayMode.Width, displayMode.Height);
                 }
             }
+
+            FlatRedBall.Debugging.Debugger.CommandLineWrite($"attack stuff {Enemy.currentAttackCooldown}");
 
             Keybinds.UpdateBinds();
             state.TickState();

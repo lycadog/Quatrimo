@@ -6,36 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quatrimo.Encounter
+namespace Quatrimo
 {
     public abstract class Enemy
     {
         public double maxHealth;
         public double health;
-        public int level;
+        public int level = 0;
 
         public EnemyAttack activeAttack;
 
-        bool attackOnCooldown = true;
-        int currentAttackCooldown;
+        protected bool attackOnCooldown = true;
+        public int currentAttackCooldown = 10;
 
-        int minAttackCooldown;
-        int maxAttackCooldown;
+        protected int minAttackCooldown;
+        protected int maxAttackCooldown;
 
-        EnemyAttack[] attackPool;
+        protected EnemyAttack[] attackPool;
 
-        protected Enemy(double maxHealth, double health, int level)
-        {
-            this.maxHealth = maxHealth;
-            this.health = health;
-            this.level = level;
-        }
 
-        public void Update(GameScreen screen)
+        public virtual void Update(GameScreen screen)
         {
             if (attackOnCooldown)
             {
-                currentAttackCooldown = -1;
+                currentAttackCooldown -= 1;
 
                 if(currentAttackCooldown == 0)
                 {
@@ -45,11 +39,11 @@ namespace Quatrimo.Encounter
                 return;
             }
 
-            activeAttack.turnsUntilAttack = -1;
+            activeAttack.turnsUntilAttack -= 1;
 
             if(activeAttack.turnsUntilAttack == 0)
             {
-                activeAttack.DoAttack(screen);
+                activeAttack.DoAttack(screen, this);
                 currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
 
                 activeAttack = null;

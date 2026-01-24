@@ -29,6 +29,9 @@ namespace Quatrimo.Main
             }
             screen.Bag.DeselectCard();
 
+            screen.Enemy.Update(screen);
+            //todo: update UI stuff too
+
             screen.StartState(new StartTurnAndWaitState());
         }
         

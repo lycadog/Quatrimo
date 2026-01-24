@@ -72,10 +72,7 @@ namespace Quatrimo.Data
             }
 
             //pieces by default will get a color with a random hue and a small range of saturation and values
-            int h = FlatRedBallServices.Random.Next(36) * 10;
-            double s = 1 - FlatRedBallServices.Random.Next(3) * .10;
-            double v = 1 - FlatRedBallServices.Random.Next(3) * .08;
-            chosenColor = new HsvColor(h, s, v);
+            chosenColor = HsvColor.GetRandomBlockColor();
 
         }
     }

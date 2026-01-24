@@ -60,6 +60,12 @@ namespace Quatrimo.Entities.block
             return this;
         }
 
+        public Block CreateBlock(GameScreen screen, Piece piece, int localX, int localY, float textureX, float textureY)
+        {
+            CreateBlock(screen, piece, localX, localY, textureX, textureY, HsvColor.GetRandomBlockColor());
+            return this;
+        }
+
         // [----==================================================================================================----]
         //                                          -- Event Methods --
         // [----==================================================================================================----]

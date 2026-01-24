@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quatrimo.Encounter
+namespace Quatrimo
 {
     public abstract class EnemyAttack
     {
         public int turnsUntilAttack;
-        int minAttackRange;
-        int maxAttackRange;
+        protected int minCooldown;
+        protected int maxCooldown;
+        protected bool scalesWithLevel;
 
-        public abstract void DoAttack(GameScreen screen);
+        public abstract void DoAttack(GameScreen screen, Enemy enemy);
     }
 }

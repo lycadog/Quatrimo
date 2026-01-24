@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using FlatRedBall;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,14 @@ namespace Quatrimo.Data
         {
             HsvToRgb(H + hOffset, S + sOffset, V + vOffset, out int r, out int g, out int b);
             return new Color(r, g, b);
+        }
+
+        public static HsvColor GetRandomBlockColor()
+        {
+            int h = FlatRedBallServices.Random.Next(36) * 10;
+            double s = 1 - FlatRedBallServices.Random.Next(3) * .10;
+            double v = 1 - FlatRedBallServices.Random.Next(3) * .08;
+            return new HsvColor(h, s, v);
         }
 
         void recalculateColor()

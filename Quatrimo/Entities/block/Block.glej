@@ -268,7 +268,7 @@
         }
       ],
       "Name": "Layer1LeftTexture",
-      "DefaultValue": 0.0,
+      "DefaultValue": 50.0,
       "SetByDerived": true,
       "SourceObject": "SpriteLayer1",
       "SourceObjectProperty": "LeftTexturePixel",
@@ -289,7 +289,7 @@
         }
       ],
       "Name": "Layer1TopTexture",
-      "DefaultValue": 0.0,
+      "DefaultValue": 30.0,
       "SetByDerived": true,
       "SourceObject": "SpriteLayer1",
       "SourceObjectProperty": "TopTexturePixel",
@@ -498,6 +498,18 @@
           "Type": "float",
           "Member": "Width",
           "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "LeftTexturePixel",
+          "Value": 50.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TopTexturePixel",
+          "Value": 30.0,
           "Time": 0.0
         }
       ],

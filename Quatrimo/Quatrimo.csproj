@@ -361,10 +361,13 @@
     <Compile Include="Data\PlayerStats.cs" />
     <Compile Include="Data\SimplePieceType.cs" />
     <Compile Include="Encounter\BlockScorer.cs" />
-    <Compile Include="Encounter\Enemy.cs" />
-    <Compile Include="Encounter\EnemyAttack.cs" />
+    <Compile Include="Enemy\RandomBlockPlacementAttack.cs" />
+    <Compile Include="Enemy\Enemy.cs" />
+    <Compile Include="Enemy\EnemyAttack.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
     <Compile Include="Encounter\Scorer.cs" />
+    <Compile Include="Enemy\TestAttack.cs" />
+    <Compile Include="Enemy\TestSlime.cs" />
     <Compile Include="Entities\block\Block.cs" />
     <Compile Include="Entities\block\Block.Event.cs">
       <DependentUpon>Block.cs</DependentUpon>
