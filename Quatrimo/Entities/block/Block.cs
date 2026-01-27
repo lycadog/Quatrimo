@@ -39,7 +39,33 @@ namespace Quatrimo.Entities.block
             this.piece = piece;
             this.localX = localX;
             this.localY = localY;
-            Debug.WriteLine("CreateNew override " + OverridesTexture);
+
+            SetVisuals(textureX, textureY, hsvColor);
+
+            return this;
+        }
+
+        public Block CreateBlock(GameScreen screen, Piece piece, int localX, int localY, float textureX, float textureY)
+        {
+            return CreateBlock(screen, piece, localX, localY, textureX, textureY, HsvColor.GetRandomBlockColor());
+        }
+
+        public Block CreateBlock(GameScreen screen, float textureX, float textureY, HsvColor hsvColor)
+        {
+            this.screen = screen;
+
+            SetVisuals(textureX, textureY, hsvColor);
+
+            return this;
+        }
+
+        public Block CreateBlock(GameScreen screen, float textureX, float textureY)
+        {
+            return CreateBlock(screen, textureX, textureY, HsvColor.GetRandomBlockColor());
+        }
+
+        void SetVisuals(float textureX, float textureY, HsvColor color)
+        {
             if (!OverridesTexture)
             {
                 Layer1LeftTexture = textureX;
@@ -54,18 +80,9 @@ namespace Quatrimo.Entities.block
             SpriteLayer1.Visible = DefaultLayer1Visibility;
             SpriteLayer2.Visible = DefaultLayer2Visibility;
             SpriteLayer3.Visible = DefaultLayer3Visibility;
-
-            updateColor(hsvColor);
-
-            return this;
+            updateColor(color);
         }
-
-        public Block CreateBlock(GameScreen screen, Piece piece, int localX, int localY, float textureX, float textureY)
-        {
-            CreateBlock(screen, piece, localX, localY, textureX, textureY, HsvColor.GetRandomBlockColor());
-            return this;
-        }
-
+        
         // [----==================================================================================================----]
         //                                          -- Event Methods --
         // [----==================================================================================================----]
@@ -80,24 +97,25 @@ namespace Quatrimo.Entities.block
             Detach();
             justPlaced = true;
 
-            screen.AttachToBoard(this);
+            screen.AttachBlockToBoard(this);
             screen.placedBlocks.Add(this);
             screen.boardUpdated = true;
-            updatePlacedBlockPos();
+            UpdatePlacedBlockPos();
 
             Block placedBlock = screen.blockboard[boardX, boardY];
-
-            if (placedBlock is not EmptyBlock)
-            {
-                
-
-
-            }
+            placedBlock.RemovePlaced(true);
+            
 
             //i cant figure out clipping shit do it later i guess
             screen.blockboard[boardX, boardY] = this; //TODO: DO clipping stuff
             SlamPreview1.Visible = false;
             SlamPreview2.Visible = false;
+        }
+
+        public void PlaceAt(int x, int y)
+        {
+            boardX = x; boardY = y;
+            Place();
         }
 
         public virtual void Score(bool forcedRemoval = false)
@@ -210,7 +228,7 @@ namespace Quatrimo.Entities.block
             screen.boardUpdated = true;
             screen.blockboard[x, y] = this;
             boardX = x; boardY = y;
-            updatePlacedBlockPos();
+            UpdatePlacedBlockPos();
         }
 
         /// <summary>
@@ -281,7 +299,7 @@ namespace Quatrimo.Entities.block
         /// <summary>
         /// Updates placed block positions
         /// </summary>
-        public void updatePlacedBlockPos()
+        public void UpdatePlacedBlockPos()
         {
             RelativeX = boardX * 10 + 10; RelativeY = boardY * 10 + 10;
             UpdatePos();

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quatrimo.Data;
 
 namespace Quatrimo
 {
@@ -14,10 +15,12 @@ namespace Quatrimo
     {
         public TestAttack()
         {
+            minCooldown = 1;
+            maxCooldown = 2;
             turnsUntilAttack = 3;
         }
 
-        public override void DoAttack(GameScreen screen, Enemy enemy)
+        public override void ExecuteAttack(GameScreen screen, Enemy enemy)
         {
            
             int blockCount = FlatRedBallServices.Random.Next(1, 12);
@@ -27,22 +30,22 @@ namespace Quatrimo
             {
                 list.Remove(FlatRedBallServices.Random.Next(0, list.Count - 1));
             }
+
             foreach (int x in list)
             {
+                Block block = BlockFactory.CreateNew();
+                block.CreateBlock(screen, 50, 30, new HsvColor(110, .7, .9));
 
                 for (int y = screen.trueBoardHeight - 1; y >= 0; y--)
                 {
-                    if (screen.blockboard[x,y] is not EmptyBlock)
+                    if (block.CollidesFalling(x, y)) //Drop the block until it collides, then place it on the board
                     {
-                        Block block = BlockFactory.CreateNew();
-                        block.CreateBlock(screen, null, 0, 0, 50, 30);
-
-                        block.MoveTo(x, y + 1);
-                        block.UnhideSprites();
-                        block.Place();
+                        block.PlaceAt(x, y + 1);
+                        
                         break;
                     }
                 }
+
             }
         }
     }

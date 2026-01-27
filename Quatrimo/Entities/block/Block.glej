@@ -477,6 +477,12 @@
           "Time": 0.0
         },
         {
+          "Type": "float",
+          "Member": "LeftTexturePixel",
+          "Value": 50.0,
+          "Time": 0.0
+        },
+        {
           "Type": "Texture2D",
           "Member": "Texture",
           "Value": "atlas",
@@ -489,6 +495,12 @@
           "Time": 0.0
         },
         {
+          "Type": "float",
+          "Member": "TopTexturePixel",
+          "Value": 30.0,
+          "Time": 0.0
+        },
+        {
           "Type": "bool",
           "Member": "Visible",
           "Value": true,
@@ -498,18 +510,6 @@
           "Type": "float",
           "Member": "Width",
           "Value": 10.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "LeftTexturePixel",
-          "Value": 50.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "TopTexturePixel",
-          "Value": 30.0,
           "Time": 0.0
         }
       ],

@@ -17,10 +17,10 @@ namespace Quatrimo
         public EnemyAttack activeAttack;
 
         protected bool attackOnCooldown = true;
-        public int currentAttackCooldown = 10;
+        public int currentAttackCooldown = 1;
 
-        protected int minAttackCooldown;
-        protected int maxAttackCooldown;
+        protected int minAttackCooldown = 2;
+        protected int maxAttackCooldown = 5;
 
         protected EnemyAttack[] attackPool;
 
@@ -31,9 +31,10 @@ namespace Quatrimo
             {
                 currentAttackCooldown -= 1;
 
-                if(currentAttackCooldown == 0)
+                if(currentAttackCooldown <= 0)
                 {
                     activeAttack = attackPool[FlatRedBallServices.Random.Next(attackPool.Length)];
+                    activeAttack.PrepareAttack(this);
                     attackOnCooldown = false;
                 }
                 return;
@@ -41,16 +42,16 @@ namespace Quatrimo
 
             activeAttack.turnsUntilAttack -= 1;
 
-            if(activeAttack.turnsUntilAttack == 0)
+            FlatRedBall.Debugging.Debugger.CommandLineWrite($"turns until attack: {activeAttack.turnsUntilAttack}");
+
+            if (activeAttack.turnsUntilAttack <= 0)
             {
-                activeAttack.DoAttack(screen, this);
+                activeAttack.ExecuteAttack(screen, this);
                 currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
 
                 activeAttack = null;
                 attackOnCooldown = true;
             }
-            
-            
         }
 
         public abstract void InitializeAttacks();

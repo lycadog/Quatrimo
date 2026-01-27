@@ -94,7 +94,7 @@ namespace Quatrimo.Screens
                 }
             }
 
-            FlatRedBall.Debugging.Debugger.CommandLineWrite($"attack stuff {Enemy.currentAttackCooldown}");
+            
 
             Keybinds.UpdateBinds();
             state.TickState();
@@ -180,9 +180,15 @@ namespace Quatrimo.Screens
         /// Attach PositionedObject to the main board
         /// </summary>
         /// <param name="entity"></param>
-        public void AttachToBoard(PositionedObject entity)
+        public void AttachToBoard(PositionedObject entity) 
         {
             entity.AttachTo(MainBoard);
+        }
+
+        public void AttachBlockToBoard(Block block)
+        {
+            block.AttachTo(MainBoard);
+            block.MoveToLayer(PlacedBlocksLayer);
         }
 
         /// <summary>
