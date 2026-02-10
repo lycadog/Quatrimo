@@ -20,7 +20,17 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
-            foreach(var block in screen.placedBlocks)
+
+            screen.Enemy.Update(screen); //need to check board again after an attack
+            if (screen.boardUpdated)
+            {
+                screen.StartState(new ProcessScoringState());
+                return;
+            }
+
+
+
+            foreach (var block in screen.placedBlocks)
             {
                 block.justPlaced = false;
                 block.scored = false;
@@ -29,7 +39,10 @@ namespace Quatrimo.Main
             }
             screen.Bag.DeselectCard();
 
-            screen.Enemy.Update(screen);
+            
+            
+
+
             //todo: update UI stuff too
 
             screen.StartState(new StartTurnAndWaitState());

@@ -27,28 +27,31 @@ namespace Quatrimo
 
         public virtual void Update(GameScreen screen)
         {
-            if (attackOnCooldown)
+            if (attackOnCooldown) //if cooldown state
             {
                 currentAttackCooldown -= 1;
 
                 if(currentAttackCooldown <= 0)
                 {
                     activeAttack = attackPool[FlatRedBallServices.Random.Next(attackPool.Length)];
-                    activeAttack.PrepareAttack(this);
-                    attackOnCooldown = false;
+                    activeAttack.PrepareAttack(this); //prepare a random attack!
+                    attackOnCooldown = false; //we are no longer on cooldown
                 }
-                return;
+                return; //don't run non-cooldown code until next turn
             }
 
             activeAttack.turnsUntilAttack -= 1;
 
             FlatRedBall.Debugging.Debugger.CommandLineWrite($"turns until attack: {activeAttack.turnsUntilAttack}");
 
+
             if (activeAttack.turnsUntilAttack <= 0)
             {
+                
                 activeAttack.ExecuteAttack(screen, this);
                 currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
 
+                screen.boardUpdated = true;
                 activeAttack = null;
                 attackOnCooldown = true;
             }

@@ -36,7 +36,7 @@ namespace Quatrimo
                 Block block = BlockFactory.CreateNew();
                 block.CreateBlock(screen, 50, 30, new HsvColor(110, .7, .9));
 
-                for (int y = screen.trueBoardHeight - 1; y >= 0; y--)
+                for (int y = screen.trueBoardHeight - 1; true; y--)
                 {
                     if (block.CollidesFalling(x, y)) //Drop the block until it collides, then place it on the board
                     {

@@ -100,6 +100,7 @@ namespace Quatrimo.Entities.block
             screen.AttachBlockToBoard(this);
             screen.placedBlocks.Add(this);
             screen.boardUpdated = true;
+            screen.RowUpdated[boardY] = true;
             UpdatePlacedBlockPos();
 
             Block placedBlock = screen.blockboard[boardX, boardY];
