@@ -2,81 +2,32 @@
   "UserEvents": {
     "57889c9d05b091839687ed0be0f8ab51d3a709f9295baa9084f0d0d2d3c80577": [
       {
-        "NewName": "GameScreenGum.ButtonStandardInstance",
-        "OldName": null,
+        "NewName": null,
+        "OldName": "GameScreenGum.Text TextInstance in GameScreenGum",
         "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-12-20T00:22:03.994057Z"
+        "EventType": 6,
+        "TimestampUtc": "2026-02-10T18:33:06.3409227Z"
       },
       {
         "NewName": null,
         "OldName": "GameScreenGum.Controls/ButtonStandard ButtonStandardInstance in GameScreenGum",
         "ElementType": "Screens",
         "EventType": 6,
-        "TimestampUtc": "2025-12-20T00:24:09.9938299Z"
-      },
-      {
-        "NewName": "GameScreenGum.ButtonIconInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-12-20T00:24:13.5074819Z"
-      },
-      {
-        "NewName": "GameScreenGum.CheckBoxInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-12-20T00:24:55.6125315Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "GameScreenGum.Controls/CheckBox CheckBoxInstance in GameScreenGum",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-12-20T00:26:08.1001641Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "GameScreenGum.Controls/ButtonIcon ButtonIconInstance in GameScreenGum",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-12-20T00:26:11.184374Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "GameScreenGum.Text aaaa in GameScreenGum",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-12-27T22:59:08.8923698Z"
+        "TimestampUtc": "2026-02-10T18:33:09.6074397Z"
       },
       {
         "NewName": "GameScreenGum.TextInstance",
         "OldName": null,
         "ElementType": "Screens",
         "EventType": 5,
-        "TimestampUtc": "2025-12-27T22:59:14.7333965Z"
+        "TimestampUtc": "2026-02-10T18:33:19.3444638Z"
       },
       {
-        "NewName": "GameScreenGum.ButtonStandardInstance",
-        "OldName": null,
+        "NewName": "GameScreenGum.timeUntilAttack",
+        "OldName": "GameScreenGum.TextInstance",
         "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-12-27T23:00:07.5012045Z"
-      },
-      {
-        "NewName": "Quatrimo/FancyPuaseButton",
-        "OldName": null,
-        "ElementType": "Components",
-        "EventType": 0,
-        "TimestampUtc": "2025-12-28T00:07:06.3152685Z"
-      },
-      {
-        "NewName": "GameScreenGum.FancyPuaseButtonInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-12-28T00:57:12.7751412Z"
+        "EventType": 7,
+        "TimestampUtc": "2026-02-10T18:42:18.9703115Z"
       }
     ]
   }

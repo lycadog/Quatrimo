@@ -13,7 +13,7 @@ using Quatrimo.Data;
 
 namespace Quatrimo.Entities
 {
-    public partial class ScoreAnimation
+    public partial class TemporaryAnimation
     {
 
         public void StartScoreAnimation(int x, int y, int index = 0)
@@ -23,6 +23,11 @@ namespace Quatrimo.Entities
             RelativeZ = 4;
 
             SpriteInstance.Animate = true;
+        }
+
+        public void StartBlockPlacementAnimation(int x, int y)
+        {
+            
         }
 
         public void SetColor(HsvColor color)

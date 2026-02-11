@@ -215,6 +215,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font12Arial_0</Name>
     </None>
+    <None Include="Content\GumProject\FontCache\Font12Tahoma_noSmooth.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Tahoma_noSmooth</Name>
+    </None>
+    <None Include="Content\GumProject\FontCache\Font12Tahoma_noSmooth_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Tahoma_noSmooth_0</Name>
+    </None>
     <None Include="Content\GumProject\FontCache\Font14Arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font14Arial</Name>
@@ -246,14 +254,6 @@
     <None Include="Content\GumProject\FontCache\Font16Arial_Bold_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font16Arial_Bold_0</Name>
-    </None>
-    <None Include="Content\GumProject\FontCache\Font18Arial.fnt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Font18Arial</Name>
-    </None>
-    <None Include="Content\GumProject\FontCache\Font18Arial_0.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Font18Arial_0</Name>
     </None>
     <None Include="Content\GumProject\FontCache\Font18Arial_Bold.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -361,7 +361,7 @@
     <Compile Include="Data\PlayerStats.cs" />
     <Compile Include="Data\SimplePieceType.cs" />
     <Compile Include="Encounter\BlockScorer.cs" />
-    <Compile Include="Enemy\RandomBlockPlacementAttack.cs" />
+    <Compile Include="Enemy\BlockPlacementAttack.cs" />
     <Compile Include="Enemy\Enemy.cs" />
     <Compile Include="Enemy\EnemyAttack.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
@@ -402,9 +402,9 @@
     <Compile Include="Entities\Particle.Generated.cs">
       <DependentUpon>Particle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\ScoreAnimation.cs" />
-    <Compile Include="Entities\ScoreAnimation.Generated.cs">
-      <DependentUpon>ScoreAnimation.cs</DependentUpon>
+    <Compile Include="Entities\TemporaryAnimation.cs" />
+    <Compile Include="Entities\TemporaryAnimation.Generated.cs">
+      <DependentUpon>TemporaryAnimation.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Piece.cs" />
     <Compile Include="Entities\Piece.Event.cs">
@@ -443,7 +443,7 @@
     <Compile Include="Factories\PieceFactory.Generated.cs" />
     <Compile Include="Factories\BoardFactory.Generated.cs" />
     <Compile Include="Factories\EmptyBlockFactory.Generated.cs" />
-    <Compile Include="Factories\ScoreAnimationFactory.Generated.cs" />
+    <Compile Include="Factories\TemporaryAnimationFactory.Generated.cs" />
     <Compile Include="Factories\TestEntityFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs" />

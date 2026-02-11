@@ -24,8 +24,6 @@ namespace Quatrimo.Data
             new BombBlockData()
             ];
 
-        
-
         public static PieceShape sLine = new(new int[,] { { 1 }, { 2 }, { 3 }, { 4 } }, 2, 0, 4, "Line");
         public static PieceShape sStick = new(new int[,] { { 1 }, { 2 }, { 3 } }, 1, 0, 3, "Stick");
         public static PieceShape sTwig = new(new int[,] { { 1 }, { 2 } }, 0, 0, 2, "Twig", -1);

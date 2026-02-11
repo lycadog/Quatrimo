@@ -29,5 +29,12 @@ namespace Quatrimo.BagTypes.Bagblocks
 
             return (BombBlock)block.CreateBlock(screen, piece, bagBlock.localX, bagBlock.localY, piece.textureLeft, piece.textureTop, bagBlock.hsvColor);
         }
+
+        public override Block GetNew(GameScreen screen)
+        {
+            BombBlock block = Factories.BombBlockFactory.CreateNew();
+
+            return block;
+        }
     }
 }

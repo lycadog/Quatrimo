@@ -40,12 +40,32 @@ namespace Quatrimo
             return sprite;
         }
 
+        /// <summary>
+        /// Get initialized block
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="piece"></param>
+        /// <param name="bagBlock"></param>
+        /// <returns></returns>
         public virtual Block GetNew(GameScreen screen, Piece piece, BagBlock bagBlock)
         {
             Block block = Factories.BlockFactory.CreateNew();
 
             return block.CreateBlock(screen, piece, bagBlock.localX, bagBlock.localY, piece.textureLeft, piece.textureTop, bagBlock.hsvColor);
         }
+
+        /// <summary>
+        /// Get blank block
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <returns></returns>
+        public virtual Block GetNew(GameScreen screen)
+        {
+            Block block = Factories.BlockFactory.CreateNew();
+
+            return block;
+        }
+
 
         //TODO: methods for preview graphics, blocksense description, etc
     }

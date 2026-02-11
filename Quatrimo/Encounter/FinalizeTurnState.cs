@@ -22,6 +22,11 @@ namespace Quatrimo.Main
         {
 
             screen.Enemy.Update(screen); //need to check board again after an attack
+
+            //wait until the attack animations are fully done TODO
+
+            screen.UpdateEnemyUI();
+
             if (screen.boardUpdated)
             {
                 screen.StartState(new ProcessScoringState());

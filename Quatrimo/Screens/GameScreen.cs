@@ -1,31 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-
 using FlatRedBall;
-using FlatRedBall.Input;
-using FlatRedBall.Instructions;
 using FlatRedBall.AI.Pathfinding;
+using FlatRedBall.Graphics;
 using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Gui;
+using FlatRedBall.Input;
+using FlatRedBall.Instructions;
+using FlatRedBall.Localization;
 using FlatRedBall.Math;
 using FlatRedBall.Math.Geometry;
-using FlatRedBall.Localization;
+using FlatRedBall.Screens;
 using Microsoft.Xna.Framework;
-
+using Microsoft.Xna.Framework.Graphics;
+using Quatrimo.Data;
+using Quatrimo.Encounter;
 using Quatrimo.Entities;
 using Quatrimo.Entities.block;
 using Quatrimo.Entities.board;
 using Quatrimo.GumRuntimes;
-using Microsoft.Xna.Framework.Graphics;
 using Quatrimo.Main;
-using Quatrimo.Data;
-using System.Reflection;
-using System.Diagnostics;
-using Quatrimo.Encounter;
-using FlatRedBall.Graphics;
-using FlatRedBall.Screens;
+using System;
+using System.Collections.Generic;
+
 
 
 namespace Quatrimo.Screens
@@ -71,10 +66,12 @@ namespace Quatrimo.Screens
             Enemy = new TestSlime();
             InitializeBoard();
 
-            GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
+            //GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
 
             Bag = GlobalData.magnetBag.CreateBag();
             Bag.StartEncounter(MainHand);
+
+            UpdateEnemyUI();
 
             StartState(new StartTurnAndWaitState());
         }
@@ -128,14 +125,14 @@ namespace Quatrimo.Screens
             queuedScorers.Add(scorer);
         }
 
-        public ScoreAnimation ScoreBlock(Block block, int index = 0)
+        public TemporaryAnimation ScoreBlock(Block block, int index = 0)
         {
             return ScoreBlock(block, index, HsvColor.White);
         }
 
-        public ScoreAnimation ScoreBlock(Block block, int index, HsvColor color)
+        public TemporaryAnimation ScoreBlock(Block block, int index, HsvColor color)
         {
-            ScoreAnimation anim = Factories.ScoreAnimationFactory.CreateNew(FalingBlocksLayer);
+            TemporaryAnimation anim = Factories.TemporaryAnimationFactory.CreateNew(FalingBlocksLayer);
             AttachToBoard(anim);
             anim.SetColor(color);
             anim.StartScoreAnimation(block.boardX, block.boardY, index);
@@ -161,8 +158,17 @@ namespace Quatrimo.Screens
             EnemyHPNumberBar.UpdateBoxes((int)Enemy.health);
         }
 
-        public void UpdateAttackUI()
+        public void UpdateEnemyUI()
         {
+            string number = "???";
+            if (Enemy.attackOnCooldown == false)
+            {
+                number = Enemy.activeAttack.turnsUntilAttack.ToString();
+            }
+
+            GumScreen.timeUntilAttack.Text = $"ATTACK IN \n{number} turns";
+
+
             //todo: check attack current state after it's updated and update ui accordingly
         }
 
@@ -189,6 +195,11 @@ namespace Quatrimo.Screens
         {
             block.AttachTo(MainBoard);
             block.MoveToLayer(PlacedBlocksLayer);
+
+            TemporaryAnimation anim = Factories.TemporaryAnimationFactory.CreateNew(FalingBlocksLayer);
+            AttachToBoard(anim);
+            anim.StartScoreAnimation(block.boardX, block.boardY, 2);
+
         }
 
         /// <summary>

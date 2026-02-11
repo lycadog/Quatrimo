@@ -4,18 +4,6 @@
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>float</Type>
-      <Name>ButtonStandardInstance.X</Name>
-      <Value xsi:type="xsd:float">336</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>ButtonStandardInstance.Y</Name>
-      <Value xsi:type="xsd:float">156</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>int</Type>
       <Name>ColoredRectangleInstance.Alpha</Name>
       <Value xsi:type="xsd:int">255</Value>
@@ -65,62 +53,52 @@
     </Variable>
     <Variable>
       <Type>int</Type>
-      <Name>TextInstance.Blue</Name>
+      <Name>timeUntilAttack.Blue</Name>
+      <Value xsi:type="xsd:int">255</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFont>true</IsFont>
+      <Type>string</Type>
+      <Name>timeUntilAttack.Font</Name>
+      <Value xsi:type="xsd:string">Tahoma</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>timeUntilAttack.Green</Name>
       <Value xsi:type="xsd:int">255</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
-      <Name>TextInstance.FontSize</Name>
-      <Value xsi:type="xsd:int">18</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>TextInstance.Green</Name>
-      <Value xsi:type="xsd:int">255</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>TextInstance.Height</Name>
-      <Value xsi:type="xsd:float">-2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>TextInstance.Red</Name>
+      <Name>timeUntilAttack.Red</Name>
       <Value xsi:type="xsd:int">255</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">HURRAY!</Value>
+      <Name>timeUntilAttack.Text</Name>
+      <Value xsi:type="xsd:string">error attack ui uninitialized
+</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>bool</Type>
-      <Name>TextInstance.Visible</Name>
+      <Name>timeUntilAttack.UseFontSmoothing</Name>
       <Value xsi:type="xsd:boolean">false</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.Width</Name>
-      <Value xsi:type="xsd:float">7</Value>
+      <Name>timeUntilAttack.X</Name>
+      <Value xsi:type="xsd:float">351</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.X</Name>
-      <Value xsi:type="xsd:float">354</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>TextInstance.Y</Name>
-      <Value xsi:type="xsd:float">120</Value>
+      <Name>timeUntilAttack.Y</Name>
+      <Value xsi:type="xsd:float">163</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -196,13 +174,8 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>TextInstance</Name>
+    <Name>timeUntilAttack</Name>
     <BaseType>Text</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>ButtonStandardInstance</Name>
-    <BaseType>Controls/ButtonStandard</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors />

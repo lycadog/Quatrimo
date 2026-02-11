@@ -29,5 +29,12 @@ namespace Quatrimo
 
             return (CursedBlock)block.CreateBlock(screen, piece, bagBlock.localX, bagBlock.localY, piece.textureLeft, piece.textureTop, bagBlock.hsvColor);
         }
+
+        public override Block GetNew(GameScreen screen)
+        {
+            CursedBlock block = Factories.CursedBlockFactory.CreateNew();
+
+            return block;
+        }
     }
 }

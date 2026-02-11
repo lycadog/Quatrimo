@@ -16,11 +16,11 @@ namespace Quatrimo
 
         public EnemyAttack activeAttack;
 
-        protected bool attackOnCooldown = true;
+        public bool attackOnCooldown = true;
         public int currentAttackCooldown = 1;
 
         protected int minAttackCooldown = 2;
-        protected int maxAttackCooldown = 5;
+        protected int maxAttackCooldown = 8;
 
         protected EnemyAttack[] attackPool;
 

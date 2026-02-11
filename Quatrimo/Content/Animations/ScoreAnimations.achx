@@ -161,10 +161,28 @@
     <Frame>
       <TextureName>../atlas.png</TextureName>
       <FrameLength>0.4</FrameLength>
-      <LeftCoordinate>80</LeftCoordinate>
-      <RightCoordinate>90</RightCoordinate>
+      <LeftCoordinate>90</LeftCoordinate>
+      <RightCoordinate>100</RightCoordinate>
       <TopCoordinate>20</TopCoordinate>
       <BottomCoordinate>30</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>BlockHighlight</Name>
+    <Frame>
+      <TextureName>../atlas.png</TextureName>
+      <FrameLength>0.16</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>10</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves />
         <AxisAlignedCubeSaves />

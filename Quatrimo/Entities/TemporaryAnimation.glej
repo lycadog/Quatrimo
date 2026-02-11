@@ -73,6 +73,12 @@
           "Time": 0.0
         },
         {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
           "Type": "ColorOperation",
           "Member": "ColorOperation",
           "Value": 6,
@@ -82,6 +88,18 @@
           "Type": "string",
           "Member": "CurrentChainName",
           "Value": "ScoreAnimation",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -97,6 +115,6 @@
       "GenerateTimedEmit": true
     }
   ],
-  "Name": "Entities\\ScoreAnimation",
+  "Name": "Entities\\TemporaryAnimation",
   "CustomClassesForExport": []
 }
