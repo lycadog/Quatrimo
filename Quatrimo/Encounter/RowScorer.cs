@@ -64,7 +64,7 @@ namespace Quatrimo.Main
             //which means we need to implement inner iterators. otherwise, if the counter stays at 1, we only need outer iterators
             for (int x = 0; x < screen.boardWidth; x++)
             {
-                Block block = screen.blockboard[x, y];
+                Block block = screen[x, y];
 
                 if (block.justPlaced)
                 {
@@ -130,8 +130,8 @@ namespace Quatrimo.Main
 
         void ScoreBlock(int x, int index = 0)
         {
-            if (screen.blockboard[x, y].scored) { return; }
-            screen.ScoreBlock(screen.blockboard[x, y], index);
+            if (screen[x, y].scored) { return; }
+            screen.ScoreBlock(screen[x, y], index);
         }
 
         class ScoreIterator

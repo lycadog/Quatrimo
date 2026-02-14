@@ -99,16 +99,15 @@ namespace Quatrimo.Entities.block
 
             screen.AttachBlockToBoard(this);
             screen.placedBlocks.Add(this);
-            screen.boardUpdated = true;
-            screen.RowUpdated[boardY] = true;
+
             UpdatePlacedBlockPos();
 
-            Block placedBlock = screen.blockboard[boardX, boardY];
+            Block placedBlock = screen[boardX, boardY];
             placedBlock.RemovePlaced(true);
             
 
             //i cant figure out clipping shit do it later i guess
-            screen.blockboard[boardX, boardY] = this; //TODO: DO clipping stuff
+            screen[boardX, boardY] = this; //TODO: DO clipping stuff
             SlamPreview1.Visible = false;
             SlamPreview2.Visible = false;
         }
@@ -133,14 +132,12 @@ namespace Quatrimo.Entities.block
 
         public virtual void RemovePlaced(bool forced = false)
         {
-            screen.boardUpdated = true;
             screen.SetEmpty(boardX, boardY);
             Destroy();
         }
 
         public virtual void RemoveAndLower(bool forced = false)
         {
-            screen.boardUpdated = true;
             LowerCollumn();
             Destroy();
         }
@@ -151,12 +148,9 @@ namespace Quatrimo.Entities.block
         /// <param name="screen"></param>
         protected void LowerCollumn()
         {
-            screen.RowUpdated[boardY] = true;
-
             for (int y = boardY+1; y < screen.trueBoardHeight; y++) //go up and move each block down
             {
-                screen.RowUpdated[y] = true;
-                screen.blockboard[boardX, y].MoveTo(boardX, y - 1);
+                screen[boardX, y].MoveTo(boardX, y - 1);
 
                 //Create a new empty to fill in space created by lowering blocks at the top of the board
                 if (y == screen.trueBoardHeight - 1)
@@ -164,7 +158,6 @@ namespace Quatrimo.Entities.block
                     screen.SetEmpty(boardX, y);
                 }
             }
-            
         }
 
         public void Tick()
@@ -226,8 +219,7 @@ namespace Quatrimo.Entities.block
         /// <param name="y"></param>
         public void MoveTo(int x, int y)
         {
-            screen.boardUpdated = true;
-            screen.blockboard[x, y] = this;
+            screen[x, y] = this;
             boardX = x; boardY = y;
             UpdatePlacedBlockPos();
         }
@@ -242,7 +234,7 @@ namespace Quatrimo.Entities.block
         {
             if (screen.IsOutsideBounds(x, y)) { return true; }
 
-            return CollidesWhenFalling && screen.blockboard[x, y].CollidesWhenPlaced;
+            return CollidesWhenFalling && screen[x, y].CollidesWhenPlaced;
         }
 
         public bool CollidesFallingOffset(int xOffset, int yOffset)

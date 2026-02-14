@@ -87,8 +87,8 @@ namespace Quatrimo.Main
             for(int i = 0; i < screen.RowUpdated.Length; i++)
             {
                 screen.RowUpdated[i] = true;
-                screen.boardUpdated = true;
             }
+            screen.boardUpdated = true;
             bag.Tick();
         }
 

@@ -28,7 +28,7 @@ namespace Quatrimo.Encounter
             {
                 if (screen.IsOutsideBounds(positions[i].X, positions[i].Y)) { continue; }
 
-                blockList.Add(screen.blockboard[positions[i].X, positions[i].Y]);
+                blockList.Add(screen[positions[i].X, positions[i].Y]);
             }
             blocks = [.. blockList];
             Start();

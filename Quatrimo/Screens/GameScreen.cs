@@ -34,7 +34,16 @@ namespace Quatrimo.Screens
         public List<Scorer> activeScorers = [];
         public List<Scorer> queuedScorers = [];
 
-        public Block[,] blockboard;
+        Block[,] blockboard;
+
+        public Block this[int x, int y]
+            {
+            get => blockboard[x, y];
+            set {
+                blockboard[x, y] = value;
+                RowUpdated[y] = true;
+                boardUpdated = true; }
+            }
         public bool[] RowUpdated; //if row of Y index has been updated this turn
         public bool boardUpdated = false;
 
@@ -59,6 +68,9 @@ namespace Quatrimo.Screens
 
         private void CustomInitialize()
         {
+
+            
+
             FlatRedBallServices.GraphicsDeviceManager.HardwareModeSwitch = false;
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;

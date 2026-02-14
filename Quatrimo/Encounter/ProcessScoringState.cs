@@ -84,7 +84,7 @@ namespace Quatrimo.Main
 
                 for (int x = 0; x < screen.boardWidth; x++)//iterate through row blocks
                 {
-                    if (!screen.blockboard[x, y].Scorable) //if a block isn't scorable check if we need to stop scoring
+                    if (!screen[x, y].Scorable) //if a block isn't scorable check if we need to stop scoring
                     {
                         nonScorableBlocks++;
                         if (nonScorableBlocks > PlayerStats.EmptySpacesAllowedForScoring)
