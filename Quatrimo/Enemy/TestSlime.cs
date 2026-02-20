@@ -17,7 +17,13 @@ namespace Quatrimo
 
         public override void InitializeAttacks()
         {
-            attackPool = [new TestAttack()];
+            attackPool = [new BlockPlacementAttack(){
+                minBlocksDropped = 12,
+                maxBlocksDropped = 12
+            }
+
+
+                ];
         }
 
         public override void LevelUp(int level)

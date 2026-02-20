@@ -56,11 +56,11 @@ namespace Quatrimo.Screens
         public Enemy Enemy;
 
         public int level = 0;
+        public float levelTimes = 1;
         public int rowsRequiredForLevelup = 4;
-        public int rowsCleared = 0;
-        public double totalScore = 0;
+        public int turnRowsCleared = 0;
+        public int RowsCleared = 0;
         public double turnScore = 0;
-        public double turnTimes = 1;
 
         public int ActiveAnimCount { get => ScoreAnimations.Count; }
 
@@ -68,9 +68,6 @@ namespace Quatrimo.Screens
 
         private void CustomInitialize()
         {
-
-            
-
             FlatRedBallServices.GraphicsDeviceManager.HardwareModeSwitch = false;
             CameraInstance.BackgroundColor = new Color(2, 0, 40);
             trueBoardHeight = visualBoardHeight + 8;
@@ -83,7 +80,7 @@ namespace Quatrimo.Screens
             Bag = GlobalData.magnetBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
-            UpdateEnemyUI();
+            UpdateUI();
 
             StartState(new StartTurnAndWaitState());
         }
@@ -111,7 +108,7 @@ namespace Quatrimo.Screens
 
         public void InitializeBoard()
         {
-            blockboard = new Block[boardWidth, trueBoardHeight + 8];
+            blockboard = new Block[boardWidth, trueBoardHeight];
             MainBoard.GenerateGraphics(boardWidth, visualBoardHeight);
             MainHand.SetPosition(boardWidth);
             for(int x = 0; x < boardWidth; x++) //Initialize the board with empty blocks
@@ -153,7 +150,7 @@ namespace Quatrimo.Screens
             scoredBlocks.Add(block);
 
             turnScore += block.score;
-            turnTimes += block.times;
+            //turnTimes += block.times;
             boardUpdated = true;
             ScoreNumberBar.UpdateBoxes((int)turnScore);
             return anim;
@@ -170,7 +167,7 @@ namespace Quatrimo.Screens
             EnemyHPNumberBar.UpdateBoxes((int)Enemy.health);
         }
 
-        public void UpdateEnemyUI()
+        public void UpdateUI()
         {
             string number = "???";
             if (Enemy.attackOnCooldown == false)
@@ -180,6 +177,10 @@ namespace Quatrimo.Screens
 
             GumScreen.timeUntilAttack.Text = $"ATTACK IN \n{number} turns";
 
+            GumScreen.levelTimes.Text = $"| X: {levelTimes}";
+            GumScreen.playerLevel.Text = $"LVL: {level}";
+            GumScreen.enemyHP.Text = $"HP: {Enemy.health}/{Enemy.maxHealth}";
+            ScoreNumberBar.ClearBox();
 
             //todo: check attack current state after it's updated and update ui accordingly
         }

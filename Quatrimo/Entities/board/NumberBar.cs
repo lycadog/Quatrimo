@@ -53,6 +53,15 @@ namespace Quatrimo.Entities.board
             }
         }
 
+        public void ClearBox()
+        {
+            foreach(Sprite sprite in sprites)
+            {
+                sprite.LeftTexturePixel = 100;
+                sprite.RightTexturePixel = 111;
+            }
+        }
+
         void SetBox(int index, int number)
         {
             sprites[index].LeftTexturePixel = 10 * number;

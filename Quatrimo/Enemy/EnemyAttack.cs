@@ -10,12 +10,12 @@ namespace Quatrimo
 {
     public abstract class EnemyAttack
     {
-        public int turnsUntilAttack;
-        protected int minCooldown;
-        protected int maxCooldown;
+        public int turnsUntilAttack = 0;
+        protected int minCooldown = 2;
+        protected int maxCooldown = 12;
         protected bool scalesWithLevel;
 
-        public virtual void PrepareAttack(Enemy attacker)
+        public virtual void PrepareAttack(GameScreen screen, Enemy attacker)
         {
             turnsUntilAttack = FlatRedBallServices.Random.Next(minCooldown, maxCooldown);
         }

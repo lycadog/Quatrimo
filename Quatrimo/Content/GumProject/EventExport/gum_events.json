@@ -28,6 +28,335 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2026-02-10T18:42:18.9703115Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-15T22:06:49.9641827Z"
+      },
+      {
+        "NewName": "GameScreenGum.EnemyHP",
+        "OldName": "GameScreenGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-15T22:06:58.5374187Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text EnemyHP in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-15T22:07:07.0754345Z"
+      },
+      {
+        "NewName": "GameScreenGum.timeUntilAttack1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-15T22:07:09.5761734Z"
+      },
+      {
+        "NewName": "GameScreenGum.enemyHP",
+        "OldName": "GameScreenGum.timeUntilAttack1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-15T22:07:15.5465264Z"
+      },
+      {
+        "NewName": "GameScreenGum.enemyHP1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-15T22:09:24.3544982Z"
+      },
+      {
+        "NewName": "GameScreenGum.LVL",
+        "OldName": "GameScreenGum.enemyHP1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-15T22:10:13.8689997Z"
+      },
+      {
+        "NewName": "GameScreenGum.playerLevel",
+        "OldName": "GameScreenGum.LVL",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-15T22:10:23.3929709Z"
+      },
+      {
+        "NewName": "GameScreenGum.playerLevel1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-15T22:10:37.1859268Z"
+      },
+      {
+        "NewName": "GameScreenGum.levelTimes",
+        "OldName": "GameScreenGum.playerLevel1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-15T22:14:56.7959935Z"
+      },
+      {
+        "NewName": "GameScreenGum.NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-17T18:56:51.5927692Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-17T18:58:35.2949512Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text TextInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-17T18:58:43.1923575Z"
+      },
+      {
+        "NewName": "GameScreenGum.enemyHP1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-17T18:58:48.0851861Z"
+      },
+      {
+        "NewName": "GameScreenGum.BlockSensePanel",
+        "OldName": "GameScreenGum.NineSliceInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-17T18:58:56.3367016Z"
+      },
+      {
+        "NewName": "GameScreenGum.blockSenseText",
+        "OldName": "GameScreenGum.enemyHP1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-17T18:59:01.1198241Z"
+      },
+      {
+        "NewName": "GameScreenGum.blockSenseText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-17T18:59:19.7376137Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text blockSenseText1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-17T19:00:27.4559556Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-17T19:00:29.8728728Z"
+      },
+      {
+        "NewName": "GameScreenGum.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-18T05:08:27.2741585Z"
+      },
+      {
+        "NewName": "GameScreenGum.blockSprite",
+        "OldName": "GameScreenGum.SpriteInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-18T05:08:37.7574135Z"
+      },
+      {
+        "NewName": "GameScreenGum.DividerHorizontalInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-18T05:11:36.9933245Z"
+      },
+      {
+        "NewName": "GameScreenGum.headerText",
+        "OldName": "GameScreenGum.blockSenseText",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-19T00:36:08.1966686Z"
+      },
+      {
+        "NewName": "GameScreenGum.headerIcon",
+        "OldName": "GameScreenGum.blockSprite",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-19T01:07:45.0581714Z"
+      },
+      {
+        "NewName": "GameScreenGum.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T01:14:47.8442083Z"
+      },
+      {
+        "NewName": "GameScreenGum.DividerHorizontalInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:44.9759323Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:45.0037679Z"
+      },
+      {
+        "NewName": "GameScreenGum.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:45.0309802Z"
+      },
+      {
+        "NewName": "GameScreenGum.headerText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:45.0563131Z"
+      },
+      {
+        "NewName": "GameScreenGum.headerIcon1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:45.080638Z"
+      },
+      {
+        "NewName": "GameScreenGum.BlockSensePanel1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T02:59:45.1052044Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Elements/Divider DividerHorizontalInstance1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T02:59:50.966507Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text TextInstance1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T02:59:50.9686066Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Sprite SpriteInstance1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T02:59:50.9830482Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Text headerText1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T02:59:50.9968152Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Sprite headerIcon1 in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T02:59:51.0110092Z"
+      },
+      {
+        "NewName": "GameScreenGum.block square",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T20:29:40.5585111Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Container block square in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T20:29:58.917664Z"
+      },
+      {
+        "NewName": "GameScreenGum.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T20:30:07.292178Z"
+      },
+      {
+        "NewName": "GameScreenGum.SpriteInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T20:48:35.9239809Z"
+      },
+      {
+        "NewName": "GameScreenGum.infoButton",
+        "OldName": "GameScreenGum.SpriteInstance2",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2026-02-19T20:49:44.5045968Z"
+      },
+      {
+        "NewName": "GameScreenGum.ButtonIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T21:02:25.8263208Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Controls/ButtonIcon ButtonIconInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2026-02-19T21:02:38.0509414Z"
+      },
+      {
+        "NewName": "Quatrimo/SenseInfoButton",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2026-02-19T21:02:55.1752046Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Quatrimo/SenseInfoButton",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2026-02-19T21:05:50.4021232Z"
+      },
+      {
+        "NewName": "Quatrimo/SenseInfoButton",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2026-02-19T21:05:58.9622335Z"
+      },
+      {
+        "NewName": "Quatrimo/SenseInfoButton (Container).infoButton",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2026-02-19T21:06:08.7096526Z"
       }
     ]
   }

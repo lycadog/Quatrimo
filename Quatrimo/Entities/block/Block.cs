@@ -64,7 +64,7 @@ namespace Quatrimo.Entities.block
             return CreateBlock(screen, textureX, textureY, HsvColor.GetRandomBlockColor());
         }
 
-        void SetVisuals(float textureX, float textureY, HsvColor color)
+        protected void SetVisuals(float textureX, float textureY, HsvColor color)
         {
             if (!OverridesTexture)
             {

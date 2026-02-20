@@ -34,7 +34,7 @@ namespace Quatrimo
                 if(currentAttackCooldown <= 0)
                 {
                     activeAttack = attackPool[FlatRedBallServices.Random.Next(attackPool.Length)];
-                    activeAttack.PrepareAttack(this); //prepare a random attack!
+                    activeAttack.PrepareAttack(screen, this); //prepare a random attack!
                     attackOnCooldown = false; //we are no longer on cooldown
                 }
                 return; //don't run non-cooldown code until next turn
@@ -42,7 +42,6 @@ namespace Quatrimo
 
             activeAttack.turnsUntilAttack -= 1;
 
-            FlatRedBall.Debugging.Debugger.CommandLineWrite($"turns until attack: {activeAttack.turnsUntilAttack}");
 
 
             if (activeAttack.turnsUntilAttack <= 0)

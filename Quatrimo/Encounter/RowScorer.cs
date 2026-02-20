@@ -31,6 +31,8 @@ namespace Quatrimo.Main
 
         public override void Update()
         {
+            if (completed) { return; }
+
             foreach (var iterator in iterators)
             {
                 iterator.Iterate();
@@ -45,7 +47,7 @@ namespace Quatrimo.Main
             if (iterators.Count == 0)
             {
                 completed = true;
-                screen.rowsCleared += 1;
+                screen.turnRowsCleared += 1;
             }
         }
 

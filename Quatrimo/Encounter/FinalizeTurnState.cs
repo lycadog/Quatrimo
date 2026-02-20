@@ -2,6 +2,7 @@
 using Quatrimo.Screens;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,8 +26,6 @@ namespace Quatrimo.Main
 
             //wait until the attack animations are fully done TODO
 
-            screen.UpdateEnemyUI();
-
             if (screen.boardUpdated)
             {
                 screen.StartState(new ProcessScoringState());
@@ -44,12 +43,30 @@ namespace Quatrimo.Main
             }
             screen.Bag.DeselectCard();
 
-            
-            
+            screen.RowsCleared += screen.turnRowsCleared;
 
+            while(screen.RowsCleared >= screen.rowsRequiredForLevelup) //increment level!
+            {
+                Debug.WriteLine(screen.RowsCleared);
+                screen.level += 1;
+                screen.levelTimes += 0.5f;
+
+                screen.RowsCleared -= screen.rowsRequiredForLevelup;
+                screen.rowsRequiredForLevelup += 2;
+            }
+
+            if(screen.turnRowsCleared >= 4)
+            {
+                screen.turnScore *= screen.levelTimes;
+            }
+
+            screen.turnRowsCleared = 0;
+
+            screen.Enemy.health -= screen.turnScore;
+            screen.turnScore = 0;
 
             //todo: update UI stuff too
-
+            screen.UpdateUI();
             screen.StartState(new StartTurnAndWaitState());
         }
         

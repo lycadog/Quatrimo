@@ -199,6 +199,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>FancyPuaseButton</Name>
     </None>
+    <None Include="Content\GumProject\Components\Quatrimo\SenseInfoButton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SenseInfoButton</Name>
+    </None>
     <None Include="Content\GumProject\FontCache\Font10Arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font10Arial</Name>
@@ -222,6 +226,14 @@
     <None Include="Content\GumProject\FontCache\Font12Tahoma_noSmooth_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Font12Tahoma_noSmooth_0</Name>
+    </None>
+    <None Include="Content\GumProject\FontCache\Font12Tahoma_noSmooth_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Tahoma_noSmooth_Bold</Name>
+    </None>
+    <None Include="Content\GumProject\FontCache\Font12Tahoma_noSmooth_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Tahoma_noSmooth_Bold_0</Name>
     </None>
     <None Include="Content\GumProject\FontCache\Font14Arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -354,6 +366,7 @@
     <Compile Include="Data\Duration.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="Data\HsvColor.cs" />
+    <Compile Include="Data\IBlockSensable.cs" />
     <Compile Include="Data\ObjPool.cs" />
     <Compile Include="Data\PieceShape.cs" />
     <Compile Include="Data\PieceType.cs" />
@@ -684,6 +697,7 @@
     <Compile Include="GumRuntimes\Quatrimo\FancyPuaseButtonRuntime.Generated.cs">
       <DependentUpon>FancyPuaseButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\SenseInfoButtonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
