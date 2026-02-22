@@ -2,9 +2,11 @@
 using Gum.Converters;
 using Quatrimo.Data;
 using Quatrimo.Entities.block;
+using Quatrimo.Entities.board;
 using Quatrimo.Screens;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +40,8 @@ namespace Quatrimo
         public HsvColor color;
         public bool useRandomColor = true; //generates a random color for every block?
         public bool generateColorOnPrepare = true; //generate a new color every time the attack is prepared? if no, will generate on instantiation
+
+        public PlacementType placementType = PlacementType.DroppedFromAbove;
 
         // =================== Active Fields ===================
 
@@ -76,9 +80,6 @@ namespace Quatrimo
                 return (this.x.Equals(other.x));
             }
         }
-
-
-        PlacementType placementType = PlacementType.DroppedFromAbove;
 
         public BlockPlacementAttack()
         {
@@ -198,9 +199,6 @@ namespace Quatrimo
 
             BlockList.Sort();
 
-            FlatRedBall.Debugging.Debugger.CommandLineWrite($"block attack count: {BlockList.Count}");
-
-
 
             //TODO: add telegraping here
 
@@ -241,6 +239,7 @@ namespace Quatrimo
 
             foreach (var queuedBlock in BlockList)
             {
+                Debug.WriteLine("attack block X: " + queuedBlock.x);
                 int x = queuedBlock.x;
 
                 //create our new block from parameters
@@ -251,13 +250,14 @@ namespace Quatrimo
                 screen[x, screen.trueBoardHeight - 1].Destroy();
                 //sorry block!
 
+                //not working for some reason, adding an extra block of air right above the newly added block
 
-                for (int y = screen.trueBoardHeight - 2; y > -1; y--) //iterate top to bottom through the board, raising every block by one
+                for (int y = screen.trueBoardHeight - 2; y >= 0; y--) //iterate top to bottom through the board, raising every block by one
                 {
                     screen[x, y].MoveTo(x, y + 1); //move block up one!
                 }
 
-                block.PlaceAt(x, 0); //fill in the empty spot at the bottom!
+                block.PlaceAt(x, 0, true); //fill in the empty spot at the bottom!
             }
         }
 

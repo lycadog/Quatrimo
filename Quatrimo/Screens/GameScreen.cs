@@ -77,7 +77,7 @@ namespace Quatrimo.Screens
 
             //GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
 
-            Bag = GlobalData.magnetBag.CreateBag();
+            Bag = GlobalData.quantumBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
             UpdateUI();

@@ -69,7 +69,7 @@ namespace Quatrimo.Data
             new HsvColor(330, 1, .93), new HsvColor(310, .9, .91), new HsvColor(288, .83, .97), new HsvColor(274, .88, 1), new HsvColor(266, .83, .85), new HsvColor(258, .91, 1), new HsvColor(180, .88, 1), new HsvColor(160, .92, .92), new HsvColor(60, .88, 1), new HsvColor(50, .75, 1)
             ], "quantum bag", 0, 40);
 
-        public static StarterBag debugBag = new([sCursedNub, sLHatchet.B, sTwig.B, sBombTwig], "debug");
+        public static StarterBag debugBag = new([sLine.B, sTwig.B, sNub.B], "debug");
 
 
     }

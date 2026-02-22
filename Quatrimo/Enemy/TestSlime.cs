@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quatrimo.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,17 @@ namespace Quatrimo
     {
         public TestSlime()
         {
-            maxHealth = 300;
-            health = 300;
+            maxHealth = 1000;
+            health = 1000;
             InitializeAttacks();
         }
 
         public override void InitializeAttacks()
         {
             attackPool = [new BlockPlacementAttack(){
-                minBlocksDropped = 12,
-                maxBlocksDropped = 12
+                color = new HsvColor(137, .8, .9),
+                useRandomColor = false
             }
-
-
                 ];
         }
 

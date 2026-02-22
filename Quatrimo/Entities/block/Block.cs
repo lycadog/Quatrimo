@@ -92,7 +92,11 @@ namespace Quatrimo.Entities.block
 
         }
 
-        public virtual void Place()
+        /// <summary>
+        /// Place the block in its current position. ONLY use skipClipping if we are placing on a null or stale block!
+        /// </summary>
+        /// <param name="skipClipping"></param>
+        public virtual void Place(bool skipClipping = false)
         {
             Detach();
             justPlaced = true;
@@ -102,8 +106,12 @@ namespace Quatrimo.Entities.block
 
             UpdatePlacedBlockPos();
 
-            Block placedBlock = screen[boardX, boardY];
-            placedBlock.RemovePlaced(true);
+            if (!skipClipping)
+            {
+                Block placedBlock = screen[boardX, boardY];
+                placedBlock.RemovePlaced(true);
+            }
+            
             
 
             //i cant figure out clipping shit do it later i guess
@@ -112,10 +120,10 @@ namespace Quatrimo.Entities.block
             SlamPreview2.Visible = false;
         }
 
-        public void PlaceAt(int x, int y)
+        public void PlaceAt(int x, int y, bool skipClipping = false)
         {
             boardX = x; boardY = y;
-            Place();
+            Place(skipClipping);
         }
 
         public virtual void Score(bool forcedRemoval = false)

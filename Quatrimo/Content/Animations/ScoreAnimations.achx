@@ -178,7 +178,7 @@
     <Name>BlockHighlight</Name>
     <Frame>
       <TextureName>../atlas.png</TextureName>
-      <FrameLength>0.16</FrameLength>
+      <FrameLength>0.18</FrameLength>
       <LeftCoordinate>0</LeftCoordinate>
       <RightCoordinate>10</RightCoordinate>
       <TopCoordinate>10</TopCoordinate>

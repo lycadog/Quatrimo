@@ -55,7 +55,7 @@
     <Variable>
       <Type>bool</Type>
       <Name>BlockSensePanel.Visible</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
+      <Value xsi:type="xsd:boolean">true</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -73,7 +73,7 @@
     <Variable>
       <Type>float</Type>
       <Name>BlockSensePanel.X</Name>
-      <Value xsi:type="xsd:float">-124</Value>
+      <Value xsi:type="xsd:float">-303</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -85,7 +85,7 @@
     <Variable>
       <Type>float</Type>
       <Name>BlockSensePanel.Y</Name>
-      <Value xsi:type="xsd:float">14</Value>
+      <Value xsi:type="xsd:float">6</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -461,7 +461,6 @@
       <Type>string</Type>
       <Name>headerText.Text</Name>
       <Value xsi:type="xsd:string">CURSED BLOCK</Value>
-      <ExposedAsName>blockSenseTextText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -534,7 +533,7 @@
     <Variable>
       <Type>int</Type>
       <Name>infoButton.TextureLeft</Name>
-      <Value xsi:type="xsd:int">20</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
