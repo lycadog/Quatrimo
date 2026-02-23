@@ -379,7 +379,6 @@
     <Compile Include="Enemy\EnemyAttack.cs" />
     <Compile Include="Encounter\RowScorer.cs" />
     <Compile Include="Encounter\Scorer.cs" />
-    <Compile Include="Enemy\TestAttack.cs" />
     <Compile Include="Enemy\TestSlime.cs" />
     <Compile Include="Entities\block\Block.cs" />
     <Compile Include="Entities\block\Block.Event.cs">

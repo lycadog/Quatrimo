@@ -49,9 +49,6 @@ namespace Quatrimo
                 
                 activeAttack.ExecuteAttack(screen, this);
                 currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
-
-                activeAttack = null;
-                attackOnCooldown = true;
             }
         }
 

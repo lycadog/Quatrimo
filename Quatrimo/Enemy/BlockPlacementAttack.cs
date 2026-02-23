@@ -1,4 +1,7 @@
 ﻿using FlatRedBall;
+using FlatRedBall.Graphics.Particle;
+using FlatRedBall.Instructions;
+using FlatRedBall.Screens;
 using Gum.Converters;
 using Quatrimo.Data;
 using Quatrimo.Entities.block;
@@ -20,7 +23,7 @@ namespace Quatrimo
         public int[] blockTypes = [0];
 
         // Range of blocks dropped
-        public int minBlocksDropped = 4;
+        public int minBlocksDropped = 14;
         public int maxBlocksDropped = 18;
 
         public bool depthRestricted = true; // Whether or not the depth values are used to restrict block depth
@@ -47,7 +50,8 @@ namespace Quatrimo
 
         protected int blockCount;
         protected int depth;
-        protected List<QueuedBlock> BlockList = [];
+        protected List<QueuedBlock> QueuedBlocks = [];
+        protected List<QueuedBlock> FallingBlocks = [];
 
         public enum PlacementType
         {
@@ -57,8 +61,14 @@ namespace Quatrimo
 
         protected class QueuedBlock : IEquatable<QueuedBlock>, IComparable<QueuedBlock>
         {
+            public Block block;
             public int x, y;
+
+            public int finalY;
             public int type;
+            public bool placed = false;
+
+            public Sprite telegraphSprite;
 
             public QueuedBlock(int x, int type)
             {
@@ -93,6 +103,8 @@ namespace Quatrimo
 
         public override void ExecuteAttack(GameScreen screen, Enemy enemy)
         {
+            currentlyAttacking = true;
+
             //drop blocks according to parameters!
             //delete telegraph ui!
             //start animations!
@@ -100,7 +112,7 @@ namespace Quatrimo
             {
                 case PlacementType.DroppedFromAbove:
 
-                    DropBlocks(screen, enemy);
+                    StartBlockDrop(screen, enemy);
                     break;
 
                 case PlacementType.RaisedFromBelow:
@@ -180,7 +192,8 @@ namespace Quatrimo
                     if (blockArray[x, y] == null)
                     {
                         blockArray[x, y] = block;
-                        BlockList.Add(block);
+                        block.y = y;
+                        QueuedBlocks.Add(block);
                         //add block to our lists to be used later
                     }
                 }
@@ -197,7 +210,7 @@ namespace Quatrimo
                 }
             }
 
-            BlockList.Sort();
+            QueuedBlocks.Sort();
 
 
             //TODO: add telegraping here
@@ -209,35 +222,146 @@ namespace Quatrimo
             //generate telegraph UI!
         }
 
-        protected void DropBlocks(GameScreen screen, Enemy enemy)
+        protected void CreateTelegraphGraphics()
         {
 
-            foreach (var blockToDrop in BlockList)
+        }
+
+        public override void HideTelegraphSprites()
+        {
+            foreach(var block in QueuedBlocks)
             {
-                int x = blockToDrop.x;
+                block.telegraphSprite.Alpha = 0.25f;
+            }
+        }
 
-                //create our new block from parameters
-                Block block = GlobalData.blocks[blockToDrop.type].GetNew(screen);
-                block.CreateBlock(screen, textureX, textureY, color);
+        public override void UnhideTelegraphSprites()
+        {
+            foreach (var block in QueuedBlocks)
+            {
+                block.telegraphSprite.Alpha = 1;
+            }
+        }
 
-                for (int y = screen.trueBoardHeight - 1; true; y--) //slowly lower the block down the board
-                {
-                    if (block.CollidesFalling(x, y)) //once the block collides place it on the board above the block it collided with
+        public override bool UpdateAttack(GameScreen screen, Enemy enemy)
+        {
+            if (!currentlyAttacking) { return true; } //don't update an attack that isnt attacking
+
+            switch (placementType)
+            {
+                case PlacementType.DroppedFromAbove:
+
+                    bool complete = true;
+                    foreach (var block in FallingBlocks)
                     {
-                        block.PlaceAt(x, y + 1); //hence the y + 1
-
-                        break;
+                        if (!CheckFallingBlock(block))
+                        {
+                            complete = false;
+                        }
                     }
-                }
+
+                    //if (complete) { currentlyAttacking = false; enemy.attackOnCooldown = true; }
+                    return false;
+
+                case PlacementType.RaisedFromBelow:
+
+                    return true;
+
+                default:
+
+                    throw new InvalidOperationException("Attempted to run BlockPlacement UpdateAttack() with invalid PlacementType");
 
             }
         }
+
+        
+
+        protected void StartBlockDrop(GameScreen screen, Enemy enemy)
+        {
+
+            //use delegate instructions to delay dropping each block based on its X position
+            //genius!
+            foreach (var blockToDrop in QueuedBlocks)
+            {
+
+                InstructionManager.Add(new MethodInstruction<BlockPlacementAttack>(
+                    this,
+                    "DropBlock",
+                    [screen, blockToDrop],
+                    TimeManager.CurrentTime + 0.03f * blockToDrop.x));
+            }
+        }
+
+        /// <summary>
+        /// Trace path downwards and begin moving the block
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="queuedBlock"></param>
+        protected void DropBlock(GameScreen screen, QueuedBlock queuedBlock)
+        {
+            int x = queuedBlock.x;
+
+            //create our new block from parameters
+            Block block = GlobalData.blocks[queuedBlock.type].GetNew(screen);
+            block.CreateBlock(screen, textureX, textureY, color);
+
+            for (int y = screen.trueBoardHeight - 1; true; y--) //slowly lower the block down the board
+            {
+                if (block.CollidesFalling(x, y)) //once the block collides place it on the board above the block it collided with
+                {
+                    queuedBlock.block = block;
+                    queuedBlock.finalY = y + 1 + queuedBlock.y; //y + 1 because y is the block that we collided with, so we need to place ontop of it
+                    //we need to add the queued block Y to avoid conflicts with multiple blocks dropped at once on the same X position
+
+                    block.RelativeYAcceleration = -500f;
+                    FallingBlocks.Add(queuedBlock);
+
+                    screen.AttachBlockToBoard(block, false);
+                    block.UnhideSprites();
+                    block.RelativeX = queuedBlock.x * 10 + 10;
+                    block.RelativeY = 200; //this is wrong but thats ok. we need to lower the Y if there is another block being placed above this one
+
+                    block.UpdateSlamPos(150);
+                    //so we will need a new system where blocks are less independent and can affect the blocks on the same X value
+                    //SpriteManager.RemoveSprite(queuedBlock.telegraphSprite);
+
+                    break;
+                }
+            }
+        }
+
+        protected bool CheckFallingBlock(QueuedBlock queuedblock)
+        {
+            if (queuedblock.placed)
+            {
+                return true;
+            }
+
+            Block block = queuedblock.block;
+
+            //check if the block has reached its final position
+            if (block.RelativeY <= queuedblock.finalY * 10 + 10)
+            {
+                //place the block and stop animating it
+                block.PlaceAt(queuedblock.x, queuedblock.finalY);
+                block.RelativeYAcceleration = 0;
+                block.RelativeYVelocity = 0;
+                queuedblock.placed = true;
+                return true;
+            }
+
+
+            //RelativeX = boardX * 10 + 10; RelativeY = boardY * 10 + 10;
+
+            return false;
+        }
+
 
         protected void PlaceUnder(GameScreen screen, Enemy enemy)
         {
             //code to raise a collumn, then insert new block, similar to lower collumn!
 
-            foreach (var queuedBlock in BlockList)
+            foreach (var queuedBlock in QueuedBlocks)
             {
                 Debug.WriteLine("attack block X: " + queuedBlock.x);
                 int x = queuedBlock.x;
@@ -260,7 +384,6 @@ namespace Quatrimo
                 block.PlaceAt(x, 0, true); //fill in the empty spot at the bottom!
             }
         }
-
 
 
     }

@@ -20,7 +20,9 @@ namespace Quatrimo
         {
             attackPool = [new BlockPlacementAttack(){
                 color = new HsvColor(137, .8, .9),
-                useRandomColor = false
+                useRandomColor = false,
+                depthMax = 1,
+                depthRestricted = true,
             }
                 ];
         }

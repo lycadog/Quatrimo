@@ -36,6 +36,12 @@ namespace Quatrimo.Entities.block
         {
             SpriteLayer3.BottomTexturePixel = Layer3TopTexture + 10;
         }
+        void OnAfterAlphaSet (object sender, EventArgs e) 
+        {
+            SpriteLayer1.Alpha = Alpha;
+            SpriteLayer2.Alpha = Alpha;
+            SpriteLayer3.Alpha = Alpha;
+        }
  
     }
 }

@@ -204,11 +204,15 @@ namespace Quatrimo.Screens
             entity.AttachTo(MainBoard);
         }
 
-        public void AttachBlockToBoard(Block block)
+        public void AttachBlockToBoard(Block block, bool placed = true)
         {
             block.AttachTo(MainBoard);
             block.MoveToLayer(PlacedBlocksLayer);
 
+            if (!placed)
+            {
+                return;
+            }
             TemporaryAnimation anim = Factories.TemporaryAnimationFactory.CreateNew(FalingBlocksLayer);
             AttachToBoard(anim);
             anim.StartScoreAnimation(block.boardX, block.boardY, 2);

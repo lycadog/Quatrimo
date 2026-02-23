@@ -438,6 +438,25 @@
       "DefaultValue": -1,
       "SetByDerived": true,
       "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "Alpha",
+      "SetByDerived": true,
+      "Summary": "Alpha of all contained sprites",
+      "CreatesEvent": true,
+      "Category": "Visuals"
     }
   ],
   "NamedObjects": [
@@ -510,6 +529,12 @@
           "Type": "float",
           "Member": "Width",
           "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Alpha",
+          "Value": 0.66,
           "Time": 0.0
         }
       ],
@@ -850,6 +875,12 @@
     {
       "EventName": "AfterLayer3TopTextureSet",
       "SourceVariable": "Layer3TopTexture",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterAlphaSet",
+      "SourceVariable": "Alpha",
       "BeforeOrAfter": 1,
       "DelegateType": ""
     }
