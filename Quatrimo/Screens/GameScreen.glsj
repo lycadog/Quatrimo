@@ -387,6 +387,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "Layer",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
       "Is2D": true
@@ -404,6 +405,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "Layer",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
       "Is2D": true
@@ -421,6 +423,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "Layer",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
       "Is2D": true
@@ -438,6 +441,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "Layer",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
       "Is2D": true
@@ -455,6 +459,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "Layer",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
       "Is2D": true

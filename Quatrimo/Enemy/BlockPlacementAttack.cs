@@ -3,6 +3,7 @@ using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Instructions;
 using FlatRedBall.Screens;
 using Gum.Converters;
+using Microsoft.Xna.Framework.Graphics;
 using Quatrimo.Data;
 using Quatrimo.Entities.block;
 using Quatrimo.Entities.board;
@@ -23,15 +24,15 @@ namespace Quatrimo
         public int[] blockTypes = [0];
 
         // Range of blocks dropped
-        public int minBlocksDropped = 14;
-        public int maxBlocksDropped = 18;
+        public int minBlocksDropped = 4;
+        public int maxBlocksDropped = 16;
 
         public bool depthRestricted = true; // Whether or not the depth values are used to restrict block depth
         public bool depthEnforced = false; // Whether or not all blocks dropped match the depth perfectly (so 2 depth = 2 blocks dropped on every spot)
 
         //Range of allowed depth
-        public int depthMin = 1;
-        public int depthMax = 2;
+        public int depthMin = 2;
+        public int depthMax = 3;
 
         //Misc toggles and values
         public bool clustered = false; //Places blocks near 1-2 dense clusters. More likely to lead to high depth
@@ -50,8 +51,11 @@ namespace Quatrimo
 
         protected int blockCount;
         protected int depth;
+
+        protected QueuedBlock[,] BlockArray;
+
         protected List<QueuedBlock> QueuedBlocks = [];
-        protected List<QueuedBlock> FallingBlocks = [];
+        protected List<Sprite> TelegraphSprites = [];
 
         public enum PlacementType
         {
@@ -67,8 +71,6 @@ namespace Quatrimo
             public int finalY;
             public int type;
             public bool placed = false;
-
-            public Sprite telegraphSprite;
 
             public QueuedBlock(int x, int type)
             {
@@ -101,9 +103,8 @@ namespace Quatrimo
 
         // =================== Attack Methods ===================
 
-        public override void ExecuteAttack(GameScreen screen, Enemy enemy)
+        public override void StartAttack(GameScreen screen, Enemy enemy)
         {
-            currentlyAttacking = true;
 
             //drop blocks according to parameters!
             //delete telegraph ui!
@@ -131,6 +132,10 @@ namespace Quatrimo
         {
             base.PrepareAttack(screen, attacker);
 
+
+            QueuedBlocks.Clear(); //clear out values from previous attacks
+
+
             //todo: add symmetrical attack support
 
             // ==================== set all the values needed for the blocks ====================
@@ -138,14 +143,19 @@ namespace Quatrimo
             //Set random values
             blockCount = FlatRedBallServices.Random.Next(minBlocksDropped, maxBlocksDropped);
             depth = FlatRedBallServices.Random.Next(depthMin, depthMax);
+
             if (generateColorOnPrepare && useRandomColor)
             {
                 color = HsvColor.GetRandomBlockColor();
             }
 
-            int arrayDepth = screen.trueBoardHeight;
-            if (depthRestricted) { arrayDepth = depth; } //If depth restricted, restrict the array height
-            QueuedBlock[,] blockArray = new QueuedBlock[screen.boardWidth, arrayDepth];
+
+            int realArrayHeight = 1; //We will use this later to recreate the array from the real height.
+
+            int arrayDepth = screen.visualBoardHeight;
+            if (depthRestricted) { arrayDepth = depth; realArrayHeight = depth; } //If depth restricted, restrict the array height
+
+            QueuedBlock[,] tempBlockArray = new QueuedBlock[screen.boardWidth, arrayDepth];
 
             int maxClusters = 3;
             if (blockCount < 10) //lower cluster count if low block count
@@ -162,6 +172,7 @@ namespace Quatrimo
                     clusterCenters[i] = FlatRedBallServices.Random.Next(screen.boardWidth);
                 }
             }
+
 
 
             // ==================== start creating the queued blocks and arraying them ====================
@@ -189,70 +200,59 @@ namespace Quatrimo
                 for (int y = 0; y < arrayDepth; y++)
                 {
                     //find the next empty spot in the array. if there are no empty blocks, this block is discarded by not reaching the if statement below
-                    if (blockArray[x, y] == null)
+                    if (tempBlockArray[x, y] == null)
                     {
-                        blockArray[x, y] = block;
+                        tempBlockArray[x, y] = block;
                         block.y = y;
-                        QueuedBlocks.Add(block);
+
+                        realArrayHeight = Math.Max(y, realArrayHeight); //get real height to be used by the non-temporary array
+
+                        break;
+
                         //add block to our lists to be used later
+
                     }
                 }
             }
 
             if (depthEnforced) //go through the 2d array and add blocks ontop of others to match the depth
             {
-                for (int x = 0; x < blockArray.GetLength(0); x++)
+                for (int x = 0; x < tempBlockArray.GetLength(0); x++)
                 {
-                    if (blockArray[x, 0] != null)
+                    if (tempBlockArray[x, 0] != null)
                     {
                         //TODO: fill everything in with blocks here
                     }
                 }
             }
 
-            QueuedBlocks.Sort();
+            //Copy the temporary array into a shorter more accurately sized array, to be used later.
+            BlockArray = new QueuedBlock[tempBlockArray.GetLength(0), realArrayHeight];
 
+            for(int x = 0; x < tempBlockArray.GetLength(0); x++)
+            {
+                for(int y = 0; y < realArrayHeight; y++)
+                {
+                    BlockArray[x, y] = tempBlockArray[x, y];
+                }
+            }
 
-            //TODO: add telegraping here
+            CreateTelegraphGraphics(screen);
 
-
-
-
+            //TODO: we are looping through this arraay like 50 times. maybe regroup these a bit?
             //generate random blocks to drop in accordance to the specified configuration
             //generate telegraph UI!
         }
 
-        protected void CreateTelegraphGraphics()
+        public override bool ResolveAttack(GameScreen screen, Enemy enemy)
         {
-
-        }
-
-        public override void HideTelegraphSprites()
-        {
-            foreach(var block in QueuedBlocks)
-            {
-                block.telegraphSprite.Alpha = 0.25f;
-            }
-        }
-
-        public override void UnhideTelegraphSprites()
-        {
-            foreach (var block in QueuedBlocks)
-            {
-                block.telegraphSprite.Alpha = 1;
-            }
-        }
-
-        public override bool UpdateAttack(GameScreen screen, Enemy enemy)
-        {
-            if (!currentlyAttacking) { return true; } //don't update an attack that isnt attacking
 
             switch (placementType)
             {
                 case PlacementType.DroppedFromAbove:
 
                     bool complete = true;
-                    foreach (var block in FallingBlocks)
+                    foreach (var block in QueuedBlocks)
                     {
                         if (!CheckFallingBlock(block))
                         {
@@ -260,8 +260,7 @@ namespace Quatrimo
                         }
                     }
 
-                    //if (complete) { currentlyAttacking = false; enemy.attackOnCooldown = true; }
-                    return false;
+                    return complete;
 
                 case PlacementType.RaisedFromBelow:
 
@@ -275,14 +274,30 @@ namespace Quatrimo
         }
 
         
-
+        /// <summary>
+        /// Queue up every single block to be dropped using instructions
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="enemy"></param>
         protected void StartBlockDrop(GameScreen screen, Enemy enemy)
         {
+
+            
+            int blockdrops = 0;
+
+            foreach(var sprite in TelegraphSprites)
+            {
+                SpriteManager.RemoveSprite(sprite);
+            }
 
             //use delegate instructions to delay dropping each block based on its X position
             //genius!
             foreach (var blockToDrop in QueuedBlocks)
             {
+                blockdrops++;
+
+
+                Debug.WriteLine($"dropped block {blockToDrop.x}, {blockToDrop.y}");
 
                 InstructionManager.Add(new MethodInstruction<BlockPlacementAttack>(
                     this,
@@ -290,6 +305,8 @@ namespace Quatrimo
                     [screen, blockToDrop],
                     TimeManager.CurrentTime + 0.03f * blockToDrop.x));
             }
+
+            Debug.WriteLine($"queued blocks length: {QueuedBlocks.Count}, blocks dropped: {blockdrops}");
         }
 
         /// <summary>
@@ -301,28 +318,17 @@ namespace Quatrimo
         {
             int x = queuedBlock.x;
 
-            //create our new block from parameters
-            Block block = GlobalData.blocks[queuedBlock.type].GetNew(screen);
-            block.CreateBlock(screen, textureX, textureY, color);
+            Block block = queuedBlock.block;
 
             for (int y = screen.trueBoardHeight - 1; true; y--) //slowly lower the block down the board
             {
                 if (block.CollidesFalling(x, y)) //once the block collides place it on the board above the block it collided with
                 {
-                    queuedBlock.block = block;
                     queuedBlock.finalY = y + 1 + queuedBlock.y; //y + 1 because y is the block that we collided with, so we need to place ontop of it
                     //we need to add the queued block Y to avoid conflicts with multiple blocks dropped at once on the same X position
 
                     block.RelativeYAcceleration = -500f;
-                    FallingBlocks.Add(queuedBlock);
 
-                    screen.AttachBlockToBoard(block, false);
-                    block.UnhideSprites();
-                    block.RelativeX = queuedBlock.x * 10 + 10;
-                    block.RelativeY = 200; //this is wrong but thats ok. we need to lower the Y if there is another block being placed above this one
-
-                    block.UpdateSlamPos(150);
-                    //so we will need a new system where blocks are less independent and can affect the blocks on the same X value
                     //SpriteManager.RemoveSprite(queuedBlock.telegraphSprite);
 
                     break;
@@ -330,7 +336,12 @@ namespace Quatrimo
             }
         }
 
-        protected bool CheckFallingBlock(QueuedBlock queuedblock)
+        /// <summary>
+        /// Call on a falling block to check if it has fallen into place yet.
+        /// </summary>
+        /// <param name="queuedblock"></param>
+        /// <returns></returns>
+        protected static bool CheckFallingBlock(QueuedBlock queuedblock)
         {
             if (queuedblock.placed)
             {
@@ -356,7 +367,11 @@ namespace Quatrimo
             return false;
         }
 
-
+        /// <summary>
+        /// Place block under the board
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="enemy"></param>
         protected void PlaceUnder(GameScreen screen, Enemy enemy)
         {
             //code to raise a collumn, then insert new block, similar to lower collumn!
@@ -385,6 +400,132 @@ namespace Quatrimo
             }
         }
 
+        /// <summary>
+        /// Create sprites and set up everything to show the attack's telegraph
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <exception cref="InvalidOperationException"></exception>
+        protected void CreateTelegraphGraphics(GameScreen screen)
+        {
+            switch (placementType)
+            {
+                case PlacementType.DroppedFromAbove:
+
+                    CreateDroppedTelegraphUI(screen);
+                    break;
+
+                case PlacementType.RaisedFromBelow:
+
+                    break;
+
+                default:
+
+                    throw new InvalidOperationException("Attempted to execute BlockPlacement with invalid PlacementType");
+
+            }
+        }
+
+
+        protected void CreateDroppedTelegraphUI(GameScreen screen)
+        {
+
+            Debug.WriteLine($"block array size: {BlockArray.GetLength(0)}, {BlockArray.GetLength(1)}");
+
+            for(int x = 0; x < BlockArray.GetLength(0); x++)
+            {
+
+                Sprite arrowSprite = SpriteManager.AddSprite(atlas, screen.FalingBlocksLayer);
+
+                for (int y = 0; y < BlockArray.GetLength(1); y++)
+                {
+
+                    Debug.WriteLine($"block {x},{y} is null? {BlockArray[x,y] == null}");
+
+                    if (BlockArray[x,y] == null)
+                    {
+                        if(y == 0) { SpriteManager.RemoveSprite(arrowSprite); } //so fucking jank
+
+                        break;
+                    }
+
+                    QueuedBlock queuedBlock = BlockArray[x, y];
+
+                    Block block = GlobalData.blocks[queuedBlock.type].GetNew(screen);
+                    block.CreateBlock(screen, textureX, textureY, color);
+
+                    queuedBlock.block = block;
+
+                    screen.AttachBlockToBoard(block, false);
+                    block.UnhideSprites();
+                    block.RelativeX = queuedBlock.x * 10 + 10;
+                    block.RelativeY = screen.visualBoardHeight * 10; 
+                    block.HideSlamIndicator();
+
+                    QueuedBlocks.Add(queuedBlock);
+
+                    if (y == 0)
+                    {
+                        //set sprite position and texture and stuff
+                        arrowSprite.LeftTexturePixel = 30;
+                        arrowSprite.RightTexturePixel = 40;
+                        arrowSprite.TopTexturePixel = 130;
+                        arrowSprite.BottomTexturePixel = 140;
+
+                        arrowSprite.Width = 10;
+                        arrowSprite.Height = 10;
+
+                        TelegraphSprites.Add(arrowSprite);
+
+                        screen.AttachToBoard(arrowSprite);
+                        arrowSprite.RelativeX = x * 10 + 10;
+                        arrowSprite.RelativeY = screen.visualBoardHeight * 10 - 10;
+
+                        arrowSprite.Visible = true;
+                    }
+
+
+                    if (y > 0) //we need to move over blocks on the same X position out of the way or we'll have bugs
+                    {
+                        for(int loweredY = y - 1; loweredY > -1; loweredY--)
+                        {
+                            BlockArray[x, loweredY].block.RelativeY -= 10;
+                        }
+                        arrowSprite.RelativeY -= 10;
+                    }
+                }
+                //we will properly create our blocks here and attach their sprites to the board at the top, so they will be ready to fall.
+                //when another block is detected at the same X value, we need to go to the previous one and move it.
+            }
+        }
+
+
+        public override void HideTelegraphSprites()
+        {
+            foreach (var block in QueuedBlocks)
+            {
+                block.block.Alpha = 0.2f;
+            }
+
+            foreach(var sprite in TelegraphSprites)
+            {
+                sprite.Alpha = 0.2f;
+            }
+
+            //hideother telegraph stuff here too!
+        }
+
+        public override void UnhideTelegraphSprites()
+        {
+            foreach (var block in QueuedBlocks)
+            {
+                block.block.Alpha = 1;
+            }
+
+            foreach (var sprite in TelegraphSprites)
+            {
+                sprite.Alpha = 1;
+            }
+        }
 
     }
 }

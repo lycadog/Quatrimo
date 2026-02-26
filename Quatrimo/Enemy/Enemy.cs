@@ -2,6 +2,7 @@
 using Quatrimo.Screens;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,40 +17,96 @@ namespace Quatrimo
 
         public EnemyAttack activeAttack;
 
-        public bool attackOnCooldown = true;
-        public int currentAttackCooldown = 1;
+        public int currentAttackCooldown = 2;
 
         protected int minAttackCooldown = 2;
         protected int maxAttackCooldown = 8;
 
         protected EnemyAttack[] attackPool;
 
+        public EnemyState state = EnemyState.Idle;
 
-        public virtual void Update(GameScreen screen)
+        public enum EnemyState
         {
-            if (attackOnCooldown) //if cooldown state
+            Idle,
+            ChargingAttack,
+            Attacking
+        }
+
+        /// <summary>
+        /// Update enemy's attacks and behavior. Returns if FinalizeTurnState should end or wait for the attack to resolve. True = End
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public virtual bool Update(GameScreen screen)
+        {
+            switch (state)
             {
-                currentAttackCooldown -= 1;
+                case EnemyState.Idle:
 
-                if(currentAttackCooldown <= 0)
-                {
-                    activeAttack = attackPool[FlatRedBallServices.Random.Next(attackPool.Length)];
-                    activeAttack.PrepareAttack(screen, this); //prepare a random attack!
-                    attackOnCooldown = false; //we are no longer on cooldown
-                }
-                return; //don't run non-cooldown code until next turn
-            }
+                    currentAttackCooldown -= 1;
+                    if(currentAttackCooldown <= 0)
+                    {
+                        //prepare a random attack!
+                        activeAttack = attackPool[FlatRedBallServices.Random.Next(attackPool.Length)];
+                        activeAttack.PrepareAttack(screen, this);
+                        
+                        
 
-            activeAttack.turnsUntilAttack -= 1;
-
-
-
-            if (activeAttack.turnsUntilAttack <= 0)
-            {
+                        //we are charging our attack so let's change state!
+                        state = EnemyState.ChargingAttack;
+                    }
+                    return true;
                 
-                activeAttack.ExecuteAttack(screen, this);
-                currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
+                case EnemyState.ChargingAttack:
+
+                    activeAttack.turnsUntilAttack -= 1;
+
+                    if (activeAttack.turnsUntilAttack <= 0)
+                    {
+                        //Run the attack and set our state to attacking! Lets get 'em!!!!!
+                        activeAttack.StartAttack(screen, this);
+                        state = EnemyState.Attacking;
+
+                        return false;
+                        //We just started our attack so we need to wait to resolve it, so we return false
+                    }
+
+                    return true;
+                    
+                case EnemyState.Attacking:
+
+                    if(activeAttack.ResolveAttack(screen, this))
+                    {
+                        currentAttackCooldown = FlatRedBallServices.Random.Next(minAttackCooldown, maxAttackCooldown);
+                        state = EnemyState.Idle;
+
+                        return true;
+                    }
+
+                    return false;
+                //idk!!!!!!
+                //check if attack is done or not
+                //let attack handle if its resolved
+                //if its true we need to do some stuff to change our state back to idle
+
+                default:
+                    throw new ArgumentOutOfRangeException("Enemy update ran with invalid EnemyState " + state);       
             }
+
+        }
+
+        public void HideTelegraphs()
+        {
+            if (state == EnemyState.Idle) { return; }
+            activeAttack.HideTelegraphSprites();
+        }
+
+        public void UnhideTelegraphs()
+        {
+            if (state == EnemyState.Idle) { return; }
+            activeAttack.UnhideTelegraphSprites();
         }
 
         public abstract void InitializeAttacks();

@@ -201,6 +201,12 @@ namespace Quatrimo.Entities.block
             SpriteLayer3.Visible = false;
         }
 
+        public void HideSlamIndicator()
+        {
+            SlamPreview1.Visible = false;
+            SlamPreview2.Visible = false;
+        }
+
         void updateColor(HsvColor hsvColor)
         {
             SpriteLayer1.Color = hsvColor.color;

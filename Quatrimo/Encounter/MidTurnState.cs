@@ -58,11 +58,13 @@ namespace Quatrimo.Main
 
         protected override void OnStateStart()
         {
-            
+            screen.Enemy.HideTelegraphs();
         }
 
         void PlacePieceAndEndState()
         {
+            screen.Enemy.UnhideTelegraphs();
+
             screen.CurrentPiece.Place();
             screen.Bag.DiscardCard(screen.Bag.currentCardIndex);
             screen.StartState(new ProcessScoringState());

@@ -892,7 +892,12 @@
       <Value xsi:type="xsd:string">cursed block is not removed when scored and gains extra score for 3 turns after being scored
 \
 
-miscellaneous info</Value>
+miscellaneous info
+
+
+
+
+image here</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

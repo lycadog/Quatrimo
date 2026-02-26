@@ -170,7 +170,7 @@ namespace Quatrimo.Screens
         public void UpdateUI()
         {
             string number = "???";
-            if (Enemy.attackOnCooldown == false)
+            if (Enemy.state != Enemy.EnemyState.Idle)
             {
                 number = Enemy.activeAttack.turnsUntilAttack.ToString();
             }

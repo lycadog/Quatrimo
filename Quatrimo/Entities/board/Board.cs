@@ -31,8 +31,6 @@ namespace Quatrimo.Entities.board
             BorderBG.Width = x; BorderBG.Height = y;
             //FlatRedBall.Debugging.Debugger.CommandLineWrite("X/Y10: " + X + ", " + Y);
 
-            
-
             BorderD.Width = x - 20; BorderD.RelativeX = (x - 20) / 2 + 5;
             BorderU.Width = x - 20; BorderU.RelativeX = (x - 20) / 2 + 5; BorderU.RelativeY = y - 10;
 

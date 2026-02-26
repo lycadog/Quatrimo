@@ -473,6 +473,12 @@
       "InstructionSaves": [
         {
           "Type": "float",
+          "Member": "Alpha",
+          "Value": 0.66,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
           "Member": "Blue",
           "Value": 0.0,
           "Time": 0.0
@@ -529,12 +535,6 @@
           "Type": "float",
           "Member": "Width",
           "Value": 10.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Alpha",
-          "Value": 0.66,
           "Time": 0.0
         }
       ],
