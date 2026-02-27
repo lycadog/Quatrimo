@@ -42,6 +42,11 @@ namespace Quatrimo.Entities.block
             SpriteLayer2.Alpha = Alpha;
             SpriteLayer3.Alpha = Alpha;
         }
+        void OnAfterSlamPreviewAlphaSet (object sender, EventArgs e) 
+        {
+            SlamPreview1.Alpha = SlamPreviewAlpha;
+            SlamPreview2.Alpha = SlamPreviewAlpha;
+        }
  
     }
 }

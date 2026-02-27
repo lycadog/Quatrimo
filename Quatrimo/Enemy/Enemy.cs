@@ -17,7 +17,7 @@ namespace Quatrimo
 
         public EnemyAttack activeAttack;
 
-        public int currentAttackCooldown = 2;
+        public int currentAttackCooldown = 6;
 
         protected int minAttackCooldown = 2;
         protected int maxAttackCooldown = 8;
@@ -62,6 +62,8 @@ namespace Quatrimo
                 case EnemyState.ChargingAttack:
 
                     activeAttack.turnsUntilAttack -= 1;
+
+                    activeAttack.UpdatePreparedAttack(screen, this);
 
                     if (activeAttack.turnsUntilAttack <= 0)
                     {

@@ -39,8 +39,8 @@ namespace Quatrimo
         public bool symmetrical = false; //Places blocks symmetrically, enforces even number of blocks
 
         //block visuals
-        public int textureX = 120;
-        public int textureY = 30;
+        public int textureX = 0;
+        public int textureY = 50;
         public HsvColor color;
         public bool useRandomColor = true; //generates a random color for every block?
         public bool generateColorOnPrepare = true; //generate a new color every time the attack is prepared? if no, will generate on instantiation
@@ -103,30 +103,6 @@ namespace Quatrimo
 
         // =================== Attack Methods ===================
 
-        public override void StartAttack(GameScreen screen, Enemy enemy)
-        {
-
-            //drop blocks according to parameters!
-            //delete telegraph ui!
-            //start animations!
-            switch (placementType)
-            {
-                case PlacementType.DroppedFromAbove:
-
-                    StartBlockDrop(screen, enemy);
-                    break;
-
-                case PlacementType.RaisedFromBelow:
-
-                    PlaceUnder(screen, enemy);
-                    break;
-
-                default:
-
-                    throw new InvalidOperationException("Attempted to execute BlockPlacement with invalid PlacementType");
-
-            }
-        }
 
         public override void PrepareAttack(GameScreen screen, Enemy attacker)
         {
@@ -244,6 +220,39 @@ namespace Quatrimo
             //generate telegraph UI!
         }
 
+        public override void UpdatePreparedAttack(GameScreen screen, Enemy enemy)
+        {
+            foreach(var queuedBlock in QueuedBlocks)
+            {
+                queuedBlock.block.UpdateSlamPos(queuedBlock.y);
+            }
+        }
+
+        public override void StartAttack(GameScreen screen, Enemy enemy)
+        {
+
+            //drop blocks according to parameters!
+            //delete telegraph ui!
+            //start animations!
+            switch (placementType)
+            {
+                case PlacementType.DroppedFromAbove:
+
+                    StartBlockDrop(screen, enemy);
+                    break;
+
+                case PlacementType.RaisedFromBelow:
+
+                    PlaceUnder(screen, enemy);
+                    break;
+
+                default:
+
+                    throw new InvalidOperationException("Attempted to execute BlockPlacement with invalid PlacementType");
+
+            }
+        }
+
         public override bool ResolveAttack(GameScreen screen, Enemy enemy)
         {
 
@@ -281,8 +290,6 @@ namespace Quatrimo
         /// <param name="enemy"></param>
         protected void StartBlockDrop(GameScreen screen, Enemy enemy)
         {
-
-            
             int blockdrops = 0;
 
             foreach(var sprite in TelegraphSprites)
@@ -319,6 +326,8 @@ namespace Quatrimo
             int x = queuedBlock.x;
 
             Block block = queuedBlock.block;
+
+            block.HideSlamIndicator();
 
             for (int y = screen.trueBoardHeight - 1; true; y--) //slowly lower the block down the board
             {
@@ -458,8 +467,13 @@ namespace Quatrimo
                     screen.AttachBlockToBoard(block, false);
                     block.UnhideSprites();
                     block.RelativeX = queuedBlock.x * 10 + 10;
-                    block.RelativeY = screen.visualBoardHeight * 10; 
-                    block.HideSlamIndicator();
+                    block.RelativeY = screen.visualBoardHeight * 10;
+
+                    block.boardX = queuedBlock.x;
+                    block.boardY = screen.visualBoardHeight;
+
+                    block.SetEnemyBlock();
+                    block.UpdateSlamPos(y);
 
                     QueuedBlocks.Add(queuedBlock);
 
@@ -488,7 +502,11 @@ namespace Quatrimo
                     {
                         for(int loweredY = y - 1; loweredY > -1; loweredY--)
                         {
+
                             BlockArray[x, loweredY].block.RelativeY -= 10;
+                            BlockArray[x, loweredY].block.boardY--;
+
+                            BlockArray[x, loweredY].block.UpdateSlamPos(BlockArray[x, loweredY].y);
                         }
                         arrowSprite.RelativeY -= 10;
                     }
@@ -504,6 +522,7 @@ namespace Quatrimo
             foreach (var block in QueuedBlocks)
             {
                 block.block.Alpha = 0.2f;
+                block.block.SlamPreviewAlpha = 0.5f;
             }
 
             foreach(var sprite in TelegraphSprites)
@@ -519,6 +538,7 @@ namespace Quatrimo
             foreach (var block in QueuedBlocks)
             {
                 block.block.Alpha = 1;
+                block.block.SlamPreviewAlpha = 0.75f;
             }
 
             foreach (var sprite in TelegraphSprites)
@@ -526,6 +546,5 @@ namespace Quatrimo
                 sprite.Alpha = 1;
             }
         }
-
     }
 }

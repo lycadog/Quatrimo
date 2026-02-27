@@ -219,6 +219,20 @@ namespace Quatrimo.Entities.block
             SpriteLayer3.Color = hsvColor.getAlteredColor(hueOffset2, -0.06, -0.30);
         }
 
+        /// <summary>
+        /// Changes slam preview to be hostile
+        /// </summary>
+        public void SetEnemyBlock()
+        {
+            SlamPreview1.TopTexturePixel = 10;
+            SlamPreview1.BottomTexturePixel = 20;
+            SlamPreview1.Color = new Color(255, 100, 100);
+
+            SlamPreview1.Alpha = 0.75f;
+
+            SlamPreview2.Visible = false;
+        }
+
 
 
         // [----==================================================================================================----]
@@ -285,7 +299,7 @@ namespace Quatrimo.Entities.block
         }
 
         /// <summary>
-        /// Updates the board and slam position of this falling block using its localpos and the position of the piece
+        /// Updates the board position of this falling block using its localpos and the position of the piece
         /// </summary>
         public void UpdateFallingPosition()
         {
@@ -297,7 +311,23 @@ namespace Quatrimo.Entities.block
             UpdatePos();
         }
 
-        public void UpdateSlamPos(int slamOffset)
+        //TODO: SLAM REWORK! we need a UNIFIED VALUE that we can EASILY CHANGE FOR AN AUTO UPDATE!
+        //THIS TEMP OFFSET is ONLY to make block attack work
+        //very jank!
+        public void UpdateSlamPos(int tempOffset)
+        {
+            for (int yOffset = 1; yOffset < screen.trueBoardHeight; yOffset++)
+            {
+                if (CollidesFallingOffset(0, -yOffset))
+                {
+                    SetSlamPos(-yOffset + 2 + tempOffset);
+                    break;
+                }
+            }
+
+        }
+
+        public void SetSlamPos(int slamOffset)
         {
             SlamPreview1.RelativeY = slamOffset * 10;
             SlamPreview2.RelativeY = slamOffset * 10;

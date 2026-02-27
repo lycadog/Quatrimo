@@ -457,6 +457,25 @@
       "Summary": "Alpha of all contained sprites",
       "CreatesEvent": true,
       "Category": "Visuals"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Visuals",
+          "Type": "String"
+        }
+      ],
+      "Name": "SlamPreviewAlpha",
+      "SetByDerived": true,
+      "Summary": "Alpha of all Slam Preview sprites",
+      "CreatesEvent": true,
+      "Category": "Visuals"
     }
   ],
   "NamedObjects": [
@@ -743,6 +762,30 @@
           "Member": "Z",
           "Value": 3.0,
           "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
         }
       ],
       "SourceType": 2,
@@ -881,6 +924,12 @@
     {
       "EventName": "AfterAlphaSet",
       "SourceVariable": "Alpha",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterSlamPreviewAlphaSet",
+      "SourceVariable": "SlamPreviewAlpha",
       "BeforeOrAfter": 1,
       "DelegateType": ""
     }

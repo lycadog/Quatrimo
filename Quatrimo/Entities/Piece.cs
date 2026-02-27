@@ -194,7 +194,7 @@ namespace Quatrimo.Entities
 
             foreach(var block in Blocks)
             {
-                block.UpdateSlamPos(-slamOffset);
+                block.SetSlamPos(-slamOffset);
             }
 
         }

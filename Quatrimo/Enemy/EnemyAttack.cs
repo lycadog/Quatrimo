@@ -24,6 +24,13 @@ namespace Quatrimo
         }
 
         /// <summary>
+        /// Update the prepared attack, runs before it is started
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="enemy"></param>
+        public abstract void UpdatePreparedAttack(GameScreen screen, Enemy enemy);
+
+        /// <summary>
         /// Begin the attack process, leading into UpdateAttack
         /// </summary>
         /// <param name="screen"></param>
