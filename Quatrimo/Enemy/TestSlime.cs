@@ -21,6 +21,8 @@ namespace Quatrimo
             attackPool = [new BlockPlacementAttack(){
                 color = new HsvColor(137, .8, .9),
                 useRandomColor = false,
+                textureX = 60,
+                textureY = 40
             }
                 ];
         }

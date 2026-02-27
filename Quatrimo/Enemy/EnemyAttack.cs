@@ -11,7 +11,7 @@ namespace Quatrimo
 {
     public abstract class EnemyAttack
     {
-        public int turnsUntilAttack = 4;
+        public int turnsUntilAttack = 6;
         public int minCooldown = 6;
         public int maxCooldown = 14;
         public bool scalesWithLevel;

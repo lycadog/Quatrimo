@@ -39,7 +39,7 @@ namespace Quatrimo
         public bool symmetrical = false; //Places blocks symmetrically, enforces even number of blocks
 
         //block visuals
-        public int textureX = 0;
+        public int textureX = 30;
         public int textureY = 50;
         public HsvColor color;
         public bool useRandomColor = true; //generates a random color for every block?
@@ -522,7 +522,7 @@ namespace Quatrimo
             foreach (var block in QueuedBlocks)
             {
                 block.block.Alpha = 0.2f;
-                block.block.SlamPreviewAlpha = 0.5f;
+                block.block.SlamPreviewAlpha = 0.3f;
             }
 
             foreach(var sprite in TelegraphSprites)

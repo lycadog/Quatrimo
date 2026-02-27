@@ -723,8 +723,26 @@
         },
         {
           "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
           "Member": "BottomTexturePixel",
           "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -737,6 +755,12 @@
           "Type": "float",
           "Member": "LeftTexturePixel",
           "Value": 40.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -761,30 +785,6 @@
           "Type": "float",
           "Member": "Z",
           "Value": 3.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "ColorOperation",
-          "Member": "ColorOperation",
-          "Value": 6,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Red",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Green",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Blue",
-          "Value": 1.0,
           "Time": 0.0
         }
       ],

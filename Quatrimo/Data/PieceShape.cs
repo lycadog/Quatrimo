@@ -20,7 +20,7 @@ namespace Quatrimo.Data
         //Basic PieceType with no special types or anything
         public SimplePieceType B;
 
-        public PieceShape(int[,] shape, int originX, int originY, int blockCount, string name, int previewXOffset = 0, int previewYOffset = 0)
+        public PieceShape(int[,] shape, int originX, int originY, int blockCount, string name = "temporary name WIP", int previewXOffset = 0, int previewYOffset = 0)
         {
             this.shape = shape;
             this.originX = originX;
