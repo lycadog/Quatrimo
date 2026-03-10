@@ -88,7 +88,7 @@ namespace Quatrimo.Main
         {
             Hand.Add(piece);
 
-            PieceCard card = Factories.PieceCardFactory.CreateNew();
+            PieceCardOld card = Factories.PieceCardFactory.CreateNew();
             MainHand.AddCard(card);
             card.Initialize(piece);
         }

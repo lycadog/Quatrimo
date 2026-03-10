@@ -324,6 +324,137 @@
       "SetByDerived": true,
       "DefinedByBase": true,
       "Category": "Collision"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Red",
+      "DefaultValue": 1.0,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Green",
+      "DefaultValue": 1.0,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Blue",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Red",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Blue",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Green",
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "ColorOperation",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "ColorOperation",
+      "DefaultValue": 6,
+      "SetByDerived": true,
+      "DefinedByBase": true,
+      "Category": "Color"
     }
   ],
   "Name": "Entities\\block\\CursedBlock",

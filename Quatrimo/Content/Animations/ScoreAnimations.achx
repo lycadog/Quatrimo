@@ -130,7 +130,7 @@
     </Frame>
     <Frame>
       <TextureName>../atlas.png</TextureName>
-      <FrameLength>0.05</FrameLength>
+      <FrameLength>0.04</FrameLength>
       <LeftCoordinate>90</LeftCoordinate>
       <RightCoordinate>100</RightCoordinate>
       <TopCoordinate>10</TopCoordinate>
@@ -145,7 +145,7 @@
     </Frame>
     <Frame>
       <TextureName>../atlas.png</TextureName>
-      <FrameLength>0.05</FrameLength>
+      <FrameLength>0.04</FrameLength>
       <LeftCoordinate>100</LeftCoordinate>
       <RightCoordinate>110</RightCoordinate>
       <TopCoordinate>10</TopCoordinate>
@@ -160,11 +160,11 @@
     </Frame>
     <Frame>
       <TextureName>../atlas.png</TextureName>
-      <FrameLength>0.4</FrameLength>
-      <LeftCoordinate>90</LeftCoordinate>
-      <RightCoordinate>100</RightCoordinate>
-      <TopCoordinate>20</TopCoordinate>
-      <BottomCoordinate>30</BottomCoordinate>
+      <FrameLength>0.04</FrameLength>
+      <LeftCoordinate>110</LeftCoordinate>
+      <RightCoordinate>120</RightCoordinate>
+      <TopCoordinate>10</TopCoordinate>
+      <BottomCoordinate>20</BottomCoordinate>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves />
         <AxisAlignedCubeSaves />

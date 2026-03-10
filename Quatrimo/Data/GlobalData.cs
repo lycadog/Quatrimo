@@ -56,14 +56,20 @@ namespace Quatrimo.Data
         public static PieceShape sRStep = new(new int[,] { { 3, 0 }, { 0, 0}, { 1, 2} }, 1, 0, 3, "Right Step", 0, -1);
         public static PieceShape sStump = new(new int[,] { { 1, 0 }, { 2, 3 }, { 2, 3 }, { 4, 0 } }, 1, 1, 6, "Stump", -1 );
 
-        public static PieceShape sScatteredWedge = new(new int[,] { { 4, 0, 1 }, { 0, 0, 0 }, { 2, 0, 0 } }, 0, 0, 3, "temp", -1, -1);
+        public static PieceShape sScatteredWedge = new(new int[,] { { 4, 0, 1 }, { 0, 0, 0 }, { 2, 0, 0 } }, 1, 1, 3, "temp", 0, 0);
         public static PieceShape sTripleHole = new(new int[,] { { 1 }, { 0 }, { 4 }, { 0 }, { 2 } }, 2, 0, 3, "temp");
         public static PieceShape sLWeirdLine = new(new int[,] { { 2, 0, 1 }, { 2, 0, 0 }, { 3, 0, 0 }, { 4, 0, 0 } }, 1, 0, 5, "temp", 0, -1);
         public static PieceShape sRWeirdLine = new(new int[,] { { 4, 0, 0 }, {3, 0, 0 }, { 2, 0, 0 }, { 2, 0, 1 } }, 2, 0, 5, "temp",  0, -1);
         public static PieceShape sLepton = new(new int[,] { { 1 }, { 0 }, { 3 } }, 1, 0, 2, "Lepton");
         public static PieceShape sLTangle = new(new int[,] { { 0, 1 }, { 0, 0 }, { 0, 0 }, { 3, 0 } }, 1, 1, 2, "Left Tangle", -1);
         public static PieceShape sRTangle = new(new int[,] { { 1, 0 }, { 0, 0 }, { 0, 0 }, { 0, 3 } }, 1, 1, 2, "Right Tangle", -1);
-        public static PieceShape sBowl = new(new int[,] { { 1, 1 }, { 2, 0 }, { 3, 3 } }, 1, 1, 5, "Basin");
+        public static PieceShape sBowl = new(new int[,] { { 1, 1 }, { 2, 0 }, { 3, 3 } }, 1, 1, 5, "Bowl");
+
+        public static PieceShape sTrifecta = new(new int[,] { { 1, 0, 0 }, { 0, 0, 4 }, { 2, 0, 0 } }, 1, 1, 3, "Trifecta");
+        public static PieceShape sSeperatedT = new(new int[,] { { 1, 0, 0 }, { 3, 0, 4 }, { 2, 0, 0 } }, 1, 1, 4, "temp");
+        public static PieceShape sLScatteredL = new(new int[,] { { 1, 0, 4 }, { 1, 0, 0 }, { 2, 0, 0 } }, 1, 0, 4, "temp", 0, -1);
+        public static PieceShape sRScatteredR = new(new int[,] { { 1, 0, 0 }, { 2, 0, 0 }, { 2, 0, 4 } }, 1, 0, 4, "temp", 0, -1);
+
 
         //public static PieceShape s = new(new int[,] { { } })
 
@@ -78,7 +84,7 @@ namespace Quatrimo.Data
             new HsvColor(330, 1, .93), new HsvColor(310, .9, .91), new HsvColor(288, .83, .97), new HsvColor(274, .88, 1), new HsvColor(266, .83, .85), new HsvColor(258, .91, 1), new HsvColor(180, .88, 1), new HsvColor(160, .92, .92), new HsvColor(60, .88, 1), new HsvColor(50, .75, 1)
             ], "quantum bag", 0, 40);
 
-        public static StarterBag longDistanceBag = new([sScatteredWedge.B, sTripleHole.B, sLWeirdLine.B, sRWeirdLine.B, sLepton.B, sLTangle.B, sRTangle.B, sBowl.B, sStick.B, sTwig.B, sNub.B, sLine.B], "quanto bag idk", 0, 50);
+        public static StarterBag longDistanceBag = new([sScatteredWedge.B, sSeperatedT.B, sLScatteredL.B, sRScatteredR.B, sSlash.B, sLepton.B, sLTangle.B, sRTangle.B, sBowl.B, sStick.B, sWedge.B, sNub.B, sLine.B], "quanto bag idk", 0, 50);
 
         public static StarterBag debugBag = new([sLine.B, sTwig.B, sNub.B], "debug");
 

@@ -372,7 +372,7 @@
       "SourceFile": "Entities/Board",
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
-      "LayerOn": "BoardUILayer"
+      "LayerOn": "LowUILayer"
     },
     {
       "InstanceName": "BackgroundLayer",
@@ -393,7 +393,7 @@
       "Is2D": true
     },
     {
-      "InstanceName": "BoardUILayer",
+      "InstanceName": "LowUILayer",
       "SourceClassType": "FlatRedBall.Graphics.Layer",
       "Properties": [
         {
@@ -408,6 +408,25 @@
       "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
+      "Is2D": true
+    },
+    {
+      "InstanceName": "MainUILayer",
+      "SourceClassType": "FlatRedBall.Graphics.Layer",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "Layer",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "LayerOn": "LowUILayer",
       "Is2D": true
     },
     {
@@ -447,24 +466,6 @@
       "Is2D": true
     },
     {
-      "InstanceName": "OverUILayer",
-      "SourceClassType": "FlatRedBall.Graphics.Layer",
-      "Properties": [
-        {
-          "Name": "AssociateWithFactory",
-          "Value": true,
-          "Type": "bool"
-        }
-      ],
-      "InstructionSaves": [],
-      "SourceType": 2,
-      "SourceFile": "Layer",
-      "HasPublicProperty": true,
-      "AttachToContainer": true,
-      "GenerateTimedEmit": true,
-      "Is2D": true
-    },
-    {
       "InstanceName": "MainHand",
       "SourceClassType": "Entities\\board\\HandUI",
       "Properties": [
@@ -486,7 +487,25 @@
       "SourceFile": "Entities/board/HandUI",
       "AttachToContainer": true,
       "GenerateTimedEmit": true,
-      "LayerOn": "BoardUILayer"
+      "LayerOn": "LowUILayer"
+    },
+    {
+      "InstanceName": "OverUILayer",
+      "SourceClassType": "FlatRedBall.Graphics.Layer",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "Layer",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "Is2D": true
     }
   ],
   "Name": "Screens\\GameScreen",

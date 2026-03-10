@@ -268,7 +268,7 @@
         }
       ],
       "Name": "Layer1LeftTexture",
-      "DefaultValue": 50.0,
+      "DefaultValue": 10.0,
       "SetByDerived": true,
       "SourceObject": "SpriteLayer1",
       "SourceObjectProperty": "LeftTexturePixel",
@@ -289,7 +289,7 @@
         }
       ],
       "Name": "Layer1TopTexture",
-      "DefaultValue": 30.0,
+      "DefaultValue": 10.0,
       "SetByDerived": true,
       "SourceObject": "SpriteLayer1",
       "SourceObjectProperty": "TopTexturePixel",
@@ -397,7 +397,7 @@
         }
       ],
       "Name": "RotateSprite",
-      "DefaultValue": true,
+      "DefaultValue": false,
       "SetByDerived": true,
       "Summary": "If the sprite should rotate with the block",
       "Category": "Visuals"
@@ -443,20 +443,40 @@
       "Properties": [
         {
           "Name": "Type",
-          "Value": "float",
+          "Value": "ColorOperation",
           "Type": "String"
         },
         {
           "Name": "Category",
-          "Value": "Visuals",
+          "Value": "Color",
           "Type": "String"
         }
       ],
-      "Name": "Alpha",
+      "Name": "ColorOperation",
+      "DefaultValue": 6,
       "SetByDerived": true,
-      "Summary": "Alpha of all contained sprites",
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "ColorOperation",
       "CreatesEvent": true,
-      "Category": "Visuals"
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "bool",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "EnforceColor",
+      "SetByDerived": true,
+      "Summary": "Enforces color variable on all layers",
+      "Category": "Color"
     },
     {
       "Properties": [
@@ -467,7 +487,146 @@
         },
         {
           "Name": "Category",
-          "Value": "Visuals",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Red",
+      "DefaultValue": 1.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "Red",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Green",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "Green",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer1Blue",
+      "DefaultValue": 0.9019608,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer1",
+      "SourceObjectProperty": "Blue",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Red",
+      "DefaultValue": 1.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer2",
+      "SourceObjectProperty": "Red",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Green",
+      "DefaultValue": 0.0,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer2",
+      "SourceObjectProperty": "Green",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Layer2Blue",
+      "DefaultValue": 0.9019608,
+      "SetByDerived": true,
+      "SourceObject": "SpriteLayer2",
+      "SourceObjectProperty": "Blue",
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
+          "Type": "String"
+        }
+      ],
+      "Name": "Alpha",
+      "SetByDerived": true,
+      "Summary": "Alpha of all contained sprites",
+      "CreatesEvent": true,
+      "Category": "Color"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Color",
           "Type": "String"
         }
       ],
@@ -475,7 +634,7 @@
       "SetByDerived": true,
       "Summary": "Alpha of all Slam Preview sprites",
       "CreatesEvent": true,
-      "Category": "Visuals"
+      "Category": "Color"
     }
   ],
   "NamedObjects": [
@@ -499,13 +658,19 @@
         {
           "Type": "float",
           "Member": "Blue",
-          "Value": 0.0,
+          "Value": 0.9019608,
           "Time": 0.0
         },
         {
           "Type": "ColorOperation",
           "Member": "ColorOperation",
           "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 0.0,
           "Time": 0.0
         },
         {
@@ -523,7 +688,13 @@
         {
           "Type": "float",
           "Member": "LeftTexturePixel",
-          "Value": 50.0,
+          "Value": 10.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -541,7 +712,7 @@
         {
           "Type": "float",
           "Member": "TopTexturePixel",
-          "Value": 30.0,
+          "Value": 10.0,
           "Time": 0.0
         },
         {
@@ -576,13 +747,19 @@
         {
           "Type": "float",
           "Member": "Blue",
-          "Value": 0.0,
+          "Value": 0.9019608,
           "Time": 0.0
         },
         {
           "Type": "ColorOperation",
           "Member": "ColorOperation",
           "Value": 6,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 0.0,
           "Time": 0.0
         },
         {
@@ -595,6 +772,12 @@
           "Type": "bool",
           "Member": "IgnoresParentVisibility",
           "Value": false,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -930,6 +1113,12 @@
     {
       "EventName": "AfterSlamPreviewAlphaSet",
       "SourceVariable": "SlamPreviewAlpha",
+      "BeforeOrAfter": 1,
+      "DelegateType": ""
+    },
+    {
+      "EventName": "AfterColorOperationSet",
+      "SourceVariable": "ColorOperation",
       "BeforeOrAfter": 1,
       "DelegateType": ""
     }

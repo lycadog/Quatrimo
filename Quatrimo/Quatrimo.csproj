@@ -31,6 +31,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>atlas</Name>
     </None>
+    <None Include="Content\backgroundElements.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>backgroundElements</Name>
+    </None>
     <None Include="Content\barTop.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>barTop</Name>
@@ -195,9 +199,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>VerticalLines</Name>
     </None>
+    <None Include="Content\GumProject\Components\Quatrimo\BagButton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>BagButton</Name>
+    </None>
+    <None Include="Content\GumProject\Components\Quatrimo\CardInfoButton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CardInfoButton</Name>
+    </None>
     <None Include="Content\GumProject\Components\Quatrimo\FancyPuaseButton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>FancyPuaseButton</Name>
+    </None>
+    <None Include="Content\GumProject\Components\Quatrimo\PieceCard.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PieceCard</Name>
     </None>
     <None Include="Content\GumProject\Components\Quatrimo\SenseInfoButton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -361,6 +377,7 @@
     <Compile Include="BagTypes\Bagblocks\BlockData.cs" />
     <Compile Include="BagTypes\Bagblocks\BombBlockData.cs" />
     <Compile Include="BagTypes\Bagblocks\CursedBlockData.cs" />
+    <Compile Include="BagTypes\HandEntry.cs" />
     <Compile Include="BagTypes\StarterBag.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="Data\Duration.cs" />
@@ -436,9 +453,9 @@
     <Compile Include="Entities\Piece.Generated.Event.cs">
       <DependentUpon>Piece.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\PieceCard.cs" />
-    <Compile Include="Entities\PieceCard.Generated.cs">
-      <DependentUpon>PieceCard.cs</DependentUpon>
+    <Compile Include="Entities\PieceCardOld.cs" />
+    <Compile Include="Entities\PieceCardOld.Generated.cs">
+      <DependentUpon>PieceCardOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\TestEntity.cs" />
     <Compile Include="Entities\TestEntity.Generated.cs">
@@ -451,13 +468,14 @@
     <Compile Include="Factories\NumberBarFactory.Generated.cs" />
     <Compile Include="Factories\ParticleFactory.Generated.cs" />
     <Compile Include="Factories\RollingNumberBoxFactory.Generated.cs" />
-    <Compile Include="Factories\PieceCardFactory.Generated.cs" />
+    <Compile Include="Factories\PieceCardOldFactory.Generated.cs" />
     <Compile Include="Factories\PieceFactory.Generated.cs" />
     <Compile Include="Factories\BoardFactory.Generated.cs" />
     <Compile Include="Factories\EmptyBlockFactory.Generated.cs" />
     <Compile Include="Factories\TemporaryAnimationFactory.Generated.cs" />
     <Compile Include="Factories\TestEntityFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
+    <Compile Include="Forms\Components\Quatrimo\PieceCardForms.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
@@ -692,9 +710,21 @@
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\BagButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\BagButtonRuntime.Generated.cs">
+      <DependentUpon>BagButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\CardInfoButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\CardInfoButtonRuntime.Generated.cs">
+      <DependentUpon>CardInfoButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\Quatrimo\FancyPuaseButtonRuntime.cs" />
     <Compile Include="GumRuntimes\Quatrimo\FancyPuaseButtonRuntime.Generated.cs">
       <DependentUpon>FancyPuaseButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\PieceCardRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\PieceCardRuntime.Generated.cs">
+      <DependentUpon>PieceCardRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\Quatrimo\SenseInfoButtonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />

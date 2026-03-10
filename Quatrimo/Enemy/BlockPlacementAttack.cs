@@ -25,14 +25,14 @@ namespace Quatrimo
 
         // Range of blocks dropped
         public int minBlocksDropped = 4;
-        public int maxBlocksDropped = 16;
+        public int maxBlocksDropped = 12;
 
         public bool depthRestricted = true; // Whether or not the depth values are used to restrict block depth
         public bool depthEnforced = false; // Whether or not all blocks dropped match the depth perfectly (so 2 depth = 2 blocks dropped on every spot)
 
         //Range of allowed depth
-        public int depthMin = 2;
-        public int depthMax = 3;
+        public int depthMin = 1;
+        public int depthMax = 4;
 
         //Misc toggles and values
         public bool clustered = false; //Places blocks near 1-2 dense clusters. More likely to lead to high depth

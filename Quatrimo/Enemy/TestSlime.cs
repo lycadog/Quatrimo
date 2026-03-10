@@ -19,10 +19,11 @@ namespace Quatrimo
         public override void InitializeAttacks()
         {
             attackPool = [new BlockPlacementAttack(){
-                color = new HsvColor(137, .8, .9),
-                useRandomColor = false,
                 textureX = 60,
-                textureY = 40
+                textureY = 40,
+                minBlocksDropped = 4,
+                maxBlocksDropped = 28,
+                maxCooldown = 18
             }
                 ];
         }

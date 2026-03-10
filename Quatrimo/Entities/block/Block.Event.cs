@@ -47,6 +47,11 @@ namespace Quatrimo.Entities.block
             SlamPreview1.Alpha = SlamPreviewAlpha;
             SlamPreview2.Alpha = SlamPreviewAlpha;
         }
+        void OnAfterColorOperationSet (object sender, EventArgs e) 
+        {
+            SpriteLayer2.ColorOperation = ColorOperation;
+            SpriteLayer3.ColorOperation = ColorOperation;
+        }
  
     }
 }

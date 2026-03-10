@@ -11,6 +11,7 @@ using FlatRedBall.Math.Geometry;
 using FlatRedBall.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Quatrimo.BagTypes;
 using Quatrimo.Data;
 using Quatrimo.Encounter;
 using Quatrimo.Entities;
@@ -20,8 +21,6 @@ using Quatrimo.GumRuntimes;
 using Quatrimo.Main;
 using System;
 using System.Collections.Generic;
-
-
 
 namespace Quatrimo.Screens
 {
@@ -75,11 +74,13 @@ namespace Quatrimo.Screens
             Enemy = new TestSlime();
             InitializeBoard();
 
+            
             //GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
 
             Bag = GlobalData.longDistanceBag.CreateBag();
             Bag.StartEncounter(MainHand);
 
+            
             UpdateUI();
 
             StartState(new StartTurnAndWaitState());
@@ -185,9 +186,13 @@ namespace Quatrimo.Screens
             //todo: check attack current state after it's updated and update ui accordingly
         }
 
-        public void DiscardPlayedCard()
+        public RenderingLibrary.Graphics.Layer GetGumLayer(Layer layer)
         {
+            if(layer == LowUILayer) { return LowUILayerGum; }
+            else if(layer == MainUILayer) { return MainUILayerGum; }
+            else if(layer == OverUILayer) { return OverUILayerGum; }
 
+            else { throw new ArgumentOutOfRangeException("not a gum layer dumbass"); }
         }
 
         public void StartState(BoardState state)

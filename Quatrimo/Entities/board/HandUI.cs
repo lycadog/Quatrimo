@@ -15,13 +15,13 @@ namespace Quatrimo.Entities.board
 {
     public partial class HandUI
     {
-        PieceCard activeCard;
+        PieceCardOld activeCard;
         public void SetPosition(int boardWidth)
         {
             X = -53 - boardWidth * 5;
         }
 
-        public void AddCard(PieceCard card)
+        public void AddCard(PieceCardOld card)
         {
             Cards.Add(card);
             card.AttachTo(this);

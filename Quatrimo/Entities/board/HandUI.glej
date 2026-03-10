@@ -62,7 +62,7 @@
       "InstructionSaves": [],
       "SourceType": 2,
       "SourceFile": "PositionedObjectList (Generic)",
-      "SourceClassGenericType": "Entities\\PieceCard",
+      "SourceClassGenericType": "Entities\\PieceCardOld",
       "ExposedInDerived": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true

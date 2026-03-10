@@ -13,7 +13,7 @@ using Quatrimo.Screens;
 
 namespace Quatrimo.Entities
 {
-    public partial class PieceCard
+    public partial class PieceCardOld
     {
         int index;
 

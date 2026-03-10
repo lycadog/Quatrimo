@@ -553,6 +553,6 @@
       "GenerateTimedEmit": true
     }
   ],
-  "Name": "Entities\\PieceCard",
+  "Name": "Entities\\PieceCardOld",
   "CustomClassesForExport": []
 }

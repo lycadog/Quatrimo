@@ -226,7 +226,7 @@ namespace Quatrimo.Entities.block
         {
             SlamPreview1.TopTexturePixel = 10;
             SlamPreview1.BottomTexturePixel = 20;
-            SlamPreview1.Color = new Color(255, 100, 100);
+            SlamPreview1.Color = new Color(230, 120, 120);
 
             SlamPreview1.Alpha = 0.75f;
 
