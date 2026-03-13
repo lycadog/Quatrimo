@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Quatrimo.BagTypes;
 using Quatrimo.Data;
 using Quatrimo.Entities;
 using Quatrimo.Entities.board;
@@ -17,8 +18,6 @@ namespace Quatrimo.Main
         //like i want colors and textures for bags and everything
         List<Piece> pieces = [];
         ObjPool<Piece> pool;
-        public HandUI MainHand;
-        public List<Piece> Hand = [];
 
         public int currentCardIndex; //contains the corresponding index to the current selected piece/card, synced on play with screen
 
@@ -48,9 +47,8 @@ namespace Quatrimo.Main
             }
         }
 
-        public void StartEncounter(HandUI hand)
+        public void StartEncounter()
         {
-            MainHand = hand;
             CreateNewPool();
             DrawHand();
         }

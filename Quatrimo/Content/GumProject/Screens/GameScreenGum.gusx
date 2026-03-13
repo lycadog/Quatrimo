@@ -334,6 +334,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>PlayerHand.X</Name>
+      <Value xsi:type="xsd:float">97</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>int</Type>
       <Name>enemyHP.Blue</Name>
       <Value xsi:type="xsd:int">255</Value>
@@ -398,66 +404,6 @@
       <Type>float</Type>
       <Name>enemyHP.Y</Name>
       <Value xsi:type="xsd:float">47</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>ChildrenLayout</Type>
-      <Name>hand.ChildrenLayout</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>hand.ContainedType</Name>
-      <Value xsi:type="xsd:string">Quatrimo/PieceCard</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>hand.Height</Name>
-      <Value xsi:type="xsd:float">208</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>hand.StackSpacing</Name>
-      <Value xsi:type="xsd:float">8</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>hand.Width</Name>
-      <Value xsi:type="xsd:float">70</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>hand.WrapsChildren</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>hand.X</Name>
-      <Value xsi:type="xsd:float">97</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>hand.XOrigin</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>hand.Y</Name>
-      <Value xsi:type="xsd:float">20</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>hand.YUnits</Name>
-      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -898,54 +844,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>CardCategory</Type>
-      <Name>PieceCardInstance.CardCategoryState</Name>
-      <Value xsi:type="xsd:string">Default</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>PieceCardInstance.Parent</Name>
-      <Value xsi:type="xsd:string">hand</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>PieceCardInstance.XUnits</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>PieceCardInstance.Y</Name>
-      <Value xsi:type="xsd:float">46</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>PieceCardInstance.YOrigin</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>PieceCardInstance.YUnits</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>PieceCardInstance1.Parent</Name>
-      <Value xsi:type="xsd:string">hand</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>PieceCardInstance2.Parent</Name>
-      <Value xsi:type="xsd:string">hand</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>int</Type>
       <Name>playerLevel.Blue</Name>
       <Value xsi:type="xsd:int">255</Value>
@@ -1305,21 +1203,6 @@ waaaa
     </VariableList>
   </State>
   <Instance>
-    <Name>PieceCardInstance</Name>
-    <BaseType>Quatrimo/PieceCard</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>PieceCardInstance1</Name>
-    <BaseType>Quatrimo/PieceCard</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>PieceCardInstance2</Name>
-    <BaseType>Quatrimo/PieceCard</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
     <Name>TopBar</Name>
     <BaseType>Sprite</BaseType>
     <DefinedByBase>false</DefinedByBase>
@@ -1337,6 +1220,11 @@ waaaa
   <Instance>
     <Name>playerLevel</Name>
     <BaseType>Text</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>PlayerHand</Name>
+    <BaseType>Quatrimo/PlayerHand</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
@@ -1397,11 +1285,6 @@ waaaa
   <Instance>
     <Name>BlockSensePanel</Name>
     <BaseType>NineSlice</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>hand</Name>
-    <BaseType>Container</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors />

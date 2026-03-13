@@ -203,6 +203,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>BagButton</Name>
     </None>
+    <None Include="Content\GumProject\Components\Quatrimo\CardBlock.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CardBlock</Name>
+    </None>
     <None Include="Content\GumProject\Components\Quatrimo\CardInfoButton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>CardInfoButton</Name>
@@ -214,6 +218,10 @@
     <None Include="Content\GumProject\Components\Quatrimo\PieceCard.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>PieceCard</Name>
+    </None>
+    <None Include="Content\GumProject\Components\Quatrimo\PlayerHand.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlayerHand</Name>
     </None>
     <None Include="Content\GumProject\Components\Quatrimo\SenseInfoButton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -714,6 +722,10 @@
     <Compile Include="GumRuntimes\Quatrimo\BagButtonRuntime.Generated.cs">
       <DependentUpon>BagButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\CardBlockRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\CardBlockRuntime.Generated.cs">
+      <DependentUpon>CardBlockRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\Quatrimo\CardInfoButtonRuntime.cs" />
     <Compile Include="GumRuntimes\Quatrimo\CardInfoButtonRuntime.Generated.cs">
       <DependentUpon>CardInfoButtonRuntime.cs</DependentUpon>
@@ -726,6 +738,11 @@
     <Compile Include="GumRuntimes\Quatrimo\PieceCardRuntime.Generated.cs">
       <DependentUpon>PieceCardRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\PlayerHandRuntime.cs" />
+    <Compile Include="GumRuntimes\Quatrimo\PlayerHandRuntime.Generated.cs">
+      <DependentUpon>PlayerHandRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\Quatrimo\SenseInfoButtonRuntime.cs" />
     <Compile Include="GumRuntimes\Quatrimo\SenseInfoButtonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />

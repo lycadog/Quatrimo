@@ -19,7 +19,13 @@
     <Variable>
       <Type>float</Type>
       <Name>BackgroundColor.Height</Name>
-      <Value xsi:type="xsd:float">4</Value>
+      <Value xsi:type="xsd:float">100</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>BackgroundColor.HeightUnits</Name>
+      <Value xsi:type="xsd:int">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -36,13 +42,13 @@
     <Variable>
       <Type>float</Type>
       <Name>BackgroundColor.Width</Name>
-      <Value xsi:type="xsd:float">4</Value>
+      <Value xsi:type="xsd:float">100</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>BackgroundColor.WidthUnits</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -95,13 +101,13 @@
     <Variable>
       <Type>float</Type>
       <Name>IconSprite.Height</Name>
-      <Value xsi:type="xsd:float">2</Value>
+      <Value xsi:type="xsd:float">100</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>IconSprite.HeightUnits</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Value xsi:type="xsd:int">6</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -156,13 +162,13 @@
     <Variable>
       <Type>float</Type>
       <Name>IconSprite.Width</Name>
-      <Value xsi:type="xsd:float">2</Value>
+      <Value xsi:type="xsd:float">50</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>IconSprite.WidthUnits</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -251,7 +257,7 @@
       <Name>Enabled</Name>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Red</Name>
+        <Name>BackgroundColor.Blue</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -263,7 +269,7 @@
       </Variable>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Blue</Name>
+        <Name>BackgroundColor.Red</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -278,7 +284,7 @@
       <Name>Disabled</Name>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Red</Name>
+        <Name>BackgroundColor.Blue</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -290,7 +296,7 @@
       </Variable>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Blue</Name>
+        <Name>BackgroundColor.Red</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -359,7 +365,7 @@
       <Name>HighlightedFocused</Name>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Red</Name>
+        <Name>BackgroundColor.Blue</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -371,7 +377,7 @@
       </Variable>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Blue</Name>
+        <Name>BackgroundColor.Red</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -386,7 +392,7 @@
       <Name>Focused</Name>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Red</Name>
+        <Name>BackgroundColor.Blue</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -398,7 +404,7 @@
       </Variable>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Blue</Name>
+        <Name>BackgroundColor.Red</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -413,7 +419,7 @@
       <Name>DisabledFocused</Name>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Red</Name>
+        <Name>BackgroundColor.Blue</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -425,7 +431,7 @@
       </Variable>
       <Variable>
         <Type>int</Type>
-        <Name>BackgroundColor.Blue</Name>
+        <Name>BackgroundColor.Red</Name>
         <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>

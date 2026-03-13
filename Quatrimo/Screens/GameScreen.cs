@@ -17,7 +17,9 @@ using Quatrimo.Encounter;
 using Quatrimo.Entities;
 using Quatrimo.Entities.block;
 using Quatrimo.Entities.board;
+using Quatrimo.FormsControls.Components.Quatrimo;
 using Quatrimo.GumRuntimes;
+using Quatrimo.GumRuntimes.Quatrimo;
 using Quatrimo.Main;
 using System;
 using System.Collections.Generic;
@@ -78,8 +80,12 @@ namespace Quatrimo.Screens
             //GumScreen.ButtonStandardInstance.Click += (IWindow window) => { FlatRedBallServices.Game.Exit(); };
 
             Bag = GlobalData.longDistanceBag.CreateBag();
-            Bag.StartEncounter(MainHand);
+            //Bag.StartEncounter(MainHand);
 
+
+            var card = new PieceCardRuntime();
+
+            card.ScaleUpAnimation.Play();
             
             UpdateUI();
 
